@@ -1,0 +1,110 @@
+@charset "utf-8"; /* 기본 유니코드 설정 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"); /* notosansKR가져오기 */
+
+/* live server 단축키로 켜기 -> Alt + l + O */
+/* 디자인 초기화 -> 꼭 해줘야함 */
+* {
+  /* m0+p0+bxbb */
+  margin: 0;
+  padding: 0; /* 모든 여백 없애기 */
+  box-sizing: border-box; /* 사각형을 그릴 때, padding과 border가 영향을 주지 않게 */
+}
+
+ul,
+ol,
+li {
+  list-style: none; /* lisn -> 목록관련 디자인 초기화 -> 기본디자인 삭제 */
+}
+
+img {
+  vertical-align: top; /* vat -> 상단기준 맞추는 영역 + 미세한 틈을 없애주는 CSS trigger */
+}
+
+/* 폰트 설정 -> 주로 body에다가 함 */
+body {
+  font: 16px/1.6 "Noto Sans KR", sans-serif; /* f -> 폰트정의 */
+  color: #a4a4a4; /* c -> 글자색 정의 */
+}
+
+a {
+  text-decoration: none; /* tdn */
+  color: inherit; /* 색깔 강제상속 (body에서 설정한) */
+}
+
+a:hover {
+  text-decoration: none; /* tdn */
+  color: #546220; /* c -> 호버되었을 때도 밑줄이 나올 이유가 없음; */
+} /*  -> 여기까지가 디자인 초기화 */
+
+/* 디자인 시작 */
+.process {
+  /* w1080+m0-a+bg#ff5 */
+  width: 1080px; /* 기초 1080px로 가로를 잡아줌 */
+  margin: 0 auto; /* 블록이 있는 오브젝트는 항상 마진0 오토로 한다. */
+  background: #ff5; /* 확인용 background */
+
+  /* 부모가 자식의 여백을 정해주면 편해서 여기서 그 설정을 함. */
+  padding: 70px 0; /* p70-a : 위/아래 padding: 70px */
+}
+
+.process h1  /* 하위 선택자 -> 한 칸 띄면 */ {
+  /* fz34+c#546220 */
+  font-size: 34px; /* 폰트 사이즈 */
+  color: #546220; /* 컬러 */
+
+  font-weight: 500; /* fw500 : 보통 Medium의 폰트임 */
+  text-align: center; /* tac : 블록요소가 감싸고 있는 인라인 요소를 가운데로 옮기는 명령!@ */
+}
+
+.process h1 strong {
+  /* <h1>마일리지 <strong>구매 절차</strong></h1> */
+  font-weight: 400; /* 다른 테그로 묶어서 구현하면 다른 두께의 글자를 생성할 수 있다. (지금은 강조하는 의미로 strong을 씀.) */
+}
+
+.process-list /* (ol) */ {
+  /* bg#5f5 */
+  background: #5f5; /* 초록색 -> 블록이라서 부모의 가로 크기를 100% 상속받는 규칙이 있어서; -> 세로 크기는 자손이 결정! */
+  display: flex; /* df : 메인축방향으로 자동 정렬 시작 : 마치 인라인요소처럼 쪼그라들지만, 블록이다. -> 비슷한 예로 position: absolute가 있다. */
+  /* w240+h240 -> 크기설정 */
+  justify-content: space-between; /* 남는 여백을 균등하게!! 줄 수 있는 중요한 명령이다.--> (꼭 기억하자 이거 매우 좋다.) */
+  margin-top: 77px; /* mt77 -> 가능한 큰 부모에다가 margin-top을 줘서 떼어버리면된다 (이게 나쁘지 않네;) */
+}
+
+.process-list li {
+  /* bd */
+  border: 1px solid #000;
+  width: 240px;
+  height: 240px;
+  /* 항상 부모 기준으로 패딩을 줘서 관리하는게 레이아웃을 변경하지 않는 (안정적인) 포지션을 잡을 수 있어서 해당 방법이 좋다. -> 각자의 요소를 마진으로 주는거보다
+  부모의 크기에서 이미지의 크기로 padding을 주는게 사실 제일 좋은 방법이지만 그건 다음에 하자. */
+  padding: 28px; /* 4방향 모두 패딩 28px */
+}
+
+.process-list li::before {
+  /* ct+db+w116+h116 */
+  content: ""; /* 가상요소 필수요소 */
+  display: block; /* 블록화 */
+  width: 116px;
+  height: 116px; /* 크기 조정 */
+  background: #000 no-repeat 50%; /* background축약속성 -> 1. 색 / 2. 이미지 / 3. 반복여부 / 4. 위치 */
+}
+
+/* 공통요소는 축약속성으로 주고, 개별명령은 꼭 찍어서 해당 부분만 바꾼다.
+가상테그를 이용해서 이미지를 붙였다. 지금은 왜냐하면 -> 정보로써의 가치는 없다고 보고 있기 때문에 */
+
+/* 추가 질문 설명 */
+/* article과 section은 제목을 달고다닌다.
+section은 완성된 하나의 웹페이지가 있어야 정보로써의 가치가 있고
+article은 그게 아니어도 된다. */
+.process-list li:nth-child(1)::before /* 첫번째 자식 li의 가상요소 ::before & li의 ::before */ {
+  background-image: url(../img/mileag_procedure_01.png); /* bgi -> 이미지만 꼭 찍어서 "../"-> 현재 위치 기준으로 한 단계 위 */
+}
+.process-list li:nth-child(2)::before /* 두번째 자식 li의 가상요소 ::before & li의 ::before */ {
+  background-image: url(../img/mileag_procedure_02.png); /* bgi -> 이미지만 꼭 찍어서 "../"-> 현재 위치 기준으로 한 단계 위 */
+}
+.process-list li:nth-child(3)::before /* 세번째 자식 li의 가상요소 ::before & li의 ::before */ {
+  background-image: url(../img/mileag_procedure_03.png); /* bgi -> 이미지만 꼭 찍어서 "../"-> 현재 위치 기준으로 한 단계 위 */
+}
+.process-list li:nth-child(4)::before /* 네번째 자식 li의 가상요소 ::before & li의 ::before */ {
+  background-image: url(../img/mileag_procedure_04.png); /* bgi -> 이미지만 꼭 찍어서 "../"-> 현재 위치 기준으로 한 단계 위 */
+}

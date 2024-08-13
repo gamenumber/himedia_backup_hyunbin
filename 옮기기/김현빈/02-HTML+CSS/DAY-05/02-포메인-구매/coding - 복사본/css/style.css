@@ -24,6 +24,7 @@ img {
 body {
   font: 16px/1.6 "Noto Sans KR", sans-serif; /* f -> 폰트정의 */
   color: #a4a4a4; /* c -> 글자색 정의 */
+  /* display: grid; -> 레이아웃의 끝판왕 */
 }
 
 a {
@@ -41,7 +42,7 @@ a:hover {
   /* w1080+m0-a+bg#ff5 */
   width: 1080px; /* 기초 1080px로 가로를 잡아줌 */
   margin: 0 auto; /* 블록이 있는 오브젝트는 항상 마진0 오토로 한다. */
-  background: #ff5; /* 확인용 background */
+  /* background: #ff5; 확인용 background */
 
   /* 부모가 자식의 여백을 정해주면 편해서 여기서 그 설정을 함. */
   padding: 70px 0; /* p70-a : 위/아래 padding: 70px */
@@ -63,7 +64,7 @@ a:hover {
 
 .process-list /* (ol) */ {
   /* bg#5f5 */
-  background: #5f5; /* 초록색 -> 블록이라서 부모의 가로 크기를 100% 상속받는 규칙이 있어서; -> 세로 크기는 자손이 결정! */
+  /* background: #5f5; 초록색 -> 블록이라서 부모의 가로 크기를 100% 상속받는 규칙이 있어서; -> 세로 크기는 자손이 결정! */
   display: flex; /* df : 메인축방향으로 자동 정렬 시작 : 마치 인라인요소처럼 쪼그라들지만, 블록이다. -> 비슷한 예로 position: absolute가 있다. */
   /* w240+h240 -> 크기설정 */
   justify-content: space-between; /* 남는 여백을 균등하게!! 줄 수 있는 중요한 명령이다.--> (꼭 기억하자 이거 매우 좋다.) */
@@ -78,6 +79,24 @@ a:hover {
   /* 항상 부모 기준으로 패딩을 줘서 관리하는게 레이아웃을 변경하지 않는 (안정적인) 포지션을 잡을 수 있어서 해당 방법이 좋다. -> 각자의 요소를 마진으로 주는거보다
   부모의 크기에서 이미지의 크기로 padding을 주는게 사실 제일 좋은 방법이지만 그건 다음에 하자. */
   padding: 28px; /* 4방향 모두 패딩 28px */
+  position: relative; /* por : 직계 자손 절대배치의 기준점 (대표적으로 relative가 있지만 static만 아니면 다 됨.) */
+
+  display: flex; /* df로 플렉스 박스로 만들어줌 */
+  flex-direction: column; /* fxdc : 메인축의 방향을 세로 (col로 변경) */
+
+  align-content: center; /* aic -> 교차축방향 중앙정렬 */
+  justify-content: center; /* jcc -> 메인축방향 중앙정렬 */
+  gap: 12px; /* 12px로 갭줌 */
+}
+
+.process-list li:hover::after {
+  right: -40px; /* right값을 이용해서 오른쪽으로 */
+  /* transform: rotate(800deg); 재미로 회전추가 -> 이거 좀 맛없어 */
+}
+
+.process-list li p {
+  min-height: 52px; /* mih52 : 최소한 52px의 세로크기를 그린 뒤에 시작하라는 명령 */
+  text-align: center; /* 텍스트 중앙정렬 */
 }
 
 .process-list li::before {
@@ -86,7 +105,7 @@ a:hover {
   display: block; /* 블록화 */
   width: 116px;
   height: 116px; /* 크기 조정 */
-  background: #000 no-repeat 50%; /* background축약속성 -> 1. 색 / 2. 이미지 / 3. 반복여부 / 4. 위치 */
+  background: no-repeat 50%; /* background축약속성 -> 1. 색 / 2. 이미지 / 3. 반복여부 / 4. 위치 */
 }
 
 /* 공통요소는 축약속성으로 주고, 개별명령은 꼭 찍어서 해당 부분만 바꾼다.
@@ -107,4 +126,50 @@ article은 그게 아니어도 된다. */
 }
 .process-list li:nth-child(4)::before /* 네번째 자식 li의 가상요소 ::before & li의 ::before */ {
   background-image: url(../img/mileag_procedure_04.png); /* bgi -> 이미지만 꼭 찍어서 "../"-> 현재 위치 기준으로 한 단계 위 */
+}
+
+.process-list li::after {
+  /* ct+db+w44+h28+bg */
+  content: ""; /* 가상요소 필수요소 */
+  display: block; /* 블록화 */
+  width: 44px;
+  height: 28px; /* 크기 조정 */
+  background: url(../img/ico_arrow_03.png) no-repeat 0 0; /* 어차피 똑같은 이미지니까 단축속성에서 줌. */
+
+  /* poa+t50p+r0 */
+  position: absolute;
+  top: 50%;
+  right: -29px; /* 한번에 poA와 좌표지정 */
+  transform: translateY(
+    -50%
+  ); /* trfty : y축(세로)로 자신의 세로 크기의 절반만큼 이동 */
+
+  /* 호버 전에 미리 준비해서 동작시작+동작끝날 때 둘다 부드럽게 이어지게끔 함 */
+  transition: 0.4s; /* 부드럽게 */
+}
+
+.process-list li:last-child::after {
+  display: none; /* 사라져라 */
+}
+
+.apply {
+  /* w247+h70+bg#333+fz18+c#fff */
+  width: 247px;
+  height: 70px; /* 크기 지정 */
+  background: #333; /* 배경색 지정 -> 확인용 */
+  font-size: 18px; /* 폰트 사이즈 : 18px */
+  color: #fff; /* 글씨 컬러 */
+
+  /* df+jcc+aic */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 플렉스 설정으로 메인축 방향 + 교차축 방향 중앙정렬  */
+
+  margin: 50px auto; /* 가운데로 이동 + 위, 아래 마진 50px */
+}
+
+.apply:hover {
+  /* bg+c#fff */
+  background: #000;
+  color: #fff;
 }

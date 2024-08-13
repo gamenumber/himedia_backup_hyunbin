@@ -1,0 +1,22 @@
+** 피그마 사용 단축키 **
+
+Ctrl ++ : 화면 확대
+Ctrl +- : 화면 축소
+Ctrl 0 : 100% 크기로 보기
+Shift + 1 : 화면에 꽉 채우기
+
+Ctrl + [ : 뒤쪽으로
+Ctrl + ] : 앞쪽으로
+Ctrl + Shift + [ : (한방에) 뒤쪽으로
+Ctrl + Shift + ] : (한방에) 앞쪽으로
+
+Ctrl + G : 그룹만들기
+Ctrl + Shift + G : 그룹풀기
+
+Shift + A : 오토 레이아웃 만들기
+
+Ctrl + Shift + K : 이미지 / 동영상 넣기
+Ctrl + Alt + K : 컴포넌트 만들기
+Ctrl + Alt + B : 컴포넌트 풀기 (다른 레이아웃 만들 때)
+Alt + H : 가로기준 중앙정렬
+Shift + G : 그리드 보이기 / 숨기기

@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* 디자인 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* bxbb */
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+img {
+    /* top으로 붙어라 (상하기준 상단정렬)+ 문제점을 해결하는 trigger */
+    vertical-align: top;
+}
+
+body {
+    font: 20px/1.6 'Pretendard', sans-serif;
+    color: #555;
+    background: #EFFFFB; /* bg */
+}
+
+.advice {
+    width: 1321px; /* w1320 */
+    /* background: yellow; */
+    margin: 0 auto; /* m0-a: width가 있는 블록요소의 가운데 정렬 */
+    padding: 100px 0; /* p100-0 */
+}
+
+.advice > h1 {
+    /* 줄 자체 주석 : Ctrl + / */
+    /* (줄은 유지) + 나란히 주석 : Shift + Alt + A */
+    text-align: center; /* tac */
+    font-size: 40px; /* fz40 */
+    color: #000; /* c */
+}
+
+.advice > ul {
+    /* border: 1px solid #000; bd */
+    margin-top: 78px; /* mt78 */
+    display: flex; /* df */
+    flex-wrap: wrap; /* fxww: 줄바꿈이 필요할 때 */
+    gap: 48px 20px; /* g20 :  */
+}
+
+.advice > ul > li {
+    width: 427px;
+    height: 514px;
+    background: #fff; /* bg#fff */
+    text-align: center; /* tac */
+    padding: 40px; /* p40 */
+    border-radius: 20px; /* bdrs20 */
+    /* box-shadow: inset hoff voff blur #000; bxsh */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15); /* bxsh */
+    /* ()가 쓰였으면 함수입니다. */
+}
+
+.advice > ul > li > p {
+    margin-top: 40px; /* mt40 */
+    height: 189px; /* h189 */
+    /* background: tomato; bg */
+    text-align: left; /* ta:l */
+}
+
+.advice > ul > li > strong {
+    margin-top: 40px; /* mt40 */
+    display: block; /* db : 블록요소만 크기와 여백을 가지므로 
+    블록화시켜서 그게 가능하게 끔 함. */
+}

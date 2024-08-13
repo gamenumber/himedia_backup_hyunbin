@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flexible box</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul, ol, li {
+            list-style: none;
+        }
+        
+        .flex-container {
+            /* w1000+h400+bg#ff5+m50-a */
+            width: 1000px;
+            height: 400px;
+            background: #ff5;
+            margin: 50px auto;
+            display: flex; /* df */
+
+            /* 메인축 방향의 아이템 정렬 */
+            justify-content: flex-start; /* jcfs */
+            justify-content: flex-end; /* jcfe */
+            justify-content: center; /* jcc */
+            justify-content: space-between; /* jcsb */
+
+            /* 교차축 방향의 아이템 정렬 */
+            align-items: stretch; /* ai */
+            align-items: flex-start; /* aifs */
+            align-items: flex-end; /* aife */
+            align-items: center; /* aic */
+        }
+
+        .flex-item {
+            border: 1px solid #000; /* bd */
+            width: 200px; /* w200 */
+            height: 200px; /* h200 */
+        }
+    </style>
+</head>
+<body>
+    <!-- ul.flex-container>li.flex-item*4{flex item $} -->
+    <ul class="flex-container">
+        <li class="flex-item">flex item 1</li>
+        <li class="flex-item">flex item 2</li>
+        <li class="flex-item">flex item 3</li>
+        <li class="flex-item">flex item 4</li>
+    </ul>
+</body>
+</html>

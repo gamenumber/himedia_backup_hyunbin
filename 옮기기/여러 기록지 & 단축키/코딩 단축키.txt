@@ -1,0 +1,8 @@
+** 코딩 단축키
+
+Ctrl + B : 옆의 탐색기 보기 / 끄기
+Ctrl + / : 주석 토글
+Alt + Shift + a : 나란한 주석 토글
+
+Alt + Shift + 밑으로 가는 화살표 : 한 줄 복사
+Ctrl + Space : Emmet(일꾼) 실행

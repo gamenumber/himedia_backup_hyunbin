@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/* 디자인 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none; /* lisn */
+}
+
+img {
+  vertical-align: top; /* vat */
+}
+
+body {
+  font: 14px/24px "맑은 고딕", "Malgun Gothic" sans-serif; /* f */
+  letter-spacing: -1px; /* lts-1 */
+  color: #666; /* c#666 */
+  background: #f4f4f4; /* bg#f4f4f4 */
+
+  /* 어절 단위로 줄바꿈 */
+  word-break: keep-all; /* wbka */
+}
+
+a {
+  text-decoration: none; /* tdn */
+  color: inherit; /* c ->: 강제상속 */
+}
+a:hover {
+  text-decoration: underline; /* tdu */
+  color: #004a8d;
+}
+
+.management {
+  /* w1200+m0-a+bg#ff5 */
+  width: 1200px;
+  margin: 0 auto;
+  /* background: #ff5; */
+  padding: 100px 0; /* p100-0 */
+}
+
+.menagement h1 {
+  display: none; /* dn */
+}
+
+.management_list {
+  /* background: green; bg */
+  display: flex; /* df */
+  gap: 16px; /* g16 */
+
+  flex-wrap: nowrap; /* 기본값: 아이템들을 감싸지 말라 */
+  flex-wrap: wrap; /* fxww : 아이템들을 감싸라 */
+}
+.management_list li {
+  /* border: 1px solid #000; bd */
+
+  /* w288+h384+bg#fff */
+  width: 288px;
+  height: 384px;
+  background: #fff;
+  text-align: center; /* tac: 블록요소가 감싸는 인라인 요소를 가운데로 */
+
+  transition: 0.4s; /* trs.4s : A상태와 B상태의 변화를 0.4초 동안 구현 (미리 준비) */
+}
+
+.management_list li figure {
+  overflow: hidden; /* 영역을 넘쳐나는 애들을 숨겨라 */
+}
+
+.management_list li figure img {
+  transition: 0.4s; /* trs.4s */
+  filter: grayscale(1);
+}
+.management_list li:hover figure img {
+  transform: scale(1.3) rotate(10deg); /* trf */
+  filter: grayscale(0);
+}
+
+.management_list li:hover {
+  /* trfty */
+  transform: translateY(-50px);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  background: #fff;
+}
+
+.management_list li:hover dl {
+  /* p22-44-30 */
+  padding: 22px 44px 30px;
+  color: #fff;
+  background: #004a8d;
+}
+.management_list li dl dt {
+  /* fwb+fz20+c#004a8d */
+  font-weight: bold;
+  font-size: 20px;
+  color: #004a8d;
+}
+
+.management_list li:hover * {
+  color: #fff;
+}
+.management_list li dl dd {
+  margin-top: 20px; /* mt20 */
+}
+
+.management_list li dl::after {
+  content: ""; /* ct */
+  /* w35+h35+bg */
+  width: 35px;
+  height: 35px;
+  background: url(../img/arr.jpg) no-repeat 50%; /* x,y가 같은값이다! */
+  display: block; /* db */
+  margin: 20px auto 0; /* m20-a-0 */
+}
+
+.management_list li:hover dl::after {
+  background: url(../img/arr-on.jpg) no-repeat 50%; /* x,y가 같은값이다! */
+}

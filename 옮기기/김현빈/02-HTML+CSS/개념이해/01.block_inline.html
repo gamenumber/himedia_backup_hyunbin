@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>block vs inline</title>
+    <style>
+         /*  */
+         a, strong {
+            width: 200px;
+            height: 200px;
+            background : red;
+            display: block;
+         }
+
+
+         h1, p {
+            width: 200px;
+            height: 200px;
+            background : blue;
+            display: inline;
+         }
+    </style>
+</head>
+<body>
+    <!-- 모든 요소는 블록레벨요소와 인라인레벨요소로 나뉜다. -> 한 줄을 다 먹으면 block / 자기 자신만의 공간을 차지하면 inline -->
+     <h1>h1</h1> <h2>h2</h2>
+     <p>p</p>
+     <img src="" alt="img">
+     <a href="">a</a>
+     <strong>strong</strong>
+
+     <!-- ul>li*4{list item$} -->
+     <ul>
+        <li>list item1</li>
+        <li>list item2</li>
+        <li>list item3</li>
+        <li>list item4</li>
+     </ul>
+
+     <!-- dl > dt+dd -->
+     <dl>
+        <dt>dt</dt>
+        <dd>dd</dd>
+     </dl>
+
+     <div>div</div>
+
+     <!-- header+main+footer -->
+      <!-- 블록 -> 이 요소만 여백과 크기를 가질 수 있다. -->
+     <header>헤더</header>
+     <main>메인</main>
+     <footer>푸터</footer>
+
+     <!-- 인라인 -->
+     <em>em</em>
+     <span>span</span>
+
+</body>
+</html>

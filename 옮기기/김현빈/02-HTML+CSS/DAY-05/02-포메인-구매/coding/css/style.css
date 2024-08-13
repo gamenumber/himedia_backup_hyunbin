@@ -1,0 +1,119 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+* {
+  /* m0+p0+bxbb */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px/1.6 Pretendard, sans-serif;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 300;
+  margin-bottom: 20px; /* 제목과 li 간격 */
+}
+
+li {
+  padding: 20px;
+  display: block;
+  width: 240px;
+  height: 240px;
+  border: 1px solid #a0a0a0;
+  border-radius: 5px;
+  margin-bottom: 40px; /* li와 a 간격 */
+}
+
+a {
+  text-decoration: none;
+  background: #756e6e;
+  margin-top: 50px;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+.allow::after {
+  content: "";
+  display: block;
+  width: 66px;
+  height: 43px;
+  transform: translate(-50%, -50%);
+  padding-top: 80px; /* 화살표를 좀 더 아래로 이동 */
+}
+
+a {
+  text-decoration: none; /* tdn */
+  background: #756e6e;
+  margin-top: 50px;
+  padding: 20px;
+}
+ul,
+ol,
+li {
+  list-style: none; /* lisn */
+}
+
+ol {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img {
+  vertical-align: top; /* vat */
+}
+.buy {
+  width: 1080px; /* w1080 */
+  text-align: center; /* tac */
+  margin: 200px auto;
+}
+
+p {
+  color: #333;
+}
+
+strong {
+  color: #fff;
+}
+
+li {
+  padding: 20px;
+  display: flex; /* flexbox 사용 */
+  flex-direction: column; /* 요소들을 세로로 배치 */
+  align-items: center; /* 가운데 정렬 */
+  justify-content: center; /* 가운데 정렬 */
+  width: 240px;
+  height: 240px;
+  border: 1px solid #a0a0a0;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  position: relative; /* 화살표를 절대 위치로 설정하기 위해 relative 사용 */
+}
+
+li figure,
+li p {
+  margin: 0;
+  text-align: center;
+}
+
+section.buy li::after {
+  content: "";
+  display: block;
+  width: 47px;
+  height: 33px;
+  background-image: url(../img/ico_arrow_03.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 마지막 li 요소의 화살표 없애기 */
+section.buy li:last-child::after {
+  content: none;
+}

@@ -1,0 +1,194 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+* {
+  /* m0+p0+bxbb */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none; /* lisn */
+}
+
+img {
+  vertical-align: top; /* vat */
+}
+
+body {
+  font: 16px/1.6 Pretendard, sans-serif;
+}
+
+a {
+  text-decoration: none; /* tdn */
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #546220;
+}
+
+.menu {
+  /* w1078+m0-a+bg#ff5 */
+  width: 1078px;
+  margin: 0 auto;
+  /* background: #ff5; */
+}
+
+.menu h1 {
+  display: none; /* dn */
+}
+
+.menu-list {
+  /* background: green; */
+  display: flex; /* df */
+  flex-wrap: wrap; /* fxww : 부모의 크기대로 감싸기 */
+  gap: 60px 29px; /* g60-29 */
+}
+.menu-list li {
+  /* border: 1px solid #000; */
+
+  /* w340+h410+bg#fff */
+  width: 340px;
+  height: 410px;
+  background: #fff;
+  position: relative; /* por */
+}
+
+.badge {
+  /* w40+h40+bg+db */
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: no-repeat 50%;
+  position: absolute; /* poa */
+  top: 20px;
+  left: 21px;
+  color: transparent; /* 투명하게 (글씨) */
+}
+
+.badge-best {
+  background-image: url(../img/ico_menu_best.png);
+}
+.badge-hot {
+  background-image: url(../img/ico_menu_hot.png);
+}
+.badge-new {
+  background-image: url(../img/ico_menu_new.png);
+}
+
+.menu-con {
+  /* tac+pt15 */
+  text-align: center;
+  padding-top: 15px;
+}
+
+.menu-con strong {
+  font-weight: 600; /* fw600 */
+  font-size: 20px; /* fz20 */
+  color: #000; /* c */
+}
+.menu-con p {
+  font-size: 14px; /* fz14 */
+  color: #999; /* c#999 */
+}
+
+/* 상세정보 */
+.detail-info {
+  background: rgba(
+    45,
+    104,
+    11,
+    0.7
+  ); /* rgba를 쓴 이유는 opacity (투명도)조절하기 위해서 */
+  position: absolute; /* poa */
+  top: 0;
+  left: 0; /* t0+l0 */
+  width: 100%; /* w100p : (절대 배치된 요소는 가로크기가 쪼그라든다. 재설정이 필요)
+  + 퍼센트는 항상 부모를 기준으로 한다! */
+  height: 340px; /* h340 */
+  text-align: center; /* tac : 블록요소가 감싸고 있는 인라인 요소를 가운데로! */
+  padding: 70px 22px 58px; /* p70-22-58 */
+  opacity: 0;
+}
+
+.detail-info dl dt {
+  /* fw600+fz22+c#fff */
+  font-weight: 600;
+  font-size: 22px;
+  color: #fff;
+}
+
+.detail-info dl dt + dt /* 인접형제 선택자 + 부모, 자식등등의 선택자를 교제를 보고 익숙해지는게 매우 좋음
+이유는 : 굳이 클래스를 줄 이유가 없어지기 때문에 */ {
+  /* fw500+fz16+c#e9b863 */
+  font-weight: 500;
+  font-size: 16px;
+  color: #e9b863;
+  margin-top: 10px; /* mt10 */
+}
+
+.detail-info dl dd {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.6
+  ); /* 위와 마찬가지로 (투명도)조절하기 위해서  */
+  margin-top: 15px; /* mt15 */
+}
+
+.detail-info .more {
+  /* 가상요소 2개를 만들기 위한 부모요소 생성 */
+  /* db+w38+h38+bg */
+  display: block;
+  width: 38px;
+  height: 38px;
+  /* background: #000; */
+  margin: 30px auto 0; /*  m20-a-0 -> 세로마진 병합 현상때문에 30px만 계산된다. (큰거 하나) */
+  position: relative; /* por -> 절대 배치 기준점 설정 */
+}
+
+.detail-info .more::before {
+  /* ct+db+w100+h1+bg#fff+poa+t50p+l50p */
+  content: "";
+  display: block;
+  width: 25px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* trft -> 공간기준 중앙 정렬 배치 */
+
+  /* m0-a랑 tac & trft -> 중앙정렬하는 방법3가지 */
+}
+
+.detail-info .more::after {
+  /* ct+db+poa+t50p+l50%+trft+w1+h100%+bg#f00*/
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 1px;
+  height: 25px;
+  background: rgb(255, 255, 255);
+}
+
+/* hover effect */
+
+.menu-list li:hover .detail-info {
+  opacity: 1; /* op1 : 투명도로 숨겨놨던것을 나오게금 해준다.  */
+  transition: 0.3s; /* trs.4s : 자주 쓰게 되는거고,. A상태에서 B상태로 갈 때 0.4s동안 일어나게 함 (즉시 -> 0.4s) */
+}
+
+.menu-list li:hover .detail-info .more::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: 0.3s 0.2s; /* trs.4s -> 딜레이 줄 수 있음 2개의 초를 주면 */
+}

@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+/* design reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none; /* lisn */
+}
+
+img {
+  vertical-align: top; /* vat */
+}
+
+body {
+  font: 15px/1.6 sans-serif;
+}
+
+.home-service {
+  width: 1085px;
+  margin: 0 auto;
+  /* background: #ff5; */
+  padding: 45px 0; /* p45-0 */
+  text-align: center; /* tac */
+}
+
+.title-box {
+  /* background: #f00; bg#f00 */
+  text-align: center; /* tac */
+}
+
+.title-box h2 {
+  /* fz24+c */
+  font-size: 24px;
+  color: #000;
+}
+.title-box p {
+  margin-top: 10px; /* mt10 */
+}
+
+.home-service > ul {
+  /* background: #5f5; bg#5f5 */
+  margin-top: 35px; /* mt35 */
+  display: flex; /* df */
+  justify-content: space-between; /* jcsb */
+}
+
+.home-service > ul > li {
+  /* w301+h394+bd */
+  width: 301px;
+  height: 394px;
+  /* border: 1px solid #000; */
+}
+
+.home-service > ul > li > dl {
+  margin-top: 10px; /* mt10 */
+}
+.home-service > ul > li > dl > dt {
+  /* fz18+c */
+  font-size: 18px;
+  color: #000;
+}
+.home-service > ul > li > dl > dd {
+  /* mt10 */
+  margin-top: 10px;
+}
+
+.process {
+  background: #f7f7f7; /* bg#f7f7f7 */
+  padding: 100px 0; /* p100-0 */
+}
+
+.process > .inner {
+  /* w1131+m0-a+bg#5f5 */
+  width: 1131px;
+  margin: 0 auto;
+}
+
+.process ol {
+  /* Alt누르고 밑으로 가는 화살표 */
+  background: #5f5; /* bg#5f5 */
+  display: flex; /* df */
+  justify-content: space-between; /* jcsb ->균등하게 나누어가져라 */
+  margin-top: 40px; /* mt40 */
+}
+
+.process ol li {
+  border: 1px solid #000; /* bd */
+  /* w342+h354+bg#fff+bdrs10 */
+  width: 342px;
+  height: 354px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 50px 25px 40px; /* p50-25-40 */
+}
+
+.process ol li strong {
+  color: #f00;
+}
+
+.process ol li strong::after {
+  content: "";
+  /* db+w110+h110+bg */
+  display: block;
+  width: 110px;
+  height: 110px;
+
+  /* m30-a-0 */
+  margin: 30px auto 0;
+}
+
+/* 가상 클래스로 li구별해서 nth-child로 넣음 */
+.process ol li:nth-child(1) strong::after {
+  background: #000 url(../img/step1.png) no-repeat 0 0;
+}
+.process ol li:nth-child(2) strong::after {
+  background: #000 url(../img/step2.png) no-repeat 0 0;
+}
+.process ol li:nth-child(3) strong::after {
+  background: #000 url(../img/step3.png) no-repeat 0 0;
+}
+
+/*
+  .process 클래스 내부의 ol 리스트 항목(li)들에 포함된 h3 요소에 
+  가상요소 ::before와 ::after를 추가하여 스타일링
+
+.process ol li h3::before {
+  content: "BEFORE"; content 속성 : 필수, 가상요소에 텍스트 "BEFORE" 추가
+  color: #000;  글자 색상을 검정색(#000)으로 설정 
+  font-size: 30px;  글자 크기를 30px로 설정 
+}
+
+.process ol li h3::after {
+  content: ""; content 속성 : 필수, 비어있는 콘텐츠 설정 
+  display: block;  display를 블록 요소로 설정하여 너비와 높이 적용 가능 
+ 너비 20px, 높이 20px, 둥근 모서리 100% (완전한 원형), 배경색 검정색(#000) *
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #000;
+} 
+*/

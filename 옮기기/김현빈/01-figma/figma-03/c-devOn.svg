@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#d0b7ff"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="사각형_823" data-name="사각형 823" width="32" height="32" stroke="#707070" stroke-width="1" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_25" data-name="마스크 그룹 25" clip-path="url(#clip-path)">
+    <circle id="타원_72" data-name="타원 72" cx="6" cy="6" r="6" transform="translate(10 10)" fill="#eadeff" opacity="0.2"/>
+    <path id="패스_5502" data-name="패스 5502" d="M18.746,3.451A11.458,11.458,0,0,0,5.461,5.014v-1.9A1.055,1.055,0,0,0,4.344,2,1.055,1.055,0,0,0,3.228,3.116V8.14A1.055,1.055,0,0,0,4.344,9.257H9.368A1.055,1.055,0,0,0,10.485,8.14,1.055,1.055,0,0,0,9.368,7.024H6.689a8.866,8.866,0,0,1,6.475-2.791A8.958,8.958,0,0,1,22.1,13.164a1.116,1.116,0,0,0,2.233,0A11.2,11.2,0,0,0,18.746,3.451Zm3.238,13.62H16.96a1.116,1.116,0,0,0,0,2.233h2.679A8.866,8.866,0,0,1,13.164,22.1a8.958,8.958,0,0,1-8.931-8.931,1.055,1.055,0,0,0-1.116-1.116A1.055,1.055,0,0,0,2,13.164,11.132,11.132,0,0,0,20.867,21.2v2.01a1.116,1.116,0,0,0,2.233,0V18.188A1.119,1.119,0,0,0,21.984,17.071Z" transform="translate(2.836 2.836)" fill="#eadeff"/>
+  </g>
+</svg>

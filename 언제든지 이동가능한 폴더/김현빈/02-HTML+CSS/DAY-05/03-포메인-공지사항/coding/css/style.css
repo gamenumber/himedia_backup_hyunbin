@@ -1,0 +1,95 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* Design Reset */
+
+* {
+  /* m0+p0+bxbb */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none; /* lisn */
+}
+
+img {
+  vertical-align: top; /* vat */
+  max-width: 100%; /* maxw : 아무리 커져도 니 크기까지만 커져라 */
+}
+
+body {
+  font: 16px/1.6 Pretendard, sans-serif; /* f */
+}
+
+a {
+  text-decoration: none; /* tdn */
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #738924;
+}
+
+/* 디자인 시작 */
+
+.board {
+  /* w1078+m0-a+bg#ff5 */
+  width: 1078px;
+  margin: 0 auto;
+  background: #ff5;
+}
+
+.board h1 {
+  display: none; /* dn : 날리기 */
+}
+
+.board-list {
+  background: #5f5;
+  display: flex; /* df */
+  flex-wrap: wrap; /* fxww : 플렉스박스 줄바꿈 */
+  gap: 50px 29px; /* g50-29 : gap으로 여백 나누기 */
+}
+
+.board-list li {
+  border: 1px solid #000;
+  /* w340+h420 */
+  width: 340px;
+  height: 420px;
+  background: #fff; /* bg#fff */
+  position: relative; /* por : 직계 자손, 절대배치 기준점 */
+}
+
+.news-item {
+}
+.news-item em {
+  /* w47+h47+bg#f00 */
+  width: 47px;
+  height: 47px;
+  background: url(../img/ico-not.png) no-repeat 0 0;
+  display: block;
+  /* poa+t0+l0 */
+  position: absolute; /* -> 자동으로 블록화 = flex item */
+  top: 15px;
+  left: 20px;
+
+  /* 텍스트 날리기 */
+  /* color: transparent; */
+  text-indent: -9999px; /* ti-9999 : 간격 밀어버리기 */
+  overflow: hidden; /* 텍스트 날리기 */
+}
+
+.news-item .category {
+  /* poa+t20+r20+bd+p7-21+c#fff+fz13 */
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 1px solid #fff;
+  padding: 7px 21px;
+  font-size: 13px;
+}

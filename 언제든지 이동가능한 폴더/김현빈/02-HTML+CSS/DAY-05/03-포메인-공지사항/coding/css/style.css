@@ -23,6 +23,8 @@ img {
 
 body {
   font: 16px/1.6 Pretendard, sans-serif; /* f */
+  word-break: keep-all; /* 어절 단위 줄바꿈 */
+  color: #666;
 }
 
 a {
@@ -41,7 +43,7 @@ a:hover {
   /* w1078+m0-a+bg#ff5 */
   width: 1078px;
   margin: 0 auto;
-  background: #ff5;
+  /* background: #ff5; */
 }
 
 .board h1 {
@@ -49,14 +51,14 @@ a:hover {
 }
 
 .board-list {
-  background: #5f5;
+  /* background: #5f5; */
   display: flex; /* df */
   flex-wrap: wrap; /* fxww : 플렉스박스 줄바꿈 */
   gap: 50px 29px; /* g50-29 : gap으로 여백 나누기 */
 }
 
 .board-list li {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   /* w340+h420 */
   width: 340px;
   height: 420px;
@@ -64,20 +66,20 @@ a:hover {
   position: relative; /* por : 직계 자손, 절대배치 기준점 */
 }
 
-.news-item {
-}
 .news-item em {
   /* w47+h47+bg#f00 */
   width: 47px;
   height: 47px;
   background: url(../img/ico-not.png) no-repeat 0 0;
   display: block;
+
   /* poa+t0+l0 */
   position: absolute; /* -> 자동으로 블록화 = flex item */
   top: 15px;
   left: 20px;
+  z-index: 1;
 
-  /* 텍스트 날리기 */
+  /* 텍스트 날리기 방법 */
   /* color: transparent; */
   text-indent: -9999px; /* ti-9999 : 간격 밀어버리기 */
   overflow: hidden; /* 텍스트 날리기 */
@@ -92,4 +94,101 @@ a:hover {
   border: 1px solid #fff;
   padding: 7px 21px;
   font-size: 13px;
+  z-index: 1;
+}
+
+.news-pic {
+  height: 240px;
+  /* background: rebeccapurple; */
+  position: relative; /* 직계 자손인 .news-pic::after의 기준 */
+}
+
+.news-pic::after {
+  /* ct+poa+t0+l0+w100p+h100p+bg+op.6 */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.6;
+  transition: 0.4s;
+}
+
+/* mouse hover effect */
+.board-list li:hover .news-pic::after {
+  opacity: 0.1;
+}
+
+.news-pic img {
+  /* w100p+h100p */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 반응형 할 때 매우 좋음 -> 비율을 맞추면서 작아짐 (컨테인과 다른부분 : 짤려도 빈공간이 안생기지만 컨테인은 생김) */
+  /* object-fit: contain;  */
+  /* object-position: 50% 10%; 이미지가 배치되는 position값 */
+}
+
+.news-con {
+  /* p20-0-7 */
+  padding: 20px 0 7px;
+}
+
+.news-con h2 {
+  /* fw600+fz20+c#222+lh1.4 */
+  font-weight: 600;
+  font-size: 20px;
+  color: #222;
+  line-height: 1.4;
+}
+.news-con p {
+  /* mt10+c#999 */
+  margin-top: 10px;
+  color: #999;
+
+  /* 한 줄 말줄임 표시 */
+  /* width: 90%;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; */
+
+  /* 여러 줄 말줄임 표시 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 원하는 줄 수 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.news-con time {
+  /* fw500+fz10+c#676767 */
+  font-weight: 500;
+  font-size: 10px;
+  color: #676767;
+
+  /* poa+b7+l0 */
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* g5 */
+
+  /* w281+h48+bd */
+  width: 281px;
+  height: 48px;
+  border: 1px solid #000;
+  color: #676767;
+
+  /* m65-a-0 */
+  margin: 65px auto 0;
+}
+
+.more::after {
+  content: "+";
+  color: cadetblue;
 }

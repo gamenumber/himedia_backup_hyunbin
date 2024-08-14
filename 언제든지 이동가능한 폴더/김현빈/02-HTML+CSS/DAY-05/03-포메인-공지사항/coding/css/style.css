@@ -101,6 +101,12 @@ a:hover {
   height: 240px;
   /* background: rebeccapurple; */
   position: relative; /* 직계 자손인 .news-pic::after의 기준 */
+  overflow: hidden; /* 처음부터 숨겨버리기 */
+  transition: 0.4s; /* 미리준비 */
+}
+
+.news-pic:hover {
+  border-radius: 30px; /* bdrs30 */
 }
 
 .news-pic::after {
@@ -121,8 +127,14 @@ a:hover {
   opacity: 0.1;
 }
 
+.board-list li:hover img {
+  transform: scale(1.3);
+  transition: 0.4s;
+}
+
 .news-pic img {
   /* w100p+h100p */
+  transition: 0.4s;
   width: 100%;
   height: 100%;
   object-fit: cover; /* 반응형 할 때 매우 좋음 -> 비율을 맞추면서 작아짐 (컨테인과 다른부분 : 짤려도 빈공간이 안생기지만 컨테인은 생김) */

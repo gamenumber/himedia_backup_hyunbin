@@ -21,6 +21,12 @@ Desktop web app -> 로컬 폰트사용가능 여기서는 예를 들어서 prete
 
 Upscayl -> 비트맵 업스케일링 가능한 프로그램 
 
+* 이미지 생성 ai
+
+https://aitestkitchen.withgoogle.com/ko/tools/image-fx
++
+https://app.leonardo.ai/
+
 
 
 

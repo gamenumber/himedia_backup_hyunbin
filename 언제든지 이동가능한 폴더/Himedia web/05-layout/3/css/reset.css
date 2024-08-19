@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+* {
+    /* m0+p0+bxbb */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none; /* lisn */
+}
+
+img {
+    vertical-align: top; /* vat (미세한 틈 없애는 Trigger) */
+}
+
+a {
+    text-decoration: none; /* tdn */
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+body {
+    font: 1rem/1.6 sans-serif; /* f (1rem = 16px)*/
+}

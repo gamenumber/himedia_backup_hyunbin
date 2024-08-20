@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>삼성SCAG</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- header#header+main#container+footer#footer (# -> 고유한 이름을 저장)-->
+
+        <!-- <header id="header">
+            <div class="inner"></div>
+        </header>
+        <main id="container">
+            <section class="visual"></section>
+            <section class="links">
+                <div class="inner"></div>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="inner"></div>
+        </footer> -->
+
+        <!-- inner : 그리드(grid) -->
+        <header id="header">
+            <!-- s: header -->
+            <div class="inner">
+                <!-- nav>h1.logo+ul.gnb+.util-menu -->
+                <nav>
+                    <h1 class="logo">
+                        <!-- a>img -->
+                        <a href="#">
+                            <img src="img/logo.jpg" alt="삼성SCAG" />
+                        </a>
+                    </h1>
+                    <ul class="gnb">
+                        <!-- li*4>a -->
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">제품소개</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">녹색경영</a></li>
+                    </ul>
+                    <div class="util-menu">
+                        <!-- a>img -->
+                        <a href="#">
+                            <img src="img/contact-us.jpg" alt="contact-us" />
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <!-- /e : header -->
+        </header>
+
+        <main id="container">
+            <!-- section.visual+section.links -->
+            <!-- s: visual -->
+            <section class="visual">
+                <h2>메인 비주얼</h2>
+                <div class="slider">
+                    <div class="slide-img">
+                        <img src="img/main_img.jpg" alt="slide-img" />
+                    </div>
+                    <!-- 용도에 따라서 이름 2개를 지어줌 (각각) -->
+                    <a href="#" class="slide-btn btn-prev">이전</a>
+                    <a href="#" class="slide-btn btn-next">다음</a>
+                </div>
+            </section>
+            <!-- /e: visual -->
+
+            <!-- s: links -->
+            <section class="links">
+                <div class="inner">
+                    <h2>주요링크</h2>
+
+                    <!-- ul.link-list>li*3>a>(figure>img[src="img/link-pic$"])+dl>dt+dd -->
+                    <ul class="link-list">
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="img/link-pic1" alt="Recruit" />
+                                </figure>
+                                <dl>
+                                    <dt>Recruit</dt>
+                                    <dd>
+                                        삼성코닝어드밴스드글라스와 함께 할
+                                        인재를 기다립니다.
+                                    </dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="img/link-pic2" alt="Contact Us" />
+                                </figure>
+                                <dl>
+                                    <dt>Contact Us</dt>
+                                    <dd>Network place Information</dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="img/link-pic3" alt="Company" />
+                                </figure>
+                                <dl>
+                                    <dt>Company</dt>
+                                    <dd>
+                                        삼성코닝어드밴스드글라스를 소개합니다.
+                                    </dd>
+                                </dl>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- /e: links -->
+        </main>
+
+        <footer id="footer">
+            <!-- s: footer -->
+            <div class="inner">
+                <!-- .foot-wrap>.foot-logo+.foot-con -->
+                <div class="foot-wrap">
+                    <div class="foot-logo">
+                        <img src="img/foot-logo.jpg" alt="삼성SCAG" />
+                    </div>
+
+                    <div class="foot-con">
+                        <!-- ul.foot-menu>li*4>a -->
+                        <ul class="foot-menu">
+                            <li><a href="#">고객지원</a></li>
+                            <li><a href="#">개인정보 취급방침</a></li>
+                            <li><a href="#">관리자에게 문의</a></li>
+                            <li><a href="#">사이버감사</a></li>
+                        </ul>
+
+                        <!-- Ctrl+H를 이용하여 특정부분을 복사하고, 바꾸기를 클릭하여 넣어주면 한 번에 바꿀 수 있다. -->
+
+                        <p class="copyright">
+                            COPYRIGHT (C) 2014 SAMSUNG CORNING ADVANCED GLASS.
+                            ALL RIGHTS RESERVED.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- /e: footer -->
+        </footer>
+    </body>
+</html>

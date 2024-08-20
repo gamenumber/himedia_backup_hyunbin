@@ -1,1 +1,73 @@
 @charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* 기본디자인 */
+:root /* 피그마 스타일처럼 변수를 선언해서 사용할 수 있다. (댜양한 변수를 선언)*/ {
+    --main-color: #133984;
+    --title-color: #222; /* 진한회색 */
+    --text-color: #666;
+    --line-color: rgba(0, 0, 0, 0.2);
+    --h1: 40px;
+    font-size: 100%; /* fz100p = 16px */
+}
+
+a {
+    text-decoration: none; /* tdn */
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none; /* tdn */
+    color: var(--main-color); /* #133984 -> var로 선언한 변수의 색 가져오기 */
+}
+
+body {
+    font: 1rem /* =16px *//1.3 Pretendard, sans-serif;
+    color: var(--text-color); /* 변수명만 가져오면 var이 자동으로 딸려옴; */
+}
+
+.skip {
+    /* poa+m-1+w1+h1+oh */
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); /* css hidden명령 중에 네이버가 이용했던 방법 */
+}
+
+/* 디자인 시작 */
+
+#header /* id는 # / class는 . */ {
+    /* h91+bdb+bg#fff */
+    height: 91px;
+    border-bottom: 1px solid var(--line-color); /* rgba(0, 0, 0, 0.2) */
+    background: #fff;
+}
+
+.inner {
+    /* w1200+m0-a+bg#ff5 */
+    width: 1200px;
+    margin: 0 auto;
+    background: #ff5;
+    height: 100%; /* h100p (세로크기 상속) */
+}
+
+#header nav {
+    display: flex; /* df */
+    justify-content: space-between; /* jcsb */
+    background: orange;
+    height: 100%; /* h100p (세로크기 상속) */
+    align-items: center; /* aic : 교차축방향 정렬 */
+}
+
+.gnb {
+    display: flex; /* df : 플렉스박스 */
+}
+
+.gnb li a {
+    /* db+p10+bd */
+    display: block;
+    padding: 10px;
+    border: 1px solid #000;
+}

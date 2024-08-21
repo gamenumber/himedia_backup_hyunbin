@@ -91,8 +91,10 @@ body {
 
 .visual {
     /* h496+bg */
+    max-width: 1920px; /* max -> 최대(이하) min 최소(이상)*/
     height: 496px;
-    background: tomato;
+    /* background: tomato; */
+    margin: 0 auto; /* m0-a로 가운데로 보냄 */
 }
 
 .slider {

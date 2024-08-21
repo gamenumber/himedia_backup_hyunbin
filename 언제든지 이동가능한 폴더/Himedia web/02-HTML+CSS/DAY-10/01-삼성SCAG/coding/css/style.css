@@ -8,6 +8,9 @@
     --text-color: #666;
     --line-color: rgba(0, 0, 0, 0.2);
     --h1: 40px;
+    --basic-transition: all ease-in-out 0.4s;
+    --white10: rgba(255, 255, 255, 0.1);
+    --white100: rgba(255, 255, 255, 1);
     font-size: 100%; /* fz100p = 16px */
 }
 
@@ -49,7 +52,7 @@ body {
     /* w1200+m0-a+bg#ff5 */
     width: 1200px;
     margin: 0 auto;
-    background: #ff5;
+    /* background: #ff5; */
     height: 100%; /* h100p (세로크기 상속) */
 }
 
@@ -114,13 +117,15 @@ body {
     top: 50%;
     width: 70px;
     height: 70px;
-    border: 1px solid #fff;
+    border: 1px solid var(--white10);
     transform: translateY(-50%); /* trfty -> 자기 자신의 절반값을 올림 */
     background: no-repeat 50%;
     color: transparent;
     /* background-size: contain; */
     background-size: 30% auto; /* css에서 이미지를 넣으면 위치 선정이 쉽고 내가 이미지를 줄일 수 있다는 장점이 있음(들어가는 공간을 기준으로함). 
     auto -> 비율 유지하면서 자동고정 */
+
+    transition: var(--basic-transition); /* trs.4s */
 }
 
 .btn-prev {
@@ -131,4 +136,79 @@ body {
 .btn-next {
     right: 30px; /* r30 */
     background-image: url(../img/icon_ar_r.png);
+}
+
+.slide-btn:hover {
+    border: 1px solid var(--white100);
+}
+
+.links {
+    /* p40-0-55 */
+    padding: 40px 0 55px;
+}
+
+.link-list {
+    display: flex; /* df */
+}
+
+.link-list li {
+    /* border: 1px solid #000; */
+    width: 33.333%; /* w33.333p */
+}
+
+.link-list li a {
+    display: flex; /* df */
+    gap: 20px; /* g20 */
+    align-items: center; /* 교차축 기준 중앙정렬 */
+}
+
+.link-list li a dl dt {
+    /* fz13+fw700+c */
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.link-list li a dl dd {
+    /* fz13+mt5+c */
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+footer {
+    border-top: 1px solid var(--line-color); /* bdt */
+    padding: 50px 0; /* p50-0 */
+}
+
+.foot-wrap {
+    display: flex; /* df */
+    justify-content: center; /* jcc */
+    gap: 25px; /* g25 */
+}
+
+.foot-menu {
+    display: flex;
+    margin-left: -10px; /* ml-10 */
+}
+
+/* .foot-menu li {
+    border: 1px solid #000;
+} */
+
+.foot-menu li a {
+    /* db+p0-10+fz12 */
+    display: block;
+    padding: 0 10px;
+    font-size: 12px;
+    border-right: 1px solid var(--line-color); /* bdr */
+}
+
+.copyright {
+    /* mt12+fz9 */
+    margin-top: 12px;
+    font-size: 9px;
+}
+
+.foot-menu li:last-child a {
+    border: none; /* bdn */
 }

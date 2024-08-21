@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <a href="#container" class="skip">본문 바로가기</a>
+        <a href="#container" class="hidden">본문 바로가기</a>
         <!-- header#header+main#container+footer#footer (# -> 고유한 이름을 저장)-->
 
         <!-- <header id="header">
@@ -58,14 +58,19 @@
             <!-- section.visual+section.links -->
             <!-- s: visual -->
             <section class="visual">
-                <h2>메인 비주얼</h2>
+                <h2 class="hidden">메인 비주얼</h2>
                 <div class="slider">
                     <div class="slide-img">
                         <img src="img/main_img.jpg" alt="slide-img" />
                     </div>
                     <!-- 용도에 따라서 이름 2개를 지어줌 (각각) -->
-                    <a href="#" class="slide-btn btn-prev">이전</a>
-                    <a href="#" class="slide-btn btn-next">다음</a>
+                    <a href="#" class="slide-btn btn-prev"
+                        ><i class="hidden">이전</i></a
+                    >
+                    <a href="#" class="slide-btn btn-next"
+                        ><i class="hidden">다음</i></a
+                    >
+                    <!-- 텍스트 날리기 방법 -->
                 </div>
             </section>
             <!-- /e: visual -->
@@ -73,7 +78,7 @@
             <!-- s: links -->
             <section class="links">
                 <div class="inner">
-                    <h2>주요링크</h2>
+                    <h2 class="hidden">주요링크</h2>
 
                     <!-- ul.link-list>li*3>a>(figure>img[src="img/link-pic$"])+dl>dt+dd -->
                     <ul class="link-list">

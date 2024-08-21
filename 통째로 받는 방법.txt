@@ -1,0 +1,32 @@
+통째로 받는 방법 (Windows)
+
+1. google에 "Git"이라고 입력해서 1번째에 뜨는 걸 선택한다.
+
+2. windows를 선택해서 깔고나서 설치할 때는 따로 만질 것이 없으므로
+  뭐라고 팝업이 뜨면 다 next를 누른다.
+
+3. 다 깔리고 나서 바탕화면에서 마우스 우클릭을 하고 
+	"Open git Bash here"을 클릭한다.
+
+4. 그러면 이상한 터미널 창이 뜰 텐데, 당황하지말고 
+	"git init"을 입력한다.
+
+5. 그 다음에 
+	"git clone https://github.com/gamenumber/himedia_backup_hyunbin.git"를 입력하면 통째로 받아진다.
+
+------------------------------------------------------------------------------------------------------------------
+
+통째로 받는 방법 (Mac)
+
+1. 터미널을 열고 
+"/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+이걸 입력한다.
+
+2. 패스워드를 물어본다면 맥 비밀번호를 입력하면된다.
+
+3. 다 깔리면 "brew install git"라고 치면 설치완료
+
+4. "cd ~/Desktop"을 입력한다.
+
+5. 그 다음에 
+	"git clone https://github.com/gamenumber/himedia_backup_hyunbin.git"를 입력하면 통째로 받아진다.

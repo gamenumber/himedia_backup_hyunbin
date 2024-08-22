@@ -1,1 +1,76 @@
 @charset "utf-8";
+
+.inner {
+    /* w1180+m0-a+bg#ff5 */
+    width: 1180px;
+    margin: 0 auto;
+    background: #ff5;
+}
+
+#header {
+    /* h104+bg#fff */
+    /* height: 104px; */
+    background: #fff;
+}
+
+#header nav {
+    height: 104px;
+    /* background: tomato; */
+    display: flex; /* df : 플렉스 박스 */
+    justify-content: space-between; /* jcsb : 여백 균등분배 */
+    align-items: center; /* aic : 교차축 방향 기준 중앙정렬 */
+}
+
+.logo a {
+    /* db+w225+h50+bg */
+    display: block;
+    width: 225px;
+    height: 50px;
+    background: url(../img/logo.png) no-repeat 0 50%;
+}
+
+.gnb {
+    display: flex; /* df */
+}
+
+.gnb li a {
+    /* db+p10-20+bd+fw700+c */
+    display: block;
+    padding: 0px 20px;
+    border: 1px solid #000;
+    font-weight: 700;
+    color: var(--title-color);
+}
+
+.gnb li a b {
+    background: tomato;
+    display: block;
+    padding: 10px 0;
+    position: relative; /* after의 기준점 */
+}
+
+.gnb li a b::after {
+    /* ct+poa+b0+l0+w100p+h3+bg */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(
+        -50%
+    ); /* trftx : 자기 크기의 절반을 반대로 움직이게 함 */
+    width: 0%;
+    height: 3px;
+    background: var(--main-color);
+    transition: var(--basic-transition);
+}
+
+.gnb li a:hover b::after {
+    width: 100%; /* w100p로 늘려줌 */
+}
+.btn-search {
+    /* w54+h54+bd */
+    width: 54px;
+    height: 54px;
+    border: 1px solid #000;
+    background: #fff url(../img/ico-search.png) no-repeat 50%;
+}

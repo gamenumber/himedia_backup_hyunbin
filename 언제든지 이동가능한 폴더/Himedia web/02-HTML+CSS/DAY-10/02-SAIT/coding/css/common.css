@@ -1,7 +1,46 @@
 @charset "utf-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 
+/* 기본디자인 */
+:root /* 피그마 스타일처럼 변수를 선언해서 사용할 수 있다. (댜양한 변수를 선언)*/ {
+    --main-color: #13289f;
+    --title-color: #333;
+    --text-color: #666;
+    --line-color: rgba(0, 0, 0, 0.2);
+    --h1: 40px;
+    --basic-transition: all ease-in-out 0.4s;
+    --white10: rgba(255, 255, 255, 0.1);
+    --white100: rgba(255, 255, 255, 1);
+    --gray-light: #e5e5e5;
+    --gray-dark: #1f1f1f;
+    font-size: 100%; /* fz100p = 16px */
+}
 body {
-    font-family: "Noto Sans KR", sans-serif;
+    font: 400 1rem/1.6 "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none; /* tdn */
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none; /* tdn */
+    color: var(--main-color); /* #133984 -> var로 선언한 변수의 색 가져오기 */
+}
+
+.hidden {
+    /* poa+m-1+w1+h1+oh */
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); /* css hidden명령 중에 네이버가 이용했던 방법 */
+}
+
+button {
+    cursor: pointer; /* cup */
 }

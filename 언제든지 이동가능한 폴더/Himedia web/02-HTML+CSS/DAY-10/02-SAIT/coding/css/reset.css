@@ -51,6 +51,7 @@ dd,
 ol,
 ul,
 li,
+button,
 fieldset,
 form,
 label,
@@ -127,4 +128,7 @@ q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+button {
+    cursor: pointer; /* cup */
 }

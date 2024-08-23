@@ -74,3 +74,93 @@
     border: 1px solid #000;
     background: #fff url(../img/ico-search.png) no-repeat 50%;
 }
+
+.visual {
+    /* mw1920+m0-a+h584 */
+    min-width: 1920px;
+    margin: 0 auto;
+    height: 584px;
+}
+
+.visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-fit: contain; */
+    /* image-rendering: crisp-edges; or pixelated */
+    /* object-position: 50% 20%; */
+}
+
+.sec-title {
+    /* fw700+fz34+c+tac */
+    font-weight: 700;
+    font-size: 34px;
+    color: var(--title-color);
+    text-align: center;
+}
+
+.research {
+    /* p80+0-66 */
+    padding: 80px 0 66px;
+    background: var(--gray-light);
+}
+
+.research-list {
+    /* background: green; */
+    margin-top: 61px;
+    display: flex; /* 플렉스 박스 */
+    flex-wrap: wrap; /* fxww : 부모가 자식을 감싸라! */
+    gap: 20px; /* g20 */
+}
+
+.research-list li {
+    /* border: 1px solid #000; */
+    /* w380+h200 */
+    width: 380px;
+    height: 200px;
+    /* flex-shrink: 0; 쉬링크 그로우 -> 줄어드는 가로 기본값(줄어들지 말아라) */
+    background: #fff;
+    padding: 36px 38px; /* p36-38 */
+}
+
+.research-list li a {
+    display: flex;
+    gap: 29px;
+}
+.research-list li a::before {
+    /* ct+db+w71+h60+bg */
+    content: "";
+    display: block;
+    width: 71px;
+    height: 60px;
+    background: no-repeat 50%;
+    flex-shrink: 0;
+}
+
+.research-list li:nth-child(1) a::before {
+    background-image: url(../img/research-icon01.png);
+}
+.research-list li:nth-child(2) a::before {
+    background-image: url(../img/research-icon02.png);
+}
+.research-list li:nth-child(3) a::before {
+    background-image: url(../img/research-icon03.png);
+}
+.research-list li:nth-child(4) a::before {
+    background-image: url(../img/research-icon04.png);
+}
+.research-list li:nth-child(5) a::before {
+    background-image: url(../img/research-icon05.png);
+}
+.research-list li:nth-child(6) a::before {
+    background-image: url(../img/research-icon06.png);
+}
+.research-list li:nth-child(7) a::before {
+    background-image: url(../img/research-icon07.png);
+}
+.research-list li:nth-child(8) a::before {
+    background-image: url(../img/research-icon08.png);
+}
+.research-list li:nth-child(9) a::before {
+    background-image: url(../img/research-icon09.png);
+}

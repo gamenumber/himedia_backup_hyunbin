@@ -4,7 +4,7 @@
     /* w1180+m0-a+bg#ff5 */
     width: 1180px;
     margin: 0 auto;
-    background: #ff5;
+    /* background: #ff5; */
 }
 
 #header {
@@ -120,7 +120,8 @@
     height: 200px;
     /* flex-shrink: 0; 쉬링크 그로우 -> 줄어드는 가로 기본값(줄어들지 말아라) */
     background: #fff;
-    padding: 36px 38px; /* p36-38 */
+    padding: 36px 18px 36px 38px; /* p36-18-36-38 */
+    position: relative; /* 기준점 -> 라인(4개)의  */
 }
 
 .research-list li a {
@@ -163,4 +164,132 @@
 }
 .research-list li:nth-child(9) a::before {
     background-image: url(../img/research-icon09.png);
+}
+
+.research-list li dl dt {
+    /* fw700+fz18+c */
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--title-color);
+}
+.research-list li dl dd {
+    /* fz14+mt18 */
+    font-size: 14px;
+    margin-top: 18px;
+}
+
+/* 라인 호버 애니메이션 효과 */
+.research-list li::before {
+    /* ct+poa+t0+r0+w0p+h4+bg */
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--main-color);
+    transition: var(--basic-transition);
+}
+.research-list li::after {
+    /* ct+poa+b0+l0+w0p+h4+bg */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--main-color);
+    transition: var(--basic-transition);
+}
+
+.research-list li:hover::before,
+.research-list li:hover::after {
+    width: 100%; /* w100p */
+}
+
+/* 라인 2개가 더 필요하므로, 절대 배치된 dl을 가져오는게 좋지 않을까? */
+
+/* 공통 */
+.research-list li dl::before,
+.research-list li dl::after {
+    /* ct+poa+w4+h0p+bg+trs.4s */
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 0%;
+    background: var(--main-color);
+    transition: var(--basic-transition);
+}
+
+/* 개별 */
+.research-list li dl::before {
+    /* t0+l0 */
+    top: 0;
+    left: 0;
+}
+.research-list li dl::after {
+    /* b0+r0 */
+    bottom: 0;
+    right: 0;
+}
+
+.research-list li:hover dl::before,
+.research-list li:hover dl::after {
+    height: 100%; /* h100p */
+}
+
+.research-list li:hover {
+    box-shadow: 5px 7px 20px rgba(0, 0, 0, 0.2);
+}
+
+.join {
+    /* mih690+bg */
+    min-height: 690px;
+    /* background: url(../img/process-bg.jpg) no-repeat 0 0; */
+    background: url(../img/e-omong.jpg) no-repeat 0 0 / cover
+        /* 비율 유지 & 꽉 채우기 */;
+    background-attachment: fixed;
+    position: relative; /* 기준점 : dim처리 */
+    padding: 80px 0; /* p80-0 */
+}
+
+.join::after {
+    /* ct+poa+t0+l0+w100p+h100p+bg */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.text-con {
+    /* bg#f55 */
+    /* background: #f55; */
+    /* w650+mt119+c#fff */
+    width: 650px;
+    margin-top: 119px;
+    color: #fff;
+}
+
+.join .inner {
+    /* por+z1 */
+    position: relative;
+    z-index: 1; /* 포지션을 갖게 해서 z-index를 이용해 3차원으로 띄움 (단 absolute는 아니어야함 그래야 편해짐 미래에) */
+}
+
+.text-con h4 {
+    /* fwb+fz44 */
+    font-weight: bold;
+    font-size: 44px;
+}
+.text-con p {
+    /* fz20+mt31 */
+    font-size: 20px;
+    margin-top: 31px;
+}
+.text-con .more {
+    /* mt34 */
+    margin-top: 34px;
 }

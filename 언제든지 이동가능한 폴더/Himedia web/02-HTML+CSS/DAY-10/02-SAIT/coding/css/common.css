@@ -10,6 +10,7 @@
     --h1: 40px;
     --basic-transition: all ease-in-out 0.4s;
     --white10: rgba(255, 255, 255, 0.1);
+    --white50: rgba(255, 255, 255, 0.5);
     --white100: rgba(255, 255, 255, 1);
     --gray-light: #e5e5e5;
     --gray-dark: #1f1f1f;

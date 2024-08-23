@@ -37,13 +37,13 @@
     /* db+p10-20+bd+fw700+c */
     display: block;
     padding: 0px 20px;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     font-weight: 700;
     color: var(--title-color);
 }
 
 .gnb li a b {
-    background: tomato;
+    /* background: tomato; */
     display: block;
     padding: 10px 0;
     position: relative; /* after의 기준점 */
@@ -261,6 +261,14 @@
     left: 0;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    transition: var(--basic-transition);
+}
+
+.join:hover::after {
+    backdrop-filter: blur(
+        6px
+    ); /* backdropf -> 자기 자신이 놓여있는 그 밑에 들어감; */
     background: rgba(0, 0, 0, 0.6);
 }
 
@@ -279,6 +287,10 @@
     z-index: 1; /* 포지션을 갖게 해서 z-index를 이용해 3차원으로 띄움 (단 absolute는 아니어야함 그래야 편해짐 미래에) */
 }
 
+.join .sec-title {
+    color: #fff; /* c#fff */
+}
+
 .text-con h4 {
     /* fwb+fz44 */
     font-weight: bold;
@@ -290,6 +302,93 @@
     margin-top: 31px;
 }
 .text-con .more {
-    /* mt34 */
+    /* mt34+df+fw700+fz18 */
     margin-top: 34px;
+    display: flex; /* 블록화 대신에 flex로 대체 */
+    font-weight: 700;
+    font-size: 18px;
+    align-items: center; /* aic */
+    gap: 10px; /* g10 */
+}
+
+.text-con .more:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.text-con .more::after {
+    /* ct+db+w18+h18+bg+mt6 */
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url(../img/ico-more.png) no-repeat 50%;
+    margin-top: 6px;
+}
+
+#footer {
+    /* p47-0-59+bg+c */
+    padding: 47px 0 59px;
+    background: var(--gray-dark);
+    color: rgba(--white50);
+}
+
+.foot-menu {
+    display: flex;
+    padding: 31px 0;
+    margin-left: -16px; /* ml-16 : 왼쪽에 딱 붙는 느낌을 주려고 일부러 전체 요소를 이용해서 붙임 */
+}
+
+.foot-menu li a {
+    /* db+p0-16+bd */
+    display: block;
+    padding: 0 16px;
+    /* border: 1px solid red; */
+    font-weight: 700;
+    font-size: 14px;
+
+    position: relative;
+}
+
+.foot-menu li a:hover {
+    text-decoration: underline;
+    color: var(--white50);
+}
+
+.foot-menu li a::after {
+    /* ct+poa+t50p+r0+trfty+w1+h10+bg */
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 10px;
+    background: var(--white10);
+}
+
+.foot-menu li:last-child a::after {
+    display: none; /* dn */
+}
+
+.foot-con {
+    border-top: 1px solid var(--white10);
+    padding: 31px 0;
+    /* margin-top: 31px; */
+    display: flex; /* df */
+    justify-content: space-between; /* jcsb */
+    align-items: center; /* aic */
+}
+
+.foot-text p + p /* 형이 없는 p */ {
+    /* fw700+mt5 */
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.foot-logo {
+    /* db+w225+h50+bg */
+    display: block;
+    width: 225px;
+    height: 50px;
+    background: url(../img/foot-logo.png) no-repeat 0 50%;
 }

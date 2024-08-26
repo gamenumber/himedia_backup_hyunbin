@@ -70,4 +70,15 @@ hr,
     display: block;
     width: 17.9rem;
     height: 5rem;
+    background: url(../img/logo.svg) no-repeat 0 0;
+}
+
+.util-menu a {
+    /* db+w4r+h4r+bg */
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background: url(../img/ico-login.svg) no-repeat 50%;
+    border: 1px solid #000; /* bd */
+    background-repeat: 50%; /* br50p */
 }

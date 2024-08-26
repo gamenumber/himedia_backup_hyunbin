@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>welcome to imaginary</title>
+        <link rel="stylesheet" href="css/reset.css">
     </head>
     <body>
         <a href="#main" class="hidden">본문 바로가기</a>
@@ -131,7 +132,34 @@
         <hr />
 
         <!-- s: footer -->
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <!-- .inner>foot-con>.foot-logo+address -->
+            <div class="inner">
+                <foot-con>
+                    <div class="foot-logo"><i class="hidden">imaginary</i></div>
+                    <address>
+                        <!-- dl>(dt+dd)*4+p -->
+                        <dl>
+                            <dt>address</dt>
+                            <dd>경기도 고양시 일산동구 탄중로 416</dd>
+                            
+                            <dt>tel</dt>
+                            <dd>031.866.1234</dd>
+
+                            <dt>fax</dt>
+                            <dd>02.6008.1234</dd>
+
+                            <dt>e-mail</dt>
+                            <dd>imaginary@gmail.com</dd>
+                        </dl>
+                        <p>Copyright &copy; 2024 imaginary. All Right Reserved</p>
+                    </address>
+                </foot-con>
+            </div>
+        </footer>
         <!-- //e: footer -->
+
+        <!-- button.btn-top>i.hidden{TOP} -->
+        <button type="button" class="btn-top"><i class="hidden">TOP</i></button>
     </body>
 </html>

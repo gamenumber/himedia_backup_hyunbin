@@ -81,5 +81,5 @@ hr,
     height: 4rem;
     background: url(../img/ico-login.svg) no-repeat 50%;
     border: 1px solid #000; /* bd */
-    background-repeat: 50%; /* br50p */
+    border-radius: 50%; /* br50p */
 }

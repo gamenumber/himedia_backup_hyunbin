@@ -20,6 +20,8 @@ html {
 body {
     font: 1.6rem/1.5 Pretendard, sans-serif;
     color: var(--text-color);
+    text-transform: capitalize; /* ttc : 영어 단어의 첫 글자를 대문자로 바꾸는 코드 */
+    word-break: keep-all; /* wbka : 어절 단위의 줄바꿈 */
 }
 
 a {
@@ -72,6 +74,42 @@ hr,
     width: 17.9rem;
     height: 5rem;
     background: url(../img/logo.svg) no-repeat 0 0;
+}
+
+.gnb {
+    display: flex; /* df : 플렉스 박스 활성화 */
+}
+
+.gnb li a {
+    /* db+p1r-3r+fw700+fz2r+c+por */
+    display: block;
+    padding: 1rem 3rem;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--title-color);
+    position: relative; /* 직계조상 기준점 */
+}
+
+.gnb li a::after {
+    /* ct+db+poa+t0+l0p+trftx+w1rem+h1rem+bdrs50p+bg+op0+trs.4s */
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: var(--main-color);
+    opacity: 0;
+    transition: 0.4s; /* 호버효과 미리 대기 */
+}
+
+.gnb li a:hover::after {
+    /* t0+op1 */
+    top: 0; /* 마치 떨어지는 것처럼 호버효과가 나옴! */
+    opacity: 1;
 }
 
 .util-menu a {

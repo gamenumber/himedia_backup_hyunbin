@@ -164,7 +164,7 @@ hr,
     top: 50%;
     /* left: 288px; */
     left: 15%;
-    transform: translateY(50%);
+    transform: translateY(-50%);
     /* background: #f00; */
 }
 

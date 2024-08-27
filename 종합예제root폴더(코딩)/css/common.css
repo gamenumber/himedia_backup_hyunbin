@@ -134,7 +134,7 @@ hr,
     min-width: 192rem;
     margin: 0 auto;
     height: 64.6rem;
-    background: #f00;
+    /* background: #f00; */
     position: relative; /* 기준점 */
     overflow: hidden;
 }

@@ -159,13 +159,14 @@ hr,
 }
 
 .visual-title {
-    /* poa+t50p+l288+trfty+bg */
+    /* poa+t50p+l288+trfty+bg+z1 */
     position: absolute;
     top: 50%;
     /* left: 288px; */
     left: 15%;
     transform: translateY(-50%);
     /* background: #f00; */
+    z-index: 1;
 }
 
 .visual-title h2 {
@@ -184,4 +185,41 @@ hr,
 .visual-title p strong {
     /* fw600*/
     font-weight: 600;
+}
+
+.visual::after {
+    /* ct+poa+t0+l0+r0+b0+bg+op0.6(또는 rgba()) */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; /* 가로세로 꽉차라 */
+    background: #000;
+    opacity: 0.6;
+
+    /* 마우스와 관계없는 요소로 만들 수 있는 코딩방법 */
+    pointer-events: none; /* 마우스와 관련한 효과를 없애라 */
+    user-select: none; /* 유저가 선택하지 못하게 만드는 효과 */
+}
+
+.intro {
+    /* p12r-0-14r+tac */
+    padding: 12rem 0 14rem;
+    text-align: center;
+}
+
+.intro-title h3 {
+    /* fw700+fz4.8r+c */
+    font-weight: 700;
+    font-size: 4.8rem;
+    color: var(--title-color);
+}
+.intro-title p {
+    /* fw500+fz2.4r+mt2.4r+w74r+m0-a  */
+    font-weight: 500;
+    font-size: 2.4rem;
+    width: 74rem;
+    margin: 0 auto;
+    margin-top: 2.4rem;
 }

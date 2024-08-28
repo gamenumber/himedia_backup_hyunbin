@@ -14,10 +14,17 @@
     --white60: rgba(255, 255, 255, 0.6);
 }
 
+/* 선택할 때의 가상요소 ::selection */
+::selection {
+    background: var(--main-color);
+    color: #fff;
+}
+
 /* root */
 html {
     /* font-size: 100%; fz100p = 16px */
     font-size: 62.5%; /* fz62.5p = 10px = 1rem  */
+    scroll-behavior: smooth; /* 상단으로의 이동을 부드럽게만드는 명령어 */
 }
 body {
     font: 1.6rem/1.5 Pretendard, sans-serif;
@@ -235,7 +242,7 @@ hr,
 
 .intro-list li {
     /* bd+w30r+mih26.2r */
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     width: 30rem;
     min-height: 26.2rem;
     display: flex; /* df */
@@ -393,17 +400,39 @@ address {
 address dl {
     display: flex; /* df : 플렉스박스 */
     flex-wrap: wrap; /* fxww (줄바꿈) */
-    gap: 1.6rem; /* g1.6r */
+    gap: 0.8rem 1.6rem; /* 로우겝이 먼저 언급되고 그 다음에 컬럼 갭 */
     width: 28.5rem; /* w28.5r */
     font-size: 1.5rem; /* fz1.5r */
 }
 address dl dt {
+    /* fw700 */
+    font-weight: 700;
 }
 address dl dd {
+    flex: 1 1 73%; /* fx1-1-73p */
 }
 
 address > p {
     /* mt3.2r+fw700 */
     margin-top: 3.2rem;
     font-weight: 700;
+}
+
+.btn-top {
+    /* pof+b22.7r+r20r+w5.4r+h5.4r+bg+bdrs50p+bxsh+trs.4s+op0 */
+    position: fixed;
+    bottom: 22.7rem;
+    right: 20rem;
+    width: 5.4rem;
+    height: 5.4rem;
+    background: #000 url(../img/ico-top.svg) no-repeat center center;
+    background-size: contain; /* Ensures the icon is properly sized */
+    border-radius: 50%;
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transition: opacity 0.4s; /* Use opacity transition only */
+}
+
+.btn-top.active {
+    opacity: 1; /* op1 */
 }

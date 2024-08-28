@@ -288,7 +288,7 @@ hr,
 }
 
 .link-list li {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 
     /* flex-shrink: 1; 
     flex-grow: 1; 
@@ -298,6 +298,10 @@ hr,
     flex: 1 1 auto;
 
     background: no-repeat 0 0 / cover;
+
+    /* p8r-10r */
+    padding: 8rem 10rem;
+    position: relative; /* por (기준점) */
 }
 
 .link-list li:nth-child(1) {
@@ -306,4 +310,44 @@ hr,
 
 .link-list li:nth-child(2) {
     background-image: url(../img/jj.png);
+}
+
+.link-list li a {
+    display: flex; /* 플랙스박스 */
+    height: 100%; /* h100p */
+    align-items: center; /* aic */
+}
+
+.link-title {
+    background: #55f; /* bg */
+    color: #fff;
+}
+
+.link-title h4 {
+    /* fw900+fz5r+lh1 */
+    font-weight: 900;
+    font-size: 5rem;
+    line-height: 1;
+}
+.link-title p {
+    /* fw700+fz2r+mt2.1r */
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 2.1rem;
+}
+
+.link-title h4 b {
+    display: block; /* 블록의 특성을 이용해서 줄바꿈 */
+}
+
+.link-list li::before {
+    /* ct+poa+t0+l0+r0+b0+bg+op.6 */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--main-color);
+    opacity: 0.6;
 }

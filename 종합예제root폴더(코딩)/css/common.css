@@ -319,8 +319,10 @@ hr,
 }
 
 .link-title {
-    background: #55f; /* bg */
+    /* background: #55f; bg */
     color: #fff;
+    z-index: 1; /* flex의 아이템에도 z-index의 값을 줄 수 있다. */
+    /* transform이 적용된 요소도 z-index의 값을 줄 수 있다. */
 }
 
 .link-title h4 {
@@ -348,6 +350,20 @@ hr,
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--main-color);
-    opacity: 0.6;
+    /* background: var(--main-color);
+    opacity: 0.6; */
+    background: rgba(
+        18,
+        86,
+        47,
+        0.6
+    ); /* backdrop-filter를 이용하려고
+     일반 opacity를 쓰지않고 background의 rgba를 쓴다. */
+    transition: 0.4s; /* trsn4s */
+}
+
+.link-list li:hover::before {
+    /* opacity: 0.8; op.8 */
+    background: rgba(18, 86, 47, 0.8);
+    backdrop-filter: blur(5px); /* backdrop-filter(블러: 5px정도) */
 }

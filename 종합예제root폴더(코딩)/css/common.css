@@ -323,6 +323,11 @@ hr,
     color: #fff;
     z-index: 1; /* flex의 아이템에도 z-index의 값을 줄 수 있다. */
     /* transform이 적용된 요소도 z-index의 값을 줄 수 있다. */
+    transition: 0.4s; /* trs.4s */
+}
+
+.link-list li:hover .link-title {
+    transform: translateX(20px);
 }
 
 .link-title h4 {

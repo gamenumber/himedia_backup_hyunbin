@@ -9,9 +9,9 @@
     --main-color: #12562f;
     --title-color: #111;
     --bg-color: #f3f6f6;
-    --bg-color:dark: #232f28;
+    --bg-color-dark: #232f28;
     --text-color: #666;
-    --white60: rgba(255,255,255,0.6);
+    --white60: rgba(255, 255, 255, 0.6);
 }
 
 /* root */
@@ -56,10 +56,7 @@ hr,
     /* w134.4r+m0-a+bg */
     width: 134.4rem;
     margin: 0 auto;
-    background: rgba(255, 255, 0, 0.3);
-}
-
-#header {
+    /* background: rgba(255, 255, 0, 0.3); */
 }
 
 /* 전기가 나갔던 불쌍한 이들을 위하여 */
@@ -378,5 +375,35 @@ hr,
 #footer {
     /* p7.7r-0+bg */
     padding: 7.7rem 0;
-    background: #000;
+    background: var(--bg-color-dark);
+    color: var(--white60);
+}
+
+.foot-logo {
+    /* w17.9r+h5r+bg */
+    width: 17.9rem;
+    height: 5rem;
+    background: url(../img/foot-logo.svg) no-repeat 0 0;
+}
+
+address {
+    /* mt2.8r */
+    margin-top: 2.8rem;
+}
+address dl {
+    display: flex; /* df : 플렉스박스 */
+    flex-wrap: wrap; /* fxww (줄바꿈) */
+    gap: 1.6rem; /* g1.6r */
+    width: 28.5rem; /* w28.5r */
+    font-size: 1.5rem; /* fz1.5r */
+}
+address dl dt {
+}
+address dl dd {
+}
+
+address > p {
+    /* mt3.2r+fw700 */
+    margin-top: 3.2rem;
+    font-weight: 700;
 }

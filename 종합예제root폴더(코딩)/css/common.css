@@ -9,7 +9,9 @@
     --main-color: #12562f;
     --title-color: #111;
     --bg-color: #f3f6f6;
+    --bg-color:dark: #232f28;
     --text-color: #666;
+    --white60: rgba(255,255,255,0.6);
 }
 
 /* root */
@@ -371,4 +373,10 @@ hr,
     /* opacity: 0.8; op.8 */
     background: rgba(18, 86, 47, 0.8);
     backdrop-filter: blur(5px); /* backdrop-filter(블러: 5px정도) */
+}
+
+#footer {
+    /* p7.7r-0+bg */
+    padding: 7.7rem 0;
+    background: #000;
 }

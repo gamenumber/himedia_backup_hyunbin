@@ -4,98 +4,114 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>welcome to imaginary</title>
-        <link rel="stylesheet" href="css/reset.css" />
-        <link rel="stylesheet" href="css/common.css" />
-        <link rel="stylesheet" href="css/main.css" />
+        <link
+            rel="shortcut icon"
+            href="./img/favicon.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="./css/reset.css" />
+
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/main.css" />
     </head>
     <body>
         <a href="#main" class="hidden">본문 바로가기</a>
         <hr />
 
-        <!-- s:header -->
+        <!-- header#header+main#main+footer#footer -->
+        <!-- s: header -->
         <header id="header">
+            <!-- .inner>nav>h1.logo+ul.gnb+.util-menu -->
             <div class="inner">
                 <nav>
                     <h1 class="logo">
-                        <a href="#"><i class="hidden">imaginary</i></a>
+                        <a href="index.html"><i class="hidden">imaginary</i></a>
                     </h1>
+
                     <ul class="gnb">
-                        <li><a href="#">company</a></li>
-                        <li><a href="#">franchise</a></li>
-                        <li><a href="#">notice</a></li>
-                        <li><a href="#">financial</a></li>
+                        <li><a href="company.html">company</a></li>
+                        <li><a href="franchise.html">franchise</a></li>
+                        <li><a href="notice.html">notice</a></li>
+                        <li><a href="financial.html">financial</a></li>
                     </ul>
+
                     <div class="util-menu">
-                        <a href="#"><i class="hidden">로그인</i></a>
+                        <a href="login.html"><i class="hidden">로그인</i></a>
                     </div>
                 </nav>
             </div>
         </header>
+        <!-- //e: header -->
         <hr />
-        <!-- e:header -->
 
         <main id="main">
-            <!-- s:visual -->
+            <!-- s: visual -->
             <section class="visual">
-                <figure>
-                    <!-- <img
-                        src="./img/visual-img.jpg"
-                        alt="Merging creativity & technology."
-                    /> -->
+                <!-- <img
+            src="./img/visual-img.jpg"
+            alt="Merging creativity & technology."
+          /> -->
 
-                    <iframe
-                        src="https://www.youtube.com/embed/6_FDG2JTQN8?autoplay=1&amp;mute=1&amp;controls=1&amp;loop=1&amp;playlist=6_FDG2JTQN8"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
-                    ></iframe>
-                    <audio controls>
-                        <source src="audio/e.mp3" type="audio/mp3" />
-                        Your browser does not support the audio element.
-                    </audio>
+                <iframe
+                    src="https://www.youtube.com/embed/6_FDG2JTQN8?autoplay=1&amp;mute=1&amp;controls=1&amp;loop=1&amp;playlist=6_FDG2JTQN8"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                ></iframe>
+                <audio controls>
+                    <source src="audio/e.mp3" type="audio/mp3" />
+                    Your browser does not support the audio element.
+                </audio>
 
-                    <!-- 정보로서의 가치가 있는 : 글 / 그림 / 동영상은 figure로 감쌈  -->
-                </figure>
                 <div class="visual-title">
                     <h2>
-                        Merging <br />
+                        Merging<br />
                         creativity & technology.
                     </h2>
                     <p>welcome to <strong>imaginary</strong></p>
                 </div>
             </section>
-            <!-- e:visual -->
+            <!-- //e: visual -->
 
-            <!-- s:intro -->
+            <!-- s: intro -->
             <section class="intro">
                 <div class="inner">
                     <div class="intro-title">
-                        <h3>We specialize in creative operations.</h3>
-                        <p>
+                        <h3 data-aos="fade-up">
+                            We specialize in creative operations.
+                        </h3>
+                        <p data-aos="fade-up">
                             We act as an extended member of your creative,
                             marketing and production teams. This allows you to
                             scale, expand, improve and enhance your content.
                         </p>
                     </div>
+
                     <ul class="intro-list">
-                        <li>
+                        <!-- li*3>dl>dt+dd -->
+                        <li data-aos="flip-left">
                             <dl>
                                 <dt>줄이고</dt>
                                 <dd>
-                                    자원이 효율적 사용으로 탄소 배출을 줄입니다
+                                    자원의 효율적 사용으로 탄소 배출을 줄입니다.
                                 </dd>
                             </dl>
                         </li>
-                        <li>
+                        <li data-aos="flip-left" data-aos-delay="300">
                             <dl>
                                 <dt>개선하여</dt>
                                 <dd>
-                                    지속 가능한 장식을 제시하고 소비자 경험을
+                                    지속 가능한 방식을 제시하고 소비자 경험을
                                     개선합니다.
                                 </dd>
                             </dl>
                         </li>
-                        <li>
+                        <li data-aos="flip-left" data-aos-delay="600">
                             <dl>
                                 <dt>혁신합니다</dt>
                                 <dd>
@@ -107,10 +123,11 @@
                     </ul>
                 </div>
             </section>
-            <!-- e:intro -->
+            <!-- //e: intro -->
 
-            <!-- s:link -->
+            <!-- s: link -->
             <section class="link">
+                <!-- ul.link-list>li*2>a>div.link-title>h4+p -->
                 <ul class="link-list">
                     <li>
                         <a href="#">
@@ -130,16 +147,15 @@
                     </li>
                 </ul>
             </section>
-            <!-- e:link -->
+            <!-- //e: link -->
         </main>
         <hr />
 
         <footer id="footer">
             <div class="inner">
                 <div class="foot-con">
-                    <div class="foot-logo">
-                        <i class="hidden">imaginary</i>
-                    </div>
+                    <div class="foot-logo"><i class="hidden">imaginary</i></div>
+
                     <address>
                         <dl>
                             <dt>address</dt>
@@ -154,13 +170,19 @@
                             <dt>e-mail</dt>
                             <dd>imaginary@gmail.com</dd>
                         </dl>
-                        <p>Copyright © 2024 imaginary. All Right Reserved</p>
+                        <p>
+                            Copyright &copy; 2024 imaginary. All Right Reserved
+                        </p>
                     </address>
                 </div>
             </div>
         </footer>
 
+        <!-- button.btn-top>i.hidden{TOP} -->
         <a href="#top" class="btn-top"><i class="hidden">TOP</i></a>
-        <script src="script/common.js"></script>
+
+        <!-- script:src -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="./js/common.js"></script>
     </body>
 </html>

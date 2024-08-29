@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+.sub-visual {
+    /* mw192r+h36r+m0-a+bg */
+    min-width: 192rem;
+    height: 36rem;
+    margin: 0 auto;
+    background: #000 url(../img/sub-visual-1.jpg) no-repeat 0 0 / cover;
+
+    animation: revealAni 2s;
+}
+
+.sub-visual .inner {
+    height: 100%; /* h100p */
+    display: flex; /* 플렉스 박스 */
+    align-items: center; /* 교차축방향 중앙정렬 */
+}
+
+/* .sub-title {
+    background: #f00;
+} */
+
+.sub-title h2 {
+    /* fw900+fz6r+c#fff */
+    font-weight: 900;
+    font-size: 6rem;
+    color: #fff;
+}
+
+.sub-title h2 b {
+    display: block;
+    animation: slideLeft 0.6s 2s both;
+}
+
+.sub-title h2::before {
+    /* ct+db+w5.6r+h.6r+bg#fff */
+    content: "";
+    display: block;
+    width: 5.6rem;
+    height: 0.6rem;
+    background: #fff;
+    animation: slideLeft 0.6s 2.3s both;
+}
+
+.greeting {
+    border: 10px solid red;
+}
+
+.sec-title {
+    /* tac+fw700+fz5r+c */
+    text-align: center;
+    font-weight: 700;
+    font-size: 5rem;
+    color: var(--title-color);
+}

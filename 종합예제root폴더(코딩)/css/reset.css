@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-/* !!!!!!!!!!!!!!최고의 reset은 이거다!!!!!!!!!! */
-
 html,
 body,
 div,
@@ -51,11 +49,11 @@ dd,
 ol,
 ul,
 li,
-button,
 fieldset,
 form,
 label,
 legend,
+button,
 table,
 caption,
 tbody,
@@ -90,7 +88,7 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: top;
-    box-sizing: border-box; /* bxbb추가 */
+    box-sizing: border-box; /* boxbb */
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -128,7 +126,4 @@ q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-}
-button {
-    cursor: pointer; /* cup */
 }

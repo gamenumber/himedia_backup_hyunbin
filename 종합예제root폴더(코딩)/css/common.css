@@ -1,11 +1,8 @@
 @charset "utf-8";
+
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-/* 기본적인 전체 디자인 정의 : reset
-다른 a나 글꼴, 루트 변수 같은건 : common 
-메인디자인은 : main */
 :root {
-    /* 루트 변수 */
     --main-color: #12562f;
     --title-color: #111;
     --bg-color: #f3f6f6;
@@ -14,30 +11,28 @@
     --white60: rgba(255, 255, 255, 0.6);
 }
 
-/* 선택할 때의 가상요소 ::selection */
 ::selection {
     background: var(--main-color);
     color: #fff;
 }
 
-/* root */
 html {
-    /* font-size: 100%; fz100p = 16px */
-    font-size: 62.5%; /* fz62.5p = 10px = 1rem  */
-    scroll-behavior: smooth; /* 상단으로의 이동을 부드럽게만드는 명령어 */
+    font-size: 100%; /* fz100p = 16px */
+    font-size: 62.5%; /* fz62.5p = 10px = 1rem */
+    scroll-behavior: smooth;
 }
+
 body {
     font: 1.6rem/1.5 Pretendard, sans-serif;
     color: var(--text-color);
-    text-transform: capitalize; /* ttc : 영어 단어의 첫 글자를 대문자로 바꾸는 코드 */
-    word-break: keep-all; /* wbka : 어절 단위의 줄바꿈 */
+    text-transform: capitalize; /* ttc: 단어의 첫글자를 대문자로 */
+    word-break: keep-all; /* wbka */
 }
 
 a {
     text-decoration: none;
     color: inherit;
 }
-
 a:hover {
     text-decoration: none;
     color: var(--main-color);
@@ -45,18 +40,12 @@ a:hover {
 
 hr,
 .hidden {
-    /* poa+m-1+w1+h1+oh */
     position: absolute;
     margin: -1px;
     width: 1px;
     height: 1px;
     overflow: hidden;
-    clip: rect(
-        0,
-        0,
-        0,
-        0
-    ); /* 클리핑 마스크로 위의 영역을 안보이게 하는거랑 비슷함 */
+    clip: rect(0, 0, 0, 0);
 }
 
 .inner {
@@ -66,373 +55,170 @@ hr,
     /* background: rgba(255, 255, 0, 0.3); */
 }
 
-/* 전기가 나갔던 불쌍한 이들을 위하여 */
 #header nav {
     height: 10rem; /* h10r */
-    display: flex; /* df */
-    justify-content: space-between; /* jcsb -> 메인축기준 중앙정렬 */
-    align-items: center; /* aic -> 교차축기준 중앙정렬 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo a {
-    /* db+w17.9r+h5r */
     display: block;
+    /* w17.9r+h5r */
     width: 17.9rem;
     height: 5rem;
-    background: url(../img/logo.svg) no-repeat 0 0;
+    background: url(../img/logo.svg) no-repeat 0 0 / contain;
 }
 
 .gnb {
-    display: flex; /* df : 플렉스 박스 활성화 */
-    margin-left: auto; /* mla : 왼쪽공간 밀어버리기 (오른쪽으로 밀기)*/
-    margin-right: 5rem; /* mr5r : 마진을 줘서 떼어버림 */
+    display: flex;
+    margin-left: auto; /* mla */
+    margin-right: 5rem;
 }
 
 .gnb li a {
-    /* db+p1r-3r+fw700+fz2r+c+por */
     display: block;
     padding: 1rem 3rem;
+    /* fw700+fz2r+c */
     font-weight: 700;
     font-size: 2rem;
     color: var(--title-color);
-    position: relative; /* 직계조상 기준점 */
+    position: relative; /* posr */
 }
 
-/* 호버했을 때 메인 컬러로 */
 .gnb li a:hover {
     color: var(--main-color);
 }
 
 .gnb li a::after {
-    /* ct+db+poa+t0+l0p+trftx+w1rem+h1rem+bdrs50p+bg+op0+trs.4s */
-    content: "";
+    content: ""; /* ct */
     display: block;
     position: absolute;
     top: -20px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* trftx */
     width: 0.7rem;
     height: 0.7rem;
     border-radius: 50%;
     background: var(--main-color);
-    opacity: 0;
-    transition: cubic-bezier(0, 0.65, 0.51, 1.11) 0.4s; /* 호버효과 미리 대기 */
+    opacity: 0; /* op0 */
+    transition: cubic-bezier(0, 0.73, 0.22, 1.3) 0.4s; /* trs.4s */
 }
-
 .gnb li a:hover::after {
-    /* t0+op1 */
-    top: 0; /* 마치 떨어지는 것처럼 호버효과가 나옴! */
-    opacity: 1;
+    top: 0;
+    opacity: 1; /* op1 */
 }
 
 .util-menu a {
-    /* db+w4r+h4r+bg */
     display: block;
     width: 4rem;
     height: 4rem;
     background: url(../img/ico-login.svg) no-repeat 50%;
-    border: 1px solid #000; /* bd */
-    border-radius: 50%; /* br50p */
-}
-
-.visual {
-    /* mw192r+m0-a+h64.6r+bg+por+oh */
-    min-width: 192rem;
-    margin: 0 auto;
-    height: 64.6rem;
-    /* background: #f00; */
-    position: relative; /* 기준점 */
-    overflow: hidden;
-}
-
-.visual figure {
-    /* w100p+h100p */
-    width: 100%;
-    height: 100%;
-}
-
-.visual figure iframe {
-    /* width: 100%;
-    height: 100%;
-    object-fit: cover; */
-    /* w1920+h1080+poa+t50p+l50p+trft  */
-    width: 1920px;
-    height: 1080px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.visual-title {
-    /* poa+t50p+l288+trfty+bg+z1 */
-    position: absolute;
-    top: 50%;
-    /* left: 288px; */
-    left: 15%;
-    transform: translateY(-50%);
-    /* background: #f00; */
-    z-index: 1;
-}
-
-.visual-title h2 {
-    /* fw900+fz8r+c#a0ffc8+lhl.1 */
-    font-weight: 900;
-    font-size: 8rem;
-    color: #a0ffc8;
-    line-height: 1.1;
-}
-.visual-title p {
-    /* fz4.8r+c#fff+mt1.2r */
-    font-size: 4.8rem;
-    color: #fff;
-    margin-top: 1.2rem;
-}
-.visual-title p strong {
-    /* fw600*/
-    font-weight: 600;
-}
-
-.visual::after {
-    /* ct+poa+t0+l0+r0+b0+bg+op0.6(또는 rgba()) */
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; /* 가로세로 꽉차라 */
-    background: #000;
-    opacity: 0.6;
-
-    /* 마우스와 관계없는 요소로 만들 수 있는 코딩방법 */
-    pointer-events: none; /* 마우스와 관련한 효과를 없애라 */
-    user-select: none; /* 유저가 선택하지 못하게 만드는 효과 */
-}
-
-.intro {
-    /* p12r-0-14r+tac */
-    padding: 12rem 0 14rem;
-    text-align: center;
-}
-
-.intro-title h3 {
-    /* fw700+fz4.8r+c */
-    font-weight: 700;
-    font-size: 4.8rem;
-    color: var(--title-color);
-}
-.intro-title p {
-    /* fw500+fz2.4r+mt2.4r+w74r+m0-a  */
-    font-weight: 500;
-    font-size: 2.4rem;
-    width: 74rem;
-    margin: 0 auto;
-    margin-top: 2.4rem;
-}
-
-.intro-list {
-    background: var(--bg-color);
-    display: flex; /* df */
-    justify-content: center; /* 메인축 방향 중앙정렬 */
-    gap: 10.8rem; /* g10.8r */
-    /* p8r-0+mt9.7r */
-    padding: 8rem 0;
-    margin-top: 9.7rem;
-}
-
-.intro-list li {
-    /* bd+w30r+mih26.2r */
-    /* border: 1px solid #000; */
-    width: 30rem;
-    min-height: 26.2rem;
-    display: flex; /* df */
-    /* flex-direction: column-reverse; 메인축 방향을 세로로 바꿈(위아래 뒤집기) */
-    flex-direction: column; /* fxdc -> 메인축 방향을 세로로 바꿈 */
-    align-items: center; /* 교차축방향 중앙정렬 */
-    gap: 2.4rem; /* g2.4r */
-    justify-content: center; /* jcc */
-    /* p1r-4.5r */
-    padding: 1rem 3.5rem;
-}
-
-.intro-list li::before {
-    /* ct+db+w10.6r+h10.6r+bdrs50p+bg*/
-    content: "";
-    display: block;
-    width: 10.6rem;
-    height: 10.6rem;
+    border: 1px solid var(--main-color);
     border-radius: 50%;
-    background: var(--main-color) no-repeat 50%;
-}
-
-.intro-list li dl dt {
-    /* fw700+fz3.2r+c */
-    font-weight: 700;
-    font-size: 3.2rem;
-    color: var(--main-color);
-}
-.intro-list li dl dd {
-    /* mt2.4r+f500+fz2r */
-    margin-top: 2.4rem;
-    font: 500px;
-    font-size: 2rem;
-}
-
-.intro-list li:nth-child(1)::before {
-    background-image: url(../img/ico-1.svg);
-}
-.intro-list li:nth-child(2)::before {
-    background-image: url(../img/ico-2.svg);
-}
-.intro-list li:nth-child(3)::before {
-    background-image: url(../img/ico-3.svg);
-}
-
-.link-list {
-    display: flex; /* df : 플랙스 박스 */
-    height: 39.5rem; /* h39.5r */
-}
-
-.link-list li {
-    /* border: 1px solid #000; */
-
-    /* flex-shrink: 1; 
-    flex-grow: 1; 
-    flex-basis: auto;  */
-
-    /* flex1-1-a */
-    flex: 1 1 auto;
-
-    background: no-repeat 0 0 / cover;
-
-    /* p8r-10r */
-    padding: 8rem 10rem;
-    position: relative; /* por (기준점) */
-}
-
-.link-list li:nth-child(1) {
-    background-image: url(../img/gg.png);
-}
-
-.link-list li:nth-child(2) {
-    background-image: url(../img/jj.png);
-}
-
-.link-list li a {
-    display: flex; /* 플랙스박스 */
-    height: 100%; /* h100p */
-    align-items: center; /* aic */
-}
-
-.link-title {
-    /* background: #55f; bg */
-    color: #fff;
-    z-index: 1; /* flex의 아이템에도 z-index의 값을 줄 수 있다. */
-    /* transform이 적용된 요소도 z-index의 값을 줄 수 있다. */
-    transition: 0.4s; /* trs.4s */
-}
-
-.link-list li:hover .link-title {
-    transform: translateX(20px);
-}
-
-.link-title h4 {
-    /* fw900+fz5r+lh1 */
-    font-weight: 900;
-    font-size: 5rem;
-    line-height: 1;
-}
-.link-title p {
-    /* fw700+fz2r+mt2.1r */
-    font-weight: 700;
-    font-size: 2rem;
-    margin-top: 2.1rem;
-}
-
-.link-title h4 b {
-    display: block; /* 블록의 특성을 이용해서 줄바꿈 */
-}
-
-.link-list li::before {
-    /* ct+poa+t0+l0+r0+b0+bg+op.6 */
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* background: var(--main-color);
-    opacity: 0.6; */
-    background: rgba(
-        18,
-        86,
-        47,
-        0.6
-    ); /* backdrop-filter를 이용하려고
-     일반 opacity를 쓰지않고 background의 rgba를 쓴다. */
-    transition: 0.4s; /* trsn4s */
-}
-
-.link-list li:hover::before {
-    /* opacity: 0.8; op.8 */
-    background: rgba(18, 86, 47, 0.8);
-    backdrop-filter: blur(5px); /* backdrop-filter(블러: 5px정도) */
 }
 
 #footer {
-    /* p7.7r-0+bg */
     padding: 7.7rem 0;
     background: var(--bg-color-dark);
     color: var(--white60);
 }
 
 .foot-logo {
-    /* w17.9r+h5r+bg */
     width: 17.9rem;
     height: 5rem;
     background: url(../img/foot-logo.svg) no-repeat 0 0;
 }
 
 address {
-    /* mt2.8r */
     margin-top: 2.8rem;
 }
 address dl {
-    display: flex; /* df : 플렉스박스 */
-    flex-wrap: wrap; /* fxww (줄바꿈) */
-    gap: 0.8rem 1.6rem; /* 로우겝이 먼저 언급되고 그 다음에 컬럼 갭 */
-    width: 28.5rem; /* w28.5r */
-    font-size: 1.5rem; /* fz1.5r */
+    display: flex;
+    flex-wrap: wrap; /* fxww */
+    gap: 0.8rem 1.6rem;
+    width: 28.5rem;
+    font-size: 1.5rem;
 }
+
 address dl dt {
-    /* fw700 */
     font-weight: 700;
 }
+
 address dl dd {
-    flex: 1 1 73%; /* fx1-1-73p */
+    flex: 1 1 73%;
 }
 
 address > p {
-    /* mt3.2r+fw700 */
     margin-top: 3.2rem;
     font-weight: 700;
 }
 
 .btn-top {
-    /* pof+b22.7r+r20r+w5.4r+h5.4r+bg+bdrs50p+bxsh+trs.4s+op0 */
     position: fixed;
-    bottom: 22.7rem;
-    right: 20rem;
+    bottom: 20.7rem;
+    right: 29rem;
     width: 5.4rem;
     height: 5.4rem;
-    background: #000 url(../img/ico-top.svg) no-repeat center center;
-    background-size: contain; /* Ensures the icon is properly sized */
+    background: #000 url(../img/ico-top.svg) no-repeat 50%;
     border-radius: 50%;
     box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.25);
     opacity: 0;
-    transition: opacity 0.4s; /* Use opacity transition only */
+    transition: 0.4s;
 }
 
 .btn-top.active {
-    opacity: 1; /* op1 */
+    opacity: 1;
+    bottom: 22.7rem;
+}
+
+/* 애니메이션 정의 */
+@keyframes revealAni {
+    0% {
+        clip-path: inset(50% 20%);
+    }
+
+    100% {
+        clip-path: inset(0);
+    }
+}
+
+@keyframes fadeScale {
+    0% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeText {
+    0% {
+        /* transform: translateY(50px); */
+        opacity: 0;
+        filter: blur(10px);
+        /* letter-spacing: 50px; */
+    }
+
+    100% {
+        /* transform: translateY(0); */
+        opacity: 1;
+        filter: blur(0);
+        /* letter-spacing: 0; */
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        /* op0+trftx */
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

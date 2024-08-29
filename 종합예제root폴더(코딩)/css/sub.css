@@ -43,7 +43,8 @@
 }
 
 .greeting {
-    border: 10px solid red;
+    /* border: 10px solid red; */
+    padding: 12rem 0 22rem;
 }
 
 .sec-title {
@@ -52,4 +53,46 @@
     font-weight: 700;
     font-size: 5rem;
     color: var(--title-color);
+}
+
+.greeting-con {
+    /* background: #5f5; bg#5f5 */
+    display: flex; /* df : 플렉스박스 */
+    justify-content: space-between; /* jcsb : 남는 여백 균등히 나눠가짐 */
+    margin-top: 8rem; /* mt8r */
+}
+
+.greeting-con figure {
+    /* border: 1px solid #000; */
+    width: 49rem;
+}
+.greeting-con .greeting-text {
+    /* border: 1px solid #000; */
+    width: 77.4rem;
+}
+
+.greeting-con .greeting-text h4 {
+    /* fw900+fz6r+c */
+    font-weight: 900;
+    font-size: 6rem;
+    color: var(--title-color);
+}
+.greeting-con .greeting-text h5 {
+    /* fw600+fz3r+c+mt3.2r */
+    font-weight: 600;
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-top: 3.2rem;
+}
+.greeting-con .greeting-text p {
+    /* fw500+fz2r+c+mt3.2r */
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-top: 3.2rem;
+}
+.greeting-con .greeting-text .ceo-sign {
+    /* mt3.2r+db */
+    margin-top: 3.2rem;
+    display: block;
 }

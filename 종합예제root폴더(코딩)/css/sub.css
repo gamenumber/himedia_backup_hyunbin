@@ -133,15 +133,34 @@
     color: var(--main-color);
     display: flex; /* 플렉스박스 */
     gap: 2.8rem; /* g2.8r */
+    position: relative; /* 절대 배치의 기준점 (부모) */
 }
 
 .process-list li dl dt::before {
     /* 3. 증가시킨 카운터 표시 */
     content: "0" counter(process-count);
 }
+
+.process-list li dl dt::after {
+    /* ct+poa+b0+l0+w90p+h40p+bg+op.4 */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 45%;
+    background: peru;
+    opacity: 0.4;
+}
 .process-list li dl dd {
     /* fw500+fz2r+mt1.6r */
     font-weight: 500;
     font-size: 2rem;
     margin-top: 1.6rem;
+}
+
+.process-list li:hover dl dt::after {
+    /* w90p+trs.4s */
+    width: 90%;
+    transition: 0.4s;
 }

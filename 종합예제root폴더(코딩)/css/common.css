@@ -232,7 +232,7 @@ address > p {
 }
 
 .btn {
-    /* mw19.5r+h5.1r+bd+bg#fff+p0-4.8r+fw700+fz1.8r+c  */
+    /* mw19.5r+h5.1r+bd+bg#fff+p0-4.8r+fw700+fz1.8r+c+trs.4s  */
     min-width: 19.5rem;
     height: 5.1rem;
     border: 1px solid var(--title-color);
@@ -245,6 +245,7 @@ address > p {
     font-weight: 700;
     font-size: 1.8rem;
     color: var(--title-color);
+    transition: 0.4s;
 }
 
 .btn::after {
@@ -254,4 +255,9 @@ address > p {
     width: 2.4rem;
     height: 2.4rem;
     background: url(../img/ico-srr.svg) no-repeat 50%;
+}
+
+.btn:hover {
+    /* bxsh */
+    box-shadow: 5px 6px 0 var(--main-color);
 }

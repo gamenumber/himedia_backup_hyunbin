@@ -164,3 +164,20 @@
     width: 90%;
     transition: 0.4s;
 }
+
+/* SNS */
+.sns-list {
+    display: flex; /* 플랙스 박스 */
+    flex-wrap: wrap; /* 플렉스 공간 줄바꿈 명령 */
+
+    /* w1077+m0-a */
+    width: 1077px;
+    margin: 0 auto;
+    background: #5f5;
+}
+.sns-list li {
+    /* bd+w25.5r+h25.5r */
+    border: 1px solid #000;
+    width: 25.5rem;
+    height: 25.5rem;
+}

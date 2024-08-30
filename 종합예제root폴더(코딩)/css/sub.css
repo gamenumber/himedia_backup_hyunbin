@@ -5,9 +5,22 @@
     min-width: 192rem;
     height: 36rem;
     margin: 0 auto;
-    background: #000 url(../img/sub-visual-1.jpg) no-repeat 0 0 / cover;
+    background: #000 no-repeat 0 0 / cover;
 
     animation: revealAni 2s;
+}
+
+.company .sub-visual {
+    background-image: url(../img/sub-visual-1.jpg);
+}
+.franchise .sub-visual {
+    background-image: url(../img/sub-visual-2.jpg);
+}
+.notice .sub-visual {
+    background-image: url(../img/sub-visual-3.jpg);
+}
+.financial .sub-visual {
+    background-image: url(../img/sub-visual-4.jpg);
 }
 
 .sub-visual .inner {
@@ -42,6 +55,7 @@
     animation: slideLeft 0.6s 2.3s both;
 }
 
+/* CEO 인사말 */
 .greeting {
     /* border: 10px solid red; */
     padding: 12rem 0 22rem;
@@ -95,4 +109,10 @@
     /* mt3.2r+db */
     margin-top: 3.2rem;
     display: block;
+}
+
+/* 가맹점 개설 절차 */
+.process {
+    /* p12r-0-22r */
+    padding: 12rem 0 22rem;
 }

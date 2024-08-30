@@ -167,8 +167,9 @@
 
 /* SNS */
 .sns-list {
-    display: flex; /* 플랙스 박스 */
-    flex-wrap: wrap; /* 플렉스 공간 줄바꿈 명령 */
+    display: flex; /* df : 플랙스 박스 */
+    flex-wrap: wrap; /* fxww :  플렉스 공간 줄바꿈 명령 */
+    gap: 1.9rem; /* g1.9r */
 
     /* w1077+m0-a */
     width: 1077px;
@@ -176,8 +177,23 @@
     background: #5f5;
 }
 .sns-list li {
-    /* bd+w25.5r+h25.5r */
+    /* bd+w25.5r+h25.5r+por */
     border: 1px solid #000;
     width: 25.5rem;
     height: 25.5rem;
+    position: relative;
+}
+
+.sns-list li figure {
+    height: 100%; /* h100p */
+}
+
+.sns-con {
+    /* poa+t0+l0+r0+b0+bg */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 0, 0, 0.3);
 }

@@ -222,3 +222,36 @@ address > p {
         transform: translateX(0);
     }
 }
+
+/* 버튼에 대한 정의 */
+.btn-wrap {
+    /* tac+mt10r */
+    text-align: center; /* tac -> 블록인 조상에  text-align: center를 주면 
+    인라인인 자식요소가 가운데 정렬이 됨. */
+    margin-top: 10rem;
+}
+
+.btn {
+    /* mw19.5r+h5.1r+bd+bg#fff+p0-4.8r+fw700+fz1.8r+c  */
+    min-width: 19.5rem;
+    height: 5.1rem;
+    border: 1px solid var(--title-color);
+    background: #fff;
+    padding: 0 4.8rem;
+    display: inline-flex; /* inline-flex : 인라인의 특징을 가지는 flex요소 */
+    justify-content: center; /* jcc : 메인축방향 중앙정렬 */
+    align-items: center; /* aic : 교차축방향 중앙정렬 */
+    gap: 1.2rem; /* 가상요소와의 여백을 위해서 */
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--title-color);
+}
+
+.btn::after {
+    /* ct+db+w2.4r+h2.4r+bg */
+    content: "";
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../img/ico-srr.svg) no-repeat 50%;
+}

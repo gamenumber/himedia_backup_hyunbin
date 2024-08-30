@@ -29,9 +29,10 @@
     align-items: center; /* 교차축방향 중앙정렬 */
 }
 
-/* .sub-title {
-    background: #f00;
-} */
+/* 공통으로 지정해서 패딩을 줌 (코드 간소화) */
+.sub-visual + section {
+    padding: 12rem 0 22rem;
+}
 
 .sub-title h2 {
     /* fw900+fz6r+c#fff */
@@ -56,11 +57,6 @@
 }
 
 /* CEO 인사말 */
-.greeting {
-    /* border: 10px solid red; */
-    padding: 12rem 0 22rem;
-}
-
 .sec-title {
     /* tac+fw700+fz5r+c */
     text-align: center;
@@ -112,7 +108,40 @@
 }
 
 /* 가맹점 개설 절차 */
-.process {
-    /* p12r-0-22r */
-    padding: 12rem 0 22rem;
+.process-list {
+    /* background: #5f5; bg#5f5 */
+    display: flex; /* df */
+    flex-wrap: wrap; /* fxww : 부모가 자식을 감싸는; */
+    gap: 4rem 7.2rem; /* g4r-7.2r */
+    margin-top: 8rem; /* mt8r */
+    counter-reset: process-count; /* 1. 프로세스 카운터 정의 */
+}
+.process-list li {
+    /* bd+w40r+h30r+bg#fff+p3r-0*/
+    border-top: 3px solid var(--title-color);
+    width: 40rem;
+    height: 30rem;
+    background: #fff;
+    padding: 3rem 0;
+    /* 2. 증가 시킴 */
+    counter-increment: process-count;
+}
+.process-list li dl dt {
+    /* fw700+fz4r+c */
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--main-color);
+    display: flex; /* 플렉스박스 */
+    gap: 2.8rem; /* g2.8r */
+}
+
+.process-list li dl dt::before {
+    /* 3. 증가시킨 카운터 표시 */
+    content: "0" counter(process-count);
+}
+.process-list li dl dd {
+    /* fw500+fz2r+mt1.6r */
+    font-weight: 500;
+    font-size: 2rem;
+    margin-top: 1.6rem;
 }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>카카오 주식 보유 현황</title>
+    </head>
+    <body>
+        <!-- display : table이긴 하지만, block과 비슷하다 -->
+        <!-- border-collapse : separate -> 분리 / collapse : 합침 -->
+        <!-- section.stock>h2+table.stock-tbl -->
+        <section class="stock">
+            <h2>5% 이상 주주의 주식소유 현황</h2>
+            <table border="1" class="stock-tbl">
+                <caption>
+                    5% 이상 주주의 주식소유 현황
+                </caption>
+                <!-- colgroup>col*4 -->
+                <colgroup>
+                    <col />
+                    <col span="2" />
+                    <col span="2" />
+                    <col span="2" />
+                </colgroup>
+
+                <thead>
+                    <!-- 대괄호 -> 속성 선택자 -->
+                    <!-- tr>th[scope="col"]*4 -->
+                    <tr>
+                        <th scope="col" rowspan="2">구분</th>
+                        <th scope="col" colspan="2">보통주</th>
+                        <th scope="col" colspan="2">우선주</th>
+                        <th scope="col" colspan="2">소개</th>
+                    </tr>
+
+                    <!-- tr>th[scope="col"]*7 -->
+                    <tr>
+                        <th scope="col">주식수</th>
+                        <th scope="col">지분율</th>
+                        <th scope="col">주식수</th>
+                        <th scope="col">지분율</th>
+                        <th scope="col">주식수</th>
+                        <th scope="col">지분율</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- tr*3>th[scope="row"]+td*6 -->
+                    <tr>
+                        <th scope="row">최대주주 및 특수관계인</th>
+                        <td>24,454,540</td>
+                        <td>36.17</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>24,454,540</td>
+                        <td>36.17</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MAXIMO PTE. LTD.</th>
+                        <td>5,599,849</td>
+                        <td>8.28</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>5,599,849</td>
+                        <td>8.28</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">HOLDINGS LIMITED</th>
+                        <td>5,555,972</td>
+                        <td>8.22</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>5,555,972</td>
+                        <td>8.22</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>2016년 12월 31일 기준 (단위: 주, %)</p>
+        </section>
+    </body>
+</html>

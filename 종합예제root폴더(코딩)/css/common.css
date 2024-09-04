@@ -234,8 +234,10 @@ address > p {
 /* 버튼에 대한 정의 */
 .btn-wrap {
     /* tac+mt10r */
-    text-align: center; /* tac -> 블록인 조상에  text-align: center를 주면 
-    인라인인 자식요소가 가운데 정렬이 됨. */
+    /* text-align: center; /* tac -> 블록인 조상에  text-align: center를 주면  */
+    display: flex;
+    justify-content: center;
+    gap: 3.6rem;
     margin-top: 10rem;
 }
 
@@ -246,7 +248,7 @@ address > p {
     border: 1px solid var(--title-color);
     background: #fff;
     padding: 0 4.8rem;
-    display: inline-flex; /* inline-flex : 인라인의 특징을 가지는 flex요소 */
+    display: flex; /* inline-flex : 인라인의 특징을 가지는 flex요소 */
     justify-content: center; /* jcc : 메인축방향 중앙정렬 */
     align-items: center; /* aic : 교차축방향 중앙정렬 */
     gap: 1.2rem; /* 가상요소와의 여백을 위해서 */

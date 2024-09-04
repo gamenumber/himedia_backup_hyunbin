@@ -293,23 +293,23 @@
     font-weight: 700;
     font-size: 1.6rem;
     text-align: center; /* 텍스트를 가운데로 (가운데 정렬) */
-    color: var(--title-color);
 }
 
 .financial-info-tdl > table colgroup col + col {
     border-left: 1px solid var(--black20);
+    font-weight: 700;
 }
 
 .financial-info-tdl > table tbody tr th {
     /* h6r+bdb */
     height: 6rem;
-    font-weight: 700;
+    /* font-weight: 700; */
     border-bottom: 1px solid var(--black20);
     vertical-align: middle; /* vam : 세로기준 중앙으로 */
     font-size: 1.6rem;
     text-align: left; /* 텍스트를 가운데로 (가운데 정렬) */
     padding-left: 3.2rem;
-    background: var(--bg-color);
+    /* background: var(--bg-color); */
 }
 
 .financial-info-tdl > table tbody tr td {
@@ -324,7 +324,7 @@
 .financial-info-tdl > table tfoot tr th {
     /* h6r+bdb */
     height: 6rem;
-    font-weight: 700;
+    /* font-weight: 700; */
     border-bottom: 1px solid var(--black20);
     vertical-align: middle; /* vam : 세로기준 중앙으로 */
     font-size: 1.6rem;
@@ -340,5 +340,17 @@
     vertical-align: middle; /* vam : 세로기준 중앙으로 */
     font-size: 1.6rem;
     text-align: center; /* 텍스트를 가운데로 (가운데 정렬) */
+    color: var(--main-color);
+}
+
+.financial-info-tdl > table .sum > * {
+    background: var(--bg-color);
+    font-weight: 700;
+    color: var(--title-color);
+}
+
+.financial-info-tdl > table .sum2 > * {
+    background: var(--bg-color);
+    font-weight: 700;
     color: var(--main-color);
 }

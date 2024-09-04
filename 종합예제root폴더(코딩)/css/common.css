@@ -9,6 +9,7 @@
     --bg-color-dark: #232f28;
     --text-color: #666;
     --white60: rgba(255, 255, 255, 0.6);
+    --black20: rgba(0, 0, 0, 0.2);
 }
 
 ::selection {

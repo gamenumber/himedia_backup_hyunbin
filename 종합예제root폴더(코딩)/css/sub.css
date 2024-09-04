@@ -266,3 +266,27 @@
     right: 2rem; /* r2r */
     transition: 0.4s 0.4s; /* trs.4s-.4s */
 }
+
+/* 재무 정보 */
+.financial-info-tdl {
+    margin-top: 8rem;
+}
+
+.financial-info-tdl p {
+    /* tar+fw500+fz1.4r */
+    text-align: right; /* tar (텍스트를 오른쪽으로 밀어버리는 기능) */
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+.financial-info-tdl > table {
+    /* bdt3px */
+    border-top: 3px solid var(--title-color);
+    margin-top: 1.6rem;
+}
+
+.financial-info-tdl > table thead tr th {
+    /* h6r+bdb */
+    height: 6rem;
+    border-bottom: 1px solid var(--black20);
+}

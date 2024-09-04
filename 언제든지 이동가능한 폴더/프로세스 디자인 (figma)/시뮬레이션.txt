@@ -74,8 +74,8 @@ black -> #000
 영문 -> 
 친근하고 접근이 쉬운 가능한 Inria Sans 폰트 사용
 
-© 2024 Sunkist Growers | Light
-© 2024 Sunkist Growers | Regular 
+Inria Sans | Regular
+Inria Sans | Light
 
 --------------------------------------------------------------------------------------------
 

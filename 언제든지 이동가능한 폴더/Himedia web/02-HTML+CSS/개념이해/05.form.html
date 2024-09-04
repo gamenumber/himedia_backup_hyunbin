@@ -6,12 +6,55 @@
         <title>form tag</title>
     </head>
     <body>
+        <!-- fotm요소들은 inline-block이다. -->
         <form action="#">
-            <input type="text" />
-            <input type="password" />
-            <input type="radio" />
-            <input type="checkbox" />
-            <input type="file" />
+            <!-- fst>log -->
+            <fieldset>
+                <legend>필수 입력 항목</legend>
+                <input type="text" placeholder="아이디 : " />
+
+                <!-- 연결이 되면 라벨만 선택해도 포커스가 들어감. -> 잊지말고 연결하는걸 추천 -->
+                <label for="user-pwd">비밀번호</label>
+                <input type="password" id="user-pwd" />
+
+                <input type="radio" id="yes" />
+                <label for="yes">yes</label>
+
+                <input type="checkbox" id="check" />
+                <label for="check">동의합니다.</label>
+
+                <input type="file" />
+            </fieldset>
+
+            <fieldset>
+                <legend>선택 입력 항목</legend>
+                <!-- select>opt*4 -->
+                <select>
+                    <option value="#">edge</option>
+                    <option value="#">chrome</option>
+                    <option value="#">safari</option>
+                    <option value="#">firefox</option>
+                </select>
+                <select>
+                    <optgroup label="서울특별시">
+                        <option value="#">강남구</option>
+                        <option value="#">강서구</option>
+                        <option value="#">서대문구</option>
+                    </optgroup>
+                    <optgroup label="경기도">
+                        <option value="#">고양시</option>
+                        <option value="#">파주시</option>
+                        <option value="#">부천시</option>
+                    </optgroup>
+                </select>
+                <textarea
+                    cols="50"
+                    rows="10"
+                    placeholder="의견을 남겨주세요."
+                ></textarea>
+                <button type="submit">확인</button>
+                <button type="button">UI로써의 버튼</button>
+            </fieldset>
         </form>
     </body>
 </html>

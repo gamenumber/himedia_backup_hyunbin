@@ -289,4 +289,6 @@
     /* h6r+bdb */
     height: 6rem;
     border-bottom: 1px solid var(--black20);
+    vertical-align: middle; /* vam : 세로기준 중앙으로 */
+    font-size: 1.6rem;
 }

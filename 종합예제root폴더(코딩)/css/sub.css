@@ -290,5 +290,17 @@
     height: 6rem;
     border-bottom: 1px solid var(--black20);
     vertical-align: middle; /* vam : 세로기준 중앙으로 */
+    font-weight: 700;
     font-size: 1.6rem;
+    text-align: left; /* 텍스트를 가운데로 (가운데 정렬) */
+    color: var(--title-color);
+}
+
+.financial-info-tdl > table thead tr td {
+    /* h6r+bdb */
+    height: 6rem;
+    border-bottom: 1px solid var(--black20);
+    vertical-align: middle; /* vam : 세로기준 중앙으로 */
+    font-size: 1.6rem;
+    text-align: center; /* 텍스트를 가운데로 (가운데 정렬) */
 }

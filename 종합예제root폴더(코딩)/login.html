@@ -49,7 +49,7 @@
         <!-- //e: header -->
         <hr />
 
-        <main id="main" class="Login">
+        <main id="main" class="login">
             <!-- s: sub visual -->
             <section class="sub-visual">
                 <!-- .inner>.sub-title>h2>b{company} -->
@@ -73,10 +73,20 @@
                 <div class="form-wrap">
                     <!-- fst>leg -->
                     <fieldset>
-                        <legend>회원 로그인</legend>
+                        <legend><i class="hidden">회원 로그인</i></legend>
 
                         <!-- div*5 -->
-                        <div class="select-member"></div>
+                        <div class="select-member">
+                            <!-- div>input:radio+label -->
+                            <div>
+                                <input type="radio" id="mem-type1" />
+                                <label for="mem-type1">개인회원</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="mem-type2" />
+                                <label for="mem-type2">기업회원</label>
+                            </div>
+                        </div>
                         <div class="f-row">
                             <label for="user-id">아이디를 입력하세요</label>
                             <input type="text" id="user-id" />
@@ -86,8 +96,14 @@
                             <input type="password" id="user-pwd" />
                         </div>
                         <!-- button:submit -->
-                        <button type="submit"></button>
-                        <div class="save-id"></div>
+                        <button type="submit">로그인</button>
+                        <div class="save-id">
+                            <!-- div>input:checkbox+label -->
+                            <div>
+                                <input type="checkbox" id="save-id" />
+                                <label for="save-id">아이디 저장</label>
+                            </div>
+                        </div>
                     </fieldset>
                 </div>
 

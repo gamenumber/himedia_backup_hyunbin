@@ -23,6 +23,18 @@
     background-image: url(../img/sub-visual-4.jpg);
 }
 
+.login .sub-visual {
+    background: #fff;
+}
+
+.login .sub-title h2 {
+    color: #000;
+}
+
+.login .sub-title h2::before {
+    background: #000;
+}
+
 .sub-visual .inner {
     height: 100%; /* h100p */
     display: flex; /* 플렉스 박스 */
@@ -353,4 +365,56 @@
     background: var(--bg-color);
     font-weight: 700;
     color: var(--main-color);
+}
+
+/* 로그인 */
+.login-wrap {
+    /* w66r+m0-a+bg#ff5 */
+    width: 66rem;
+    margin: 0 auto;
+    background: #ff5;
+    padding-top: 0 !important; /* 개별성 규칙을 강제로 무시하는 (엄청난 점수가 들어가는 코드) -> 남발은 금물*/
+    text-align: center;
+}
+
+.login-wrap h3 {
+    /* fw700+fz5r+c */
+    font-weight: 700;
+    font-size: 5rem;
+    color: #000;
+}
+
+.login-wrap p {
+    margin-top: 1.8rem;
+    font-size: 2rem;
+}
+
+.select-member {
+    /* bg#5f5+mt5.4r+df */
+    /* background: #5f5; */
+    margin-top: 5.4rem;
+    display: flex;
+    justify-content: center;
+    gap: 5.6rem;
+}
+
+.select-member > div {
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.select-member > div input {
+    /* w2r+h2r+bd */
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #000;
+}
+
+.select-member > div label {
+    /* fw700+fz1.8r+c#000 */
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #000;
 }

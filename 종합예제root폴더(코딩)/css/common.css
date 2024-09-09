@@ -271,3 +271,31 @@ address > p {
     /* bxsh */
     box-shadow: 5px 6px 0 var(--main-color);
 }
+
+/* 공통으로 모든페이지에 정의 */
+/* 대괄호 -> 속성 선택자 */
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    background: #5f5;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+input[type="checkbox"] + label::before {
+    /* ct+db+w2r+h2r+bd */
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #000;
+}
+
+input[type="checkbox"]:checked + label::before {
+    /* 체크가 된 체크박스의 인접한 동생의 before가상요소 */
+    border-color: var(--main-color);
+    background: var(--main-color) url(../img/ico-check.svg) no-repeat 50% / 50%;
+}

@@ -131,3 +131,8 @@ table {
     border-collapse: collapse; /* 보더 합치기 */
     border-spacing: 0; /* 보더 여백 없애기 */
 }
+
+button,
+label {
+    cursor: pointer;
+}

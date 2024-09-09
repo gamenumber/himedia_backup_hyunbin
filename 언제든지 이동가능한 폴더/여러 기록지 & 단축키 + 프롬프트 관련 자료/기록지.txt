@@ -25,6 +25,9 @@ https://www.imagetoday.co.kr/ -> 다양한 이미지 판매 사이트
 
 ideogram.ai -> 타이포그래피 전문 이미지 생성 ai
 
+codepan.io -> 여러 css 현란한 애니메이션이 모인곳
+
+
 * 이미지 생성 ai
 
 https://aitestkitchen.withgoogle.com/ko/tools/image-fx

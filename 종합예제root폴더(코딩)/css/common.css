@@ -279,7 +279,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"] + label {
-    background: #5f5;
+    /* background: #5f5; */
     display: flex;
     align-items: center;
     gap: 1.2rem;

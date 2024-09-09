@@ -372,7 +372,7 @@
     /* w66r+m0-a+bg#ff5 */
     width: 66rem;
     margin: 0 auto;
-    background: #ff5;
+    /* background: #ff5; */
     padding-top: 0 !important; /* 개별성 규칙을 강제로 무시하는 (엄청난 점수가 들어가는 코드) -> 남발은 금물*/
     text-align: center;
 }

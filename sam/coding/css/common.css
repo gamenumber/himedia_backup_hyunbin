@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"); /* pretendard */
+
+:root {
+    /* fz62.5p */
+    font-size: 62.5%; /* 62.5% = 10px = 1rem */
+    --main-color: #0ebfdd;
+    --main-dark-color: #184661;
+    --title-color: #222;
+    --text-color: #666;
+}
+
+hr,
+.hidden {
+    /* poa+m-1+w1+h1+oh+clip */
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+body {
+    font: 2rem/1.5 Pretendard, sans-serif;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.btn-login:hover {
+    background: var(--main-dark-color);
+    color: #fff;
+}
+
+.visual {
+    max-width: 144rem;
+    margin: 0 auto;
+    height: 60rem;
+    background: url(../img/main-pc.jpg) no-repeat 0 0 / cover fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visual-title {
+    color: #fff;
+    /* background-color: #f55; */
+    text-align: center;
+}
+
+.visual-title h2 {
+    font-weight: 700;
+    font-size: 6rem;
+}
+.visual-title p {
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.about {
+    /* p5.5r-0-6r+tac */
+    padding: 5.5rem 0 6rem;
+    text-align: center;
+}
+
+.about p {
+    padding: 0 5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.sec-title {
+    /* fw700+fz4.4r+c+tac */
+    font-weight: 700;
+    font-size: 4.4rem;
+    color: var(--main-color);
+    text-align: center;
+}

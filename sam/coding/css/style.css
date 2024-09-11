@@ -4,20 +4,19 @@
     /* w94r+m0-a+bg#ff5 */
     width: 94rem;
     margin: 0 auto;
-    background: #ff5;
+    /* background: #ff5; */
 }
 
-header {
-    /* h8r+bg */
+/* header {
     background: #000;
-}
+} */
 
 nav {
     height: 8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #5f5;
+    /* background: #5f5; */
 }
 
 .logo a {
@@ -38,7 +37,7 @@ nav {
     /* db+p1r-1.8r+bd+fw700+fz1.4r */
     display: block;
     padding: 1rem 1.8rem;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     font-weight: 700;
     font-size: 1.4rem;
 }

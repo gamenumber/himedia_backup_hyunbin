@@ -24,6 +24,7 @@ hr,
 body {
     font: 2rem/1.5 Pretendard, sans-serif;
     color: var(--text-color);
+    min-width: 320px;
 }
 
 a {
@@ -44,7 +45,8 @@ a:hover {
 .visual {
     max-width: 144rem;
     margin: 0 auto;
-    height: 60rem;
+    /* height: 60rem; */
+    aspect-ratio: 1/0.41666667;
     background: url(../img/main-pc.jpg) no-repeat 0 0 / cover fixed;
     display: flex;
     justify-content: center;
@@ -60,10 +62,12 @@ a:hover {
 .visual-title h2 {
     font-weight: 700;
     font-size: 6rem;
+    font-size: clamp(3.5rem, 4.167vw, 6rem); /* clamp(최소값, 추천값, 최대값) */
 }
 .visual-title p {
     font-weight: 600;
     font-size: 3rem;
+    font-size: clamp(2.5rem, 2.083vw, 3rem);
 }
 
 .about {
@@ -92,6 +96,7 @@ a:hover {
     /* fw700+fz4.4r+c+tac */
     font-weight: 700;
     font-size: 4.4rem;
+    font-size: clamp(3rem, 3.06vw, 4.4rem);
     color: var(--main-color);
     text-align: center;
 }
@@ -99,15 +104,19 @@ a:hover {
 .team-list {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 7rem;
-    /* background: #5f5; */
     margin-top: 5rem;
+    max-width: 62.766%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .team-list li {
     /* bd+w15r+mih21r */
     /* border: 1px solid #000; */
     /* width: 15rem; */
+    width: 25.4237%;
     min-height: 21rem;
     text-align: center;
 }
@@ -231,38 +240,9 @@ footer .inner {
             width: 95%;
         }
 
-        .logo a {
-            width: 3.5rem;
-            height: 4.3rem;
-        }
-
-        nav {
-            height: 5.7rem;
-        }
-
-        .gnb {
-            display: none;
-        }
-
-        .btn-menu {
-            display: block;
-            width: 4rem;
-            height: 4rem;
-            border: 1px solid #000;
-            border-radius: 30px;
-            background: url(../img/ico-menu.png) no-repeat 50% / 50% auto;
-        }
-
-        .btn-login {
-            width: 4rem;
-            text-indent: -999px;
-            overflow: hidden;
-            background: var(--main-color) url(../img/ico-login.png) no-repeat
-                50% / 60% auto;
-        }
-
         .visual {
-            height: 17.6rem;
+            /* height: 17.6rem; */
+            aspect-ratio: 1/0.69;
             background-image: url(../img/main-visual-mobile.jpg);
             background-position: 50% 10%;
         }
@@ -279,19 +259,8 @@ footer .inner {
             font-size: 2.5rem;
         }
 
-        .team-list {
-            flex-direction: column; /* fxdc */
-            align-items: center;
-        }
-
-        .team-list li figure {
-            /* w19.2r+h19.2r */
-            width: 19.2rem;
-            height: 19.2rem;
-        }
-
         .work-with {
-            width: 24.8rem;
+            width: 65.2632%;
             height: 5.6rem;
             font-size: 2rem;
         }
@@ -306,5 +275,62 @@ footer .inner {
             flex-direction: column;
             gap: 2.8rem;
         }
+    }
+}
+
+/* .inner 크기에 맞춘 분기점 */
+@media screen and (max-width: 940px) {
+    .inner {
+        width: 80%;
+    }
+
+    .team-list {
+        width: 100%;
+    }
+}
+
+/* .inner 크기에 맞춘 분기점 */
+@media screen and (max-width: 700px) {
+    .inner {
+        width: 85%;
+    }
+
+    .logo a {
+        width: 3.5rem;
+        height: 4.3rem;
+    }
+
+    nav {
+        height: 5.7rem;
+    }
+
+    .gnb {
+        display: none;
+    }
+
+    .btn-menu {
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        border: 1px solid #000;
+        border-radius: 30px;
+        background: url(../img/ico-menu.png) no-repeat 50% / 50% auto;
+    }
+
+    .btn-login {
+        width: 4rem;
+        text-indent: -999px;
+        overflow: hidden;
+        background: var(--main-color) url(../img/ico-login.png) no-repeat 50% /
+            60% auto;
+    }
+    .team-list {
+        /* width: 19.2rem; */
+        width: 50.5263%;
+        flex-direction: column;
+    }
+
+    .team-list li {
+        width: 100%;
     }
 }

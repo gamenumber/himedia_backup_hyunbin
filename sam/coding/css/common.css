@@ -107,7 +107,7 @@ a:hover {
 .team-list li {
     /* bd+w15r+mih21r */
     /* border: 1px solid #000; */
-    width: 15rem;
+    /* width: 15rem; */
     min-height: 21rem;
     text-align: center;
 }
@@ -189,6 +189,7 @@ footer .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 5rem;
     /* background: #5f5; */
 }
 .sns-list {
@@ -225,8 +226,85 @@ footer .inner {
 /* 모바일 디자인 */
 @media screen and (max-width: 400px) {
     body {
+        .inner {
+            /* width: 38rem; */
+            width: 95%;
+        }
+
+        .logo a {
+            width: 3.5rem;
+            height: 4.3rem;
+        }
+
         nav {
             height: 5.7rem;
+        }
+
+        .gnb {
+            display: none;
+        }
+
+        .btn-menu {
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            border: 1px solid #000;
+            border-radius: 30px;
+            background: url(../img/ico-menu.png) no-repeat 50% / 50% auto;
+        }
+
+        .btn-login {
+            width: 4rem;
+            text-indent: -999px;
+            overflow: hidden;
+            background: var(--main-color) url(../img/ico-login.png) no-repeat
+                50% / 60% auto;
+        }
+
+        .visual {
+            height: 17.6rem;
+            background-image: url(../img/main-visual-mobile.jpg);
+            background-position: 50% 10%;
+        }
+
+        .visual-title {
+            /* width: 33.5rem; */
+            width: 83.75%;
+        }
+        .visual-title h2 {
+            font-size: 3.5rem;
+        }
+
+        .visual-title p {
+            font-size: 2.5rem;
+        }
+
+        .team-list {
+            flex-direction: column; /* fxdc */
+            align-items: center;
+        }
+
+        .team-list li figure {
+            /* w19.2r+h19.2r */
+            width: 19.2rem;
+            height: 19.2rem;
+        }
+
+        .work-with {
+            width: 24.8rem;
+            height: 5.6rem;
+            font-size: 2rem;
+        }
+
+        .map {
+            height: 41.6rem;
+        }
+
+        footer .inner {
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+            flex-direction: column;
+            gap: 2.8rem;
         }
     }
 }

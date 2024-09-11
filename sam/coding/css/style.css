@@ -42,6 +42,14 @@ nav {
     font-size: 1.4rem;
 }
 
+.util-menu {
+    display: flex;
+    gap: 1rem;
+}
+.btn-menu {
+    display: none;
+}
+
 .btn-login {
     /* db+w12.4r+h4r+bg+bdrs30+c#fff+fw7000+fz1.4r+ttu */
     /* display: block; */

@@ -9,6 +9,7 @@
     --dark-color: #222;
     --text-color: #555;
     --black40: rgba(0, 0, 0, 0.4);
+    --white-60: rgba(255, 255, 255, 0.6);
 
     /* fz62.5p */
     font-size: 62.5%; /* 1rem = 10px = 16px */

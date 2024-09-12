@@ -1,0 +1,46 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+:root {
+    --main-color: #3189ff;
+    --main-white-color: #5ea4ff;
+    --sub-color: #1f60b8;
+    --gnb-color: #333;
+    --dark-color: #222;
+    --text-color: #555;
+    --black40: rgba(0, 0, 0, 0.4);
+
+    /* fz62.5p */
+    font-size: 62.5%; /* 1rem = 10px = 16px */
+}
+
+::selection {
+    background-color: var(--main-white-color);
+}
+
+body {
+    font: 1.6rem/1.5 "Jost", "Noto Sans KR", sans-serif; /* 영문먼저 (그 다음 한글) */
+    color: var(--text-color);
+    word-break: keep-all;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+hr,
+.hidden {
+    /* poa+margin-1+w1+h1+oh+clip */
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}

@@ -53,7 +53,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 370px;
+    left: 19.2708vw; /* 뷰포트의 가로크기를 기준으로 한 크기 (1920px) */
     /* background-color: #5f5; */
 }
 
@@ -203,8 +203,12 @@
 
 .news-con {
     /* bd+p1.1r-6r-0-0 */
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     padding: 1.1rem 6rem 0 0;
+    /* fx1-1-50p */
+    /* flex: 1 1 50%; */
+    /* w45.7627p */
+    width: 45.7627%;
 }
 
 .news-con h4 {
@@ -220,7 +224,8 @@
     line-height: 1.7;
 }
 .news-pic {
-    width: 64rem;
+    /* width: 64rem; */
+    width: 54.2373%;
 }
 
 .column {
@@ -236,6 +241,10 @@
     margin-top: 1.8rem;
     line-height: 1.7;
     font-size: 1.6rem;
+    font-weight: 400;
+
+    column-count: 2;
+    /* column-gap: 10rem; */
 }
 
 .column strong {
@@ -286,4 +295,11 @@
 .foot-con p + p {
     /* mt.8r */
     margin-top: 0.8rem;
+}
+
+/* 1. 첫번째 미디어쿼리는 .inner의 크기로 잡아라 */
+@media (max-width: 1180px) {
+    .inner {
+        width: 90%;
+    }
 }

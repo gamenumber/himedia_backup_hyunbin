@@ -64,7 +64,8 @@
 .visual-title h2 {
     /* fw700+fz4.8r+c+lh1.2 */
     font-weight: 700;
-    font-size: 4.8rem;
+    /* font-size: 4.8rem; 모바일 : 3rem  가변 : 4.68vw  최대 : 4.8rem */
+    font-size: clamp(3rem, 4.68vw, 4.8rem);
     color: var(--dark-color);
     line-height: 1.2;
     text-transform: uppercase;
@@ -82,7 +83,7 @@
 
 .visual-title .cta {
     /* df+jcc+aic+w20r+h4.8r+c#fff+bg+fw700+mt3.2r */
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 20rem;
@@ -95,7 +96,8 @@
 
 .business {
     /* p9r-0-12r */
-    padding: 9rem 0 12rem;
+    /* padding: 9rem 0 12rem; */
+    padding: clamp(4rem, 4.6875vw, 9rem) 0 clamp(10rem 6.25vw, 12rem);
 }
 
 .business-list {
@@ -198,7 +200,7 @@
 
 .news {
     /* p12r-0 */
-    padding: 12rem 0;
+    padding: clamp(10rem 6.25vw, 12rem) 0;
 }
 
 .news-item {
@@ -338,12 +340,8 @@
     }
 
     .visual-title {
-        left: 110px;
-    }
-
-    .visual-title h2 {
-        /* 48 / 1024(디자인 시안의 뷰포트) * 100 = vw */
-        font-size: 4.6875vw;
+        /* left: 110px; */
+        left: 10.7422vw;
     }
 
     .business-list {
@@ -365,5 +363,67 @@
     .news-pic {
         /* width: 47.4rem; */
         width: 48.9669%;
+    }
+}
+
+/* 3. 모바일 */
+@media (max-width: 390px) {
+    .inner {
+        width: 89.7436%;
+    }
+
+    .visual {
+        /* height: 48rem; */
+        height: calc(
+            100vh - 10rem
+        ); /* h100vh -> 뷰포트의 세로크기를 기준으로 100% */
+        /* 다른 단위를 계산시키는 함수 : calc */
+    }
+
+    .visual-title {
+        /* l50%+trft */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 89.7436%;
+        text-align: center;
+    }
+
+    .visual-title br {
+        display: none;
+    }
+
+    .works-list li {
+        flex-basis: 100%; /* fxb : 100p 베이시스를 100%(점유 공간을 100%로 늘림) */
+    }
+
+    .news-item {
+        flex-direction: column; /* fxdc (컬럼으로 메인축 방향을 바꿈 (row -> column)) */
+    }
+
+    .news-con,
+    .news-pic {
+        width: 100%;
+    }
+
+    .news-con {
+        padding: 0 0 2.4rem 0;
+    }
+
+    .news-pic {
+        aspect-ratio: 1/1.097;
+    }
+
+    .column p {
+        column-count: 1;
+    }
+
+    #footer .inner {
+        flex-direction: column;
+        gap: 2.4rem;
+        text-align: center;
+    }
+
+    .column .inner br {
+        display: none;
     }
 }

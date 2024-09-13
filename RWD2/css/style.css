@@ -97,7 +97,8 @@
 .business {
     /* p9r-0-12r */
     /* padding: 9rem 0 12rem; */
-    padding: clamp(4rem, 4.6875vw, 9rem) 0 clamp(10rem 6.25vw, 12rem);
+    padding: clamp(4rem, 4.6875vw, 9rem) 0 clamp(10rem, 6.25vw, 12rem) 0;
+    /* padding: clamp(4rem, 4.6875vw, 9rem) 0 clamp(4rem); */
 }
 
 .business-list {
@@ -189,18 +190,20 @@
 .work-info strong {
     /* fw700+fz2.4r */
     font-weight: 700;
-    font-size: 2.4rem;
+    /* font-size: 2.4rem; */
+    font-size: clamp(1.8rem, 2.4vw, 2.4rem);
 }
 .work-info span {
     /* fw500+fz2.4r+mt0.6r */
     font-weight: 500;
-    font-size: 2.4rem;
+    /* font-size: 2.4rem; */
     margin-top: 0.6rem;
+    font-size: clamp(1.8rem, 2.4vw, 2.4rem);
 }
 
 .news {
     /* p12r-0 */
-    padding: clamp(10rem 6.25vw, 12rem) 0;
+    padding: clamp(10rem, 6.25vw, 12rem) 0;
 }
 
 .news-item {
@@ -303,10 +306,83 @@
     margin-top: 0.8rem;
 }
 
+/* 모바일 메뉴 */
+.mobile-menu {
+    /* pof+t0+l0+w100p+h100vh+bg+c#fff */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background: var(--main-color);
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+    padding-top: 11rem;
+
+    display: none;
+}
+
+.btn-close {
+    /* poa+t2.2r+r2r+w4.8r+w4.8r+bg */
+    position: absolute;
+    top: 2.2rem;
+    right: 2rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    background: url(../img/ico-close.svg) no-repeat 50%;
+}
+
+.mobile-logo {
+    /* db+w16.4r+h3.2r+bg */
+    display: block;
+    width: 16.4rem;
+    height: 3.2rem;
+    background: url(../img/m-logo.svg) no-repeat 0 0;
+}
+
+.mobile-gnb {
+    margin-top: 6.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-gnb li a {
+    font-weight: 700;
+    font-size: 2rem;
+    display: block;
+    padding: 1.6rem 0;
+    text-align: center;
+}
+
 /* 1. 첫번째 미디어쿼리는 .inner의 크기로 잡아라 */
-@media (max-width: 1180px) {
+@media (max-width: 1300px) {
     .inner {
         width: 90%;
+    }
+
+    .visual {
+        background-position: 50% 0; /* bgp */
+        background-size: cover; /* bgz */
+    }
+}
+
+/* 1200중간분기 */
+@media (max-width: 1200px) {
+    .business-list {
+        flex-wrap: wrap; /* fxww : 줄바꿈 가능 */
+    }
+
+    .business-list li {
+        /* flex: 1 1 48%; */
+        /* fxb48p */
+        flex-basis: 48%; /* 기본 점유 공간만 바꿈 */
+        aspect-ratio: 1/0.5907; /* asr */
     }
 }
 
@@ -335,24 +411,11 @@
 
     .visual {
         height: 64rem;
-        background-position: 50% 0; /* bgp */
-        background-size: cover; /* bgz */
     }
 
     .visual-title {
         /* left: 110px; */
         left: 10.7422vw;
-    }
-
-    .business-list {
-        flex-wrap: wrap; /* fxww : 줄바꿈 가능 */
-    }
-
-    .business-list li {
-        /* flex: 1 1 48%; */
-        /* fxb48p */
-        flex-basis: 48%; /* 기본 점유 공간만 바꿈 */
-        aspect-ratio: 1/0.5907; /* asr */
     }
 
     .news-con {
@@ -367,7 +430,7 @@
 }
 
 /* 3. 모바일 */
-@media (max-width: 390px) {
+@media (max-width: 600px) {
     .inner {
         width: 89.7436%;
     }

@@ -41,6 +41,10 @@
     color: var(--gnb-color);
 }
 
+.btn-menu {
+    display: none;
+}
+
 .visual {
     /* h46r+bg */
     height: 46rem;
@@ -100,7 +104,7 @@
 }
 
 .business-list li {
-    border: 1px solid var(--black40);
+    border: 1px solid #000;
     background: #fff;
     /* width: 28rem; */
     /* height: 30.2rem; */
@@ -301,5 +305,65 @@
 @media (max-width: 1180px) {
     .inner {
         width: 90%;
+    }
+}
+
+/* 2. 테블릿 */
+@media (max-width: 1024px) {
+    #header nav {
+        height: 10rem;
+    }
+    .inner {
+        /* width: 968px; */
+        /* 968 / container --> result * 100 */
+        width: 94.5313%;
+    }
+
+    .gnb {
+        display: none;
+    }
+
+    .btn-menu {
+        /* w4.8r+h4.8r+bg */
+        display: block;
+        width: 4.8rem;
+        height: 4.8rem;
+        background: url(../img/ico-menu.svg) no-repeat 50%;
+    }
+
+    .visual {
+        height: 64rem;
+        background-position: 50% 0; /* bgp */
+        background-size: cover; /* bgz */
+    }
+
+    .visual-title {
+        left: 110px;
+    }
+
+    .visual-title h2 {
+        /* 48 / 1024(디자인 시안의 뷰포트) * 100 = vw */
+        font-size: 4.6875vw;
+    }
+
+    .business-list {
+        flex-wrap: wrap; /* fxww : 줄바꿈 가능 */
+    }
+
+    .business-list li {
+        /* flex: 1 1 48%; */
+        /* fxb48p */
+        flex-basis: 48%; /* 기본 점유 공간만 바꿈 */
+        aspect-ratio: 1/0.5907; /* asr */
+    }
+
+    .news-con {
+        /* width: 49.4rem; */
+        width: 51.0331%;
+        padding-right: 2rem;
+    }
+    .news-pic {
+        /* width: 47.4rem; */
+        width: 48.9669%;
     }
 }

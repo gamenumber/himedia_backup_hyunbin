@@ -91,5 +91,112 @@ hr,
     /* w118r+m0-a+bg#ff5 */
     width: 118rem;
     margin: 0 auto;
-    /* background: #ff5; */
+    background: var(--grid-color);
+}
+
+/* 디자인 시작 : #header+#footer */
+
+/* #header */
+#header {
+    min-width: 192rem;
+    padding: 2rem 10rem 10rem 10rem;
+    background: var(--gray-color);
+}
+
+#header .header-nav {
+    padding: 5rem 5rem 1rem 5rem;
+    display: flex;
+    gap: 60rem;
+    align-items: center;
+}
+
+#header .h-logo {
+    /* w4r+h4.8r */
+    width: 4rem;
+    height: 4.8rem;
+}
+
+#header .h-icon {
+    /* w3.6r+h3.6r */
+    width: 3.6rem;
+    height: 3.6rem;
+}
+
+#header .h-mobile-menu {
+    display: none;
+}
+
+#header .nav-flex-wrap {
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+}
+
+#header .gnb {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+#header .gnb li p {
+    font-size: 1.8rem;
+}
+
+#header .header-flex-wrap {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    text-align: center;
+}
+
+#header .header-flex-wrap h1 {
+    font-weight: 700;
+    font-size: 7.6rem;
+}
+#header .header-flex-wrap p {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+#header .header-flex-wrap .button-wrap {
+    display: block;
+    padding: 2rem 3rem 2rem 3rem;
+    border-radius: 30px;
+    border: 1px solid #000;
+    margin: 3rem auto;
+}
+
+#header .header-flex-wrap .button-wrap .request-work {
+    border-radius: 30px;
+    font-size: 2rem;
+}
+
+
+/* #footer */
+
+#footer {
+    min-width: 192rem;
+    padding: 1rem;
+    background: var(--gray-color);
+}
+
+
+#footer .inner {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footer .inner .copyright {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+#footer .inner .sns {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 2.5rem;
 }

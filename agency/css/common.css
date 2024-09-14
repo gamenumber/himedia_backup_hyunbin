@@ -1,0 +1,95 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"); /* pretendard */
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap"); /* inria-sans */
+
+/* 변수 선언 + 추가 디자인 초기화 */
+:root {
+--main-color: #9fd450;
+--sub-color1: #ff5c00;
+--sub-color2: #fff0d4;
+--sub-color3: #0ca312;
+--title-color: #000;
+--text-color: #000;
+--text-color-gray: #585858;
+--text-shadow-color: rgba(0, 0, 0, 0.7);
+--gray-color: #dfdfdf;
+--grid-color: #ff6347;
+--white-100: rgba(255, 255, 255, 1);
+--white-90: rgba(255, 255, 255, 0.9);
+--white-80: rgba(255, 255, 255, 0.8);
+--white-70: rgba(255, 255, 255, 0.7);
+--white-60: rgba(255, 255, 255, 0.6);
+--white-50: rgba(255, 255, 255, 0.5);
+--white-40: rgba(255, 255, 255, 0.4);
+--white-30: rgba(255, 255, 255, 0.3);
+--white-20: rgba(255, 255, 255, 0.2);
+--white-10: rgba(255, 255, 255, 0.1);
+--dark-100: rgba(0, 0, 0, 1);
+--dark-90: rgba(0, 0, 0, 0.9);
+--dark-80: rgba(0, 0, 0, 0.8);
+--dark-70: rgba(0, 0, 0, 0.7);
+--dark-60: rgba(0, 0, 0, 0.6);
+--dark-50: rgba(0, 0, 0, 0.5);
+--dark-40: rgba(0, 0, 0, 0.4);
+--dark-30: rgba(0, 0, 0, 0.3);
+--dark-20: rgba(0, 0, 0, 0.2);
+--dark-10: rgba(0, 0, 0, 0.1);
+--dark-0: rgba(0, 0, 0, 0);
+}
+
+::selection {
+background: var(--main-color);
+color: #fff;
+}
+
+html {
+/* font-size: 100%; fz100p = 16px */
+font-size: 62.5%; /* fz62.5p = 10px = 1rem */
+scroll-behavior: smooth;
+line-height: 150%; /* lh150p */
+}
+
+body {
+font: 1.6rem/1.5 Pretendard, sans-serif;
+color: var(--text-color);
+text-transform: capitalize; /* ttc: 단어의 첫글자를 대문자로 */
+word-break: keep-all; /* wbka */
+margin: 0 auto;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+a:hover {
+text-decoration: none;
+color: var(--main-color);
+}
+
+img {
+/* maw100p+h100p */
+max-width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* hidden + inner + hr */
+
+hr,
+.hidden {
+    /* poa+margin-1+w1+h1+oh+clip */
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.inner {
+    /* w118r+m0-a+bg#ff5 */
+    width: 118rem;
+    margin: 0 auto;
+    /* background: #ff5; */
+}

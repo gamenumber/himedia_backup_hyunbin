@@ -1,9 +1,177 @@
 @charset "utf-8";
 
 /* about-us */
+.about-us {
+    padding: 2rem;
+}
+
+.about-us .inner {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.8rem;
+}
+
+.about-us .inner h2 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+.about-us .inner p {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
 
 /* team */
+.team {
+    padding: 1rem;
+}
+
+.team .inner {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.team .inner h2 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.team .inner .human-card {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.team .inner .human-card dl {
+    margin-top: 1.5rem;
+}
+.team .inner .human-card dl dt {
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+.team .inner .human-card dl dd {
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.team .inner .human-card figure {
+    /* border: 3px solid #000; */
+    border-radius: 60%;
+    overflow: hidden;
+}
+
+.team .inner .button-wrap {
+    display: block;
+    padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+    border-radius: 30px;
+    border: 1px solid #000;
+    margin: 3rem auto;
+}
+
+.work-with-us {
+    /* border-radius: 30px; */
+    font-size: 2rem;
+}
 
 /* work */
+.work {
+    padding: 2rem;
+    text-align: center;
+}
+
+.work .inner {
+    padding: 1rem;
+}
+
+.work .inner h2 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.work .inner .work-wrap {
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.work .inner .work-wrap .left-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.work .inner .work-wrap .left-wrap figure img {
+    width: 100%;
+}
+
+.work .inner .work-wrap .left-wrap dl {
+    text-align: left;
+}
+
+.work .inner .work-wrap .left-wrap dl dt {
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+.work .inner .work-wrap .left-wrap dl dd {
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.work .inner .work-wrap .right-wrap {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.work .inner .work-wrap .right-wrap figure {
+    width: 27rem;
+    height: 23rem;
+}
+
+
+.input-container {
+    margin: 0 auto;
+    margin-top: 5rem;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.email-input {
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+}
+.request-button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.request-button:hover {
+    background-color: #e0e0e0;
+}
 
 /* map */
+.map {
+    width: 100%;
+    height: 70rem;
+    margin: 0 auto;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}

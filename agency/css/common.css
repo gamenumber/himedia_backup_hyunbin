@@ -91,7 +91,7 @@ hr,
     /* w118r+m0-a+bg#ff5 */
     width: 118rem;
     margin: 0 auto;
-    background: var(--grid-color);
+    /* background: var(--grid-color); */
 }
 
 /* 디자인 시작 : #header+#footer */
@@ -99,7 +99,7 @@ hr,
 /* #header */
 #header {
     min-width: 192rem;
-    padding: 2rem 10rem 10rem 10rem;
+    padding: 2rem 10rem 2rem 10rem;
     background: var(--gray-color);
 }
 
@@ -161,14 +161,14 @@ hr,
 
 #header .header-flex-wrap .button-wrap {
     display: block;
-    padding: 2rem 3rem 2rem 3rem;
+    padding: 1.5rem 2.5rem 1.5rem 2.5rem;
     border-radius: 30px;
     border: 1px solid #000;
     margin: 3rem auto;
 }
 
 #header .header-flex-wrap .button-wrap .request-work {
-    border-radius: 30px;
+    /* border-radius: 30px; */
     font-size: 2rem;
 }
 
@@ -200,3 +200,4 @@ hr,
     padding: 0.5rem;
     gap: 2.5rem;
 }
+

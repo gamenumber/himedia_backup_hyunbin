@@ -69,8 +69,12 @@
 }
 
 .team .inner .button-wrap {
-    display: block;
-    padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+    margin-top: 3rem;
+}
+
+.team .inner .button-wrap a {
+    /* display: block; */
+    padding: 1.5rem 2rem 2rem 2rem;
     border-radius: 30px;
     border: 1px solid #000;
     margin: 3rem auto;

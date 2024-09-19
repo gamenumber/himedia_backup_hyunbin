@@ -61,4 +61,10 @@ body {
     font: 2rem/1.5 "Montserrat", sans-serif;
     text-transform: capitalize; /* ttc : 첫번째 글자는 대문자로 */
     color: var(--text-color);
+    word-break: keep-all; /* wbka : 자연스럽게 줄바꿈 -> 단어별로 */
+}
+
+::selection {
+    background: var(--main-color);
+    color: var(--sub-color);
 }

@@ -4,6 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>an interior design company</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <!-- cdn방식으로 끌어옴 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
         <a href="#main" class="hidden">본문 바로가기</a>
@@ -16,7 +24,10 @@
                 <nav>
                     <h1 class="logo">
                         <!-- a>i.hidden{Agency} -->
-                        <a href="#"><i class="hidden">Agency</i></a>
+                        <a href="#">
+                            <i class="ri-apple-fill"></i>
+                            <i class="hidden">Agency</i>
+                        </a>
                     </h1>
                     <ul class="gnb">
                         <!-- li*4>a -->
@@ -27,6 +38,7 @@
                     </ul>
                     <div class="util-menu">
                         <button class="btn-login">
+                            <i class="ri-login-box-line"></i>
                             <!-- i.hidden{login} -->
                             <i class="hidden">login</i>
                         </button>
@@ -153,15 +165,84 @@
                     <!-- h3.sec-title+ul.work-list+.request-wrap -->
                     <h3 class="sec-title">work</h3>
                     <ul class="work-list">
-                        <!-- li*5>a>figure>img -->
+                        <!-- li*5>a>figure>img[src="./img/work-pic$.jpg"] -->
+                        <li>
+                            <a href="#">
+                                <div class="work-recent">
+                                    <figure>
+                                        <img
+                                            src="./img/work-pic1.jpg"
+                                            alt="pic1"
+                                        />
+                                    </figure>
+                                    <!-- dl>dt+dd -->
+                                    <!-- .work-info>h4+p -->
+                                    <div class="work-info">
+                                        <h4>Amet minim mollit non deserunt</h4>
+                                        <p>
+                                            Amet minim mollit non deserunt
+                                            ullamco est sit aliqua dolor do amet
+                                            sint. Velit officia consequat duis
+                                            enim velit mollit. Exercitation
+                                            veniam...
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="./img/work-pic2.jpg" alt="pic2" />
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="./img/work-pic3.jpg" alt="pic3" />
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="./img/work-pic4.jpg" alt="pic4" />
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="./img/work-pic5.jpg" alt="pic5" />
+                                </figure>
+                            </a>
+                        </li>
                     </ul>
-                    <div class="request-wrap"></div>
+                    <div class="request-wrap">
+                        <!-- input+button.btn-request -->
+                        <input type="text" placeholder="enter your e-mail" />
+                        <button class="btn-request" type="submit">
+                            request work
+                        </button>
+                    </div>
                 </div>
             </section>
             <!-- //e: work -->
 
             <!-- s: map -->
-            <section class="map"></section>
+            <section class="map">
+                <!-- h3.hidden{찾아오시는 길} -->
+                <h3 class="hidden">찾아오시는 길</h3>
+                <div class="map-wrap">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12628.65292661262!2d126.78004566813898!3d37.69236538174181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c902e548726cb%3A0xb0f5c93a62f6f0de!2z6rOg67SJ7IKw!5e0!3m2!1sko!2skr!4v1726710591139!5m2!1sko!2skr"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </section>
             <!-- //e: map -->
         </main>
         <!-- //e: main -->
@@ -175,13 +256,22 @@
                     <p class="copyright">© Company.LLC 2022</p>
                     <ul class="sns-list">
                         <li>
-                            <a href="#"><i class="hidden">facebook</i></a>
+                            <a href="#">
+                                <i class="ri-facebook-fill"></i>
+                                <i class="hidden">facebook</i>
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><i class="hidden">instagram</i></a>
+                            <a href="#">
+                                <i class="ri-instagram-fill"></i>
+                                <i class="hidden">instagram</i>
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><i class="hidden">youtube</i></a>
+                            <a href="#">
+                                <i class="ri-youtube-fill"></i>
+                                <i class="hidden">youtube</i>
+                            </a>
                         </li>
                     </ul>
                 </div>

@@ -10,6 +10,7 @@
     --dark-color: #2c2c2c;
     --title-color: #000;
     --text-color: #555;
+    --grid-color: rgba(255, 255, 0, 0.2);
     --sub-color: #e9e2d4;
     --white-100: rgba(255, 255, 255, 1);
     --white-90: rgba(255, 255, 255, 0.9);
@@ -62,6 +63,8 @@ body {
     text-transform: capitalize; /* ttc : 첫번째 글자는 대문자로 */
     color: var(--text-color);
     word-break: keep-all; /* wbka : 자연스럽게 줄바꿈 -> 단어별로 */
+    overflow-x: hidden; /* ovxh -> x축으로 overflow되는 애는 숨겨라! */
+    min-width: 32rem; /* 반응형을 위해 배려 -> 최소 이만큼은 그려라 */
 }
 
 ::selection {

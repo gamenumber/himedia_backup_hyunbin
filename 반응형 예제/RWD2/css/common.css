@@ -1,0 +1,73 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+:root {
+    --main-color: #3189ff;
+    --main-white-color: #5ea4ff;
+    --sub-color: #1f60b8;
+    --gnb-color: #333;
+    --dark-color: #222;
+    --text-color: #555;
+    --white-100: rgba(255, 255, 255, 1);
+    --white-90: rgba(255, 255, 255, 0.9);
+    --white-80: rgba(255, 255, 255, 0.8);
+    --white-70: rgba(255, 255, 255, 0.7);
+    --white-60: rgba(255, 255, 255, 0.6);
+    --white-50: rgba(255, 255, 255, 0.5);
+    --white-40: rgba(255, 255, 255, 0.4);
+    --white-30: rgba(255, 255, 255, 0.3);
+    --white-20: rgba(255, 255, 255, 0.2);
+    --white-10: rgba(255, 255, 255, 0.1);
+    --dark-100: rgba(0, 0, 0, 1);
+    --dark-90: rgba(0, 0, 0, 0.9);
+    --dark-80: rgba(0, 0, 0, 0.8);
+    --dark-70: rgba(0, 0, 0, 0.7);
+    --dark-60: rgba(0, 0, 0, 0.6);
+    --dark-50: rgba(0, 0, 0, 0.5);
+    --dark-40: rgba(0, 0, 0, 0.4);
+    --dark-30: rgba(0, 0, 0, 0.3);
+    --dark-20: rgba(0, 0, 0, 0.2);
+    --dark-10: rgba(0, 0, 0, 0.1);
+    --dark-0: rgba(0, 0, 0, 0);
+
+    /* fz62.5p */
+    font-size: 62.5%; /* 1rem = 10px = 16px */
+}
+
+::selection {
+    background-color: var(--main-white-color);
+}
+
+body {
+    font: 1.6rem/1.5 "Jost", "Noto Sans KR", sans-serif; /* 영문먼저 (그 다음 한글) */
+    color: var(--text-color);
+    word-break: keep-all;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+hr,
+.hidden {
+    /* poa+margin-1+w1+h1+oh+clip */
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+img {
+    /* w100p+h100p+obf:cover */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

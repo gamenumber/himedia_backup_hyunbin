@@ -1,0 +1,336 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"); /* pretendard */
+
+:root {
+    /* fz62.5p */
+    font-size: 62.5%; /* 62.5% = 10px = 1rem */
+    --main-color: #0ebfdd;
+    --main-dark-color: #184661;
+    --title-color: #222;
+    --text-color: #666;
+}
+
+hr,
+.hidden {
+    /* poa+m-1+w1+h1+oh+clip */
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+body {
+    font: 2rem/1.5 Pretendard, sans-serif;
+    color: var(--text-color);
+    min-width: 320px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.btn-login:hover {
+    background: var(--main-dark-color);
+    color: #fff;
+}
+
+.visual {
+    max-width: 144rem;
+    margin: 0 auto;
+    /* height: 60rem; */
+    aspect-ratio: 1/0.41666667;
+    background: url(../img/main-pc.jpg) no-repeat 0 0 / cover fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visual-title {
+    color: #fff;
+    /* background-color: #f55; */
+    text-align: center;
+}
+
+.visual-title h2 {
+    font-weight: 700;
+    font-size: 6rem;
+    font-size: clamp(3.5rem, 4.167vw, 6rem); /* clamp(최소값, 추천값, 최대값) */
+}
+.visual-title p {
+    font-weight: 600;
+    font-size: 3rem;
+    font-size: clamp(2.5rem, 2.083vw, 3rem);
+}
+
+.about {
+    /* p5.5r-0-6r+tac */
+    padding: 5.5rem 0 6rem;
+    text-align: center;
+}
+
+.about p {
+    padding: 0 5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.team {
+    background: var(--main-color);
+    color: #fff;
+    padding: 4.5rem 0 6.4rem;
+}
+
+.team .sec-title {
+    color: #fff;
+}
+
+.sec-title {
+    /* fw700+fz4.4r+c+tac */
+    font-weight: 700;
+    font-size: 4.4rem;
+    font-size: clamp(3rem, 3.06vw, 4.4rem);
+    color: var(--main-color);
+    text-align: center;
+}
+
+.team-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    margin-top: 5rem;
+    max-width: 62.766%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-list li {
+    /* bd+w15r+mih21r */
+    /* border: 1px solid #000; */
+    /* width: 15rem; */
+    width: 25.4237%;
+    min-height: 21rem;
+    text-align: center;
+}
+
+/* 이미지를 가장 쉽게 손질하는 방법 */
+.team-list li figure {
+    /* w15r+h15r+bdred+bdrs50p+oh */
+    width: 15rem;
+    height: 15rem;
+    /* border: 1px solid #f00; */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.team-list li figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-list li dl {
+    margin-top: 1rem;
+}
+.team-list li dl dt {
+    /* fw700+fz1.8r */
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.team-list li dl dd {
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.work-with {
+    /* df+w18r+h4r+bd+bdrs30+fw700+fz1.4r+ttu  */
+    width: 18rem;
+    height: 4rem;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+
+    /* 버튼 디자인에서 텍스트를 정렬시키는 가장 쉬운 코딩 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* m9r-a-0 */
+    margin: 5rem auto 0;
+
+    transition: 0.4s;
+}
+
+.work-with:hover {
+    /* border-width: 3px;  */
+    color: #fff;
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+.map {
+    height: 60rem;
+}
+
+.map iframe {
+    /* w100p+h100p */
+    width: 100%;
+    height: 100%;
+    filter: sepia(0.5);
+}
+
+footer {
+    margin: 4rem 0;
+    background: #45494d;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+footer .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+    /* background: #5f5; */
+}
+.sns-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.sns-list li a {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background: no-repeat 50% / 60% auto;
+}
+
+.sns-list li:nth-child(1) a {
+    background-image: url(../img/foot-sns1.png);
+}
+.sns-list li:nth-child(2) a {
+    background-image: url(../img/foot-sns2.png);
+}
+.sns-list li:nth-child(3) a {
+    background-image: url(../img/foot-sns3.png);
+}
+
+.copyright {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* 모바일 디자인 */
+@media screen and (max-width: 400px) {
+    body {
+        .inner {
+            /* width: 38rem; */
+            width: 95%;
+        }
+
+        .visual {
+            /* height: 17.6rem; */
+            aspect-ratio: 1/0.69;
+            background-image: url(../img/main-visual-mobile.jpg);
+            background-position: 50% 10%;
+        }
+
+        .visual-title {
+            /* width: 33.5rem; */
+            width: 83.75%;
+        }
+        .visual-title h2 {
+            font-size: 3.5rem;
+        }
+
+        .visual-title p {
+            font-size: 2.5rem;
+        }
+
+        .work-with {
+            width: 65.2632%;
+            height: 5.6rem;
+            font-size: 2rem;
+        }
+
+        .map {
+            height: 41.6rem;
+        }
+
+        footer .inner {
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+            flex-direction: column;
+            gap: 2.8rem;
+        }
+    }
+}
+
+/* .inner 크기에 맞춘 분기점 */
+@media screen and (max-width: 940px) {
+    .inner {
+        width: 80%;
+    }
+
+    .team-list {
+        width: 100%;
+    }
+}
+
+/* .inner 크기에 맞춘 분기점 */
+@media screen and (max-width: 700px) {
+    .inner {
+        width: 85%;
+    }
+
+    .logo a {
+        width: 3.5rem;
+        height: 4.3rem;
+    }
+
+    nav {
+        height: 5.7rem;
+    }
+
+    .gnb {
+        display: none;
+    }
+
+    .btn-menu {
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        border: 1px solid #000;
+        border-radius: 30px;
+        background: url(../img/ico-menu.png) no-repeat 50% / 50% auto;
+    }
+
+    .btn-login {
+        width: 4rem;
+        text-indent: -999px;
+        overflow: hidden;
+        background: var(--main-color) url(../img/ico-login.png) no-repeat 50% /
+            60% auto;
+    }
+    .team-list {
+        /* width: 19.2rem; */
+        width: 50.5263%;
+        flex-direction: column;
+    }
+
+    .team-list li {
+        width: 100%;
+    }
+}

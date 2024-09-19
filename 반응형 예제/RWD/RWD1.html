@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RWD1</title>
+        <style>
+            * {
+                /* m0+p0+bxbb */
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            /* %로 잡으면 가변 레이아웃이 된다. */
+            .wrap {
+                /* w1200+h700+m0-a+bg#ff5 */
+                /* width: 1200px; */
+                /* width: 100%; 여백을 없애고 싶으면 */
+                /* width: 90%; 살짝 여백을 주고싶으면 */
+
+                height: 700px;
+                margin: 0 auto;
+                background: #ff5;
+            }
+            @media screen and (max-width: 1200px) {
+                .wrap {
+                    width: 90%;
+                }
+            }
+            .container {
+                /* w700+h500+bg#f55 */
+                /* width: 700px; */
+                width: 58.3333%;
+                height: 500px;
+                background: #f55;
+            }
+            .box {
+                /* w200+h200+bg#55f */
+                /* w200 / 700(감싸고 있는 컨테이너의 크기) * 100으로 계산하면 적정한 비율의 %를 찾아 낼 수 있음 */
+                width: 28.5714%;
+                height: 200px;
+                background: #55f;
+                margin-left: 7.1429%;
+                color: #fff;
+                padding: 4.2857%;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- .wrap>.container>.box -->
+        <div class="wrap">
+            <div class="container">
+                <div class="box">BOX</div>
+            </div>
+        </div>
+    </body>
+</html>

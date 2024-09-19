@@ -99,7 +99,7 @@
 
 .visual-title {
     /* bg#f00+poa+t50p+l50p+trft+c+tac */
-    background: #f00;
+    /* background: #f00; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -127,8 +127,8 @@
 }
 
 #main > section {
-    /* p8r-0-12r */
-    padding: 8rem 0 4rem;
+    /* p8r-0*/
+    padding: 8rem 0;
 }
 
 .about-con {
@@ -136,7 +136,7 @@
     margin-top: 4.3rem;
     width: 88rem;
     margin: 0 auto;
-    background: #5f5;
+    /* background: #5f5; */
 }
 
 .about-con figure {
@@ -148,4 +148,72 @@
     margin-top: 2.8rem;
     padding: 0 11rem;
     text-align: center;
+}
+
+.team {
+    background-color: var(--main-color);
+    color: var(--sub-color);
+    text-align: center;
+}
+
+.team-list {
+    /* mt4r */
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.team-list li {
+    border: 1px solid var(--white-100);
+    width: 28rem;
+    min-height: 33rem;
+    padding: 2rem;
+}
+
+.team-list li figure {
+    aspect-ratio: 1/1; /* asr */
+    border-radius: 50%; /* bdrs50p : 동글동글하게! */
+    overflow: hidden; /* 튀어나가는 부분 없애기 */
+}
+
+.team-list li dl {
+    /* mt2r */
+    margin-top: 2rem;
+}
+.team-list li dl dt {
+    /* fw700+fz2.4r */
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+.team-list li dl dd {
+    /* fz1.8r+mt.8r */
+    font-size: 1.8rem;
+    margin-top: 0.8rem;
+}
+
+.btn-work-with {
+    /* mt4.8r */
+    margin-top: 4.8rem;
+}
+
+.work-list {
+    /* mt4.3r+bg#5f5+dg+g2r */
+    margin-top: 4.3rem;
+    background: #5f5;
+    display: grid; /* dg -> 약간 표 그리듯이 그리고 합친다고 생각하면 쉬움~! 
+    메인축 교차축 다 되는데 이건 여기저기 붙이는 레이아웃을 그나마 할 수 있음!*/
+    grid-template-columns: 48rem 33rem 33rem; /* gtc */
+    grid-template-rows: repeat(
+        2,
+        1fr /* 프렉션 : 분수단위(그리드에서) -> 같은비율로 2개를 만들겠다. */
+    ); /* gtr */
+    gap: 2rem;
+}
+
+.work-list li:nth-child(1) {
+    /* 아이템한테 주는 명령 (그리드의 아이템에게 number로 표현하는 방식의 코딩방법) */
+    /* grid-column-start: 1;
+    grid-column-end: 2; */
+    grid-column: 1/2;
+    grid-row: 1/3;
 }

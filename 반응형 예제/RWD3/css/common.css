@@ -82,3 +82,18 @@ body {
     font-size: 2rem;
     color: var(--white-100);
 }
+
+.sec-title {
+    /* fw700+fz4r+c */
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--title-color);
+    text-align: center;
+}
+
+img {
+    /* w100p+h100p */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

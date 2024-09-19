@@ -6,9 +6,62 @@
         <title>an interior design company</title>
     </head>
     <body>
+        <a href="#main" class="hidden">본문 바로가기</a>
+
         <!-- header#header+main#main+footer#footer -->
-        <header id="header"></header>
+        <!-- s: header -->
+        <header id="header">
+            <div class="inner">
+                <!-- nav>h1.logo+ul.gnb+.util-menu>button.btn-login-->
+                <nav>
+                    <h1 class="logo">
+                        <!-- a>i.hidden{Agency} -->
+                        <a href="#"><i class="hidden">Agency</i></a>
+                    </h1>
+                    <ul class="gnb">
+                        <!-- li*4>a -->
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">work</a></li>
+                        <li><a href="#">contack</a></li>
+                    </ul>
+                    <div class="util-menu">
+                        <button class="btn-login">
+                            <!-- i.hidden{login} -->
+                            <i class="hidden">login</i>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- //e: header -->
+        <hr />
+
+        <!-- s: main -->
         <main id="main"></main>
-        <footer id="footer"></footer>
+        <!-- //e: main -->
+        <hr />
+
+        <!-- s: footer -->
+        <footer id="footer">
+            <div class="inner">
+                <!-- .foot-wrap>p.copyright+ul.sns-list>li*3>a>i.hidden -->
+                <div class="foot-wrap">
+                    <p class="copyright">© Company.LLC 2022</p>
+                    <ul class="sns-list">
+                        <li>
+                            <a href="#"><i class="hidden">facebook</i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="hidden">instagram</i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="hidden">youtube</i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- //e: footer -->
     </body>
 </html>

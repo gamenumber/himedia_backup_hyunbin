@@ -67,12 +67,16 @@
     background: transparent;
 }
 
+.btn-menu {
+    display: none;
+}
+
 .visual {
     /* h63.7r+oh+por */
     height: 63.7rem;
     overflow: hidden;
     position: relative;
-    padding: 0;
+    padding: 0 !important;
 }
 
 .visual::after {
@@ -128,7 +132,7 @@
     /* mt1r+fw500+p0-26r */
     margin-top: 1rem;
     font-weight: 500;
-    padding: 0 26rem;
+    padding: 0 22.6087%;
 }
 
 .visual-title .btn-cta {
@@ -138,6 +142,9 @@
 #main > section {
     /* p8r-0*/
     padding: 8rem 0;
+    /* padding: 4.1667vw 0; */
+    /* padding: max(8rem, 2vw) 0; 두 값중에서 큰 걸 가져가라 */
+    /* padding: min(8rem, 4.1667vw) 0; 두 값중에서 작은 걸 가져가라 */
 }
 
 .about-con {
@@ -167,6 +174,10 @@
     text-align: center;
 }
 
+.team .sec-title {
+    color: var(--sub-color);
+}
+
 .team-list {
     /* mt4r */
     margin-top: 2rem;
@@ -176,7 +187,7 @@
 }
 
 .team-list li {
-    border: 1px solid var(--white-100);
+    /* border: 1px solid var(--white-100); */
     width: 28rem;
     min-height: 33rem;
     padding: 2rem;
@@ -338,9 +349,55 @@
 }
 
 /* .inner 크기에 맞춘 분기 (가변) */
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1200px) {
+    /* .inner {
+        width: 90%; 
+    } */
     .inner {
-        width: 90%; /* 진짜 이건 마술이다 한 수 배우고 이거쓰자 */
+        /* width: 96.4rem; */
+        width: 94.1406%;
+    }
+
+    .visual-title {
+        /* width: 71.4rem; */
+        width: 69.7266vw;
+    }
+
+    .visual-title p {
+        /* p0-7.983193277310924p */
+        padding: 0 7.9832%;
+    }
+
+    .visual {
+        height: 49rem;
+    }
+
+    .about-con {
+        width: 100%;
+    }
+
+    .work-list {
+        /* gtc */
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .work-list li:nth-child(1) {
+        /* gc */
+        grid-column: 1/5;
+
+        /* gr */
+        grid-row: 1/2;
+    }
+
+    .request-wrap {
+        width: 50.6224%;
+    }
+
+    .map {
+        /* height: 84.6rem; */
+        height: auto;
+        aspect-ratio: 1/0.826171875;
     }
 }
 
@@ -394,8 +451,44 @@
     }
 }
 
+@media screen and (max-width: 750px) {
+    .gnb {
+        display: none;
+    }
+    .btn-menu {
+        display: block;
+    }
+    .visual-title {
+        /* width: 89.7436%; */
+        width: 94%;
+    }
+
+    .btn-request {
+        width: 8rem;
+        flex-shrink: 0;
+    }
+
+    .request-wrap input {
+        width: calc(100% - 8rem);
+    }
+
+    .btn-request b {
+        display: none;
+    }
+
+    .btn-request::before {
+        content: "\F0D8";
+        font-family: "remixicon" !important;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .request-wrap input::placeholder {
+        font-size: 3.5897vw;
+    }
+}
 /* 모바일 */
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 600px) {
     :root {
         font-size: 58%;
     }
@@ -408,17 +501,9 @@
         height: 6.8rem;
     }
 
-    .gnb {
-        display: none;
-    }
-
     .visual {
         /* height: 100vh; */
         height: 54rem;
-    }
-
-    .visual-title {
-        width: 89.7436%;
     }
 
     .visual-title p {
@@ -449,23 +534,11 @@
         width: 100%;
     }
 
-    .btn-request {
-        width: 8rem;
-        flex-shrink: 0;
-    }
-
-    .btn-request b {
-        display: none;
-    }
-
-    .btn-request::before {
-        content: "\F0D8";
-        font-family: "remixicon" !important;
-        font-style: normal;
-        -webkit-font-smoothing: antialiased;
-    }
-
     .map {
         aspect-ratio: 1/1.3538;
+    }
+
+    .foot-wrap {
+        flex-direction: column;
     }
 }

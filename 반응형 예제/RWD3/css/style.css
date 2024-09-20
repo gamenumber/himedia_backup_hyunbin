@@ -6,7 +6,7 @@
     /* w118r+m0-a+bg */
     width: 118rem;
     margin: 0 auto;
-    background: var(--grid-color);
+    /* background: var(--grid-color); */
 }
 
 #header {
@@ -199,7 +199,7 @@
 .work-list {
     /* mt4.3r+bg#5f5+dg+g2r */
     margin-top: 4.3rem;
-    background: #5f5;
+    /* background: #5f5; */
     display: grid; /* dg -> 약간 표 그리듯이 그리고 합친다고 생각하면 쉬움~! 
     메인축 교차축 다 되는데 이건 여기저기 붙이는 레이아웃을 그나마 할 수 있음!*/
     grid-template-columns: 48rem 33rem 33rem; /* gtc */
@@ -216,4 +216,101 @@
     grid-column-end: 2; */
     grid-column: 1/2;
     grid-row: 1/3;
+}
+
+.work-info {
+    /* background-color: var(--white-50); */
+    /* p2.8r-0 */
+    padding: 2.8rem 0;
+}
+.work-info h4 {
+    /* mt2.8r+fw700+fz2.4r+c */
+    margin-top: 2.8rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--title-color);
+}
+.work-info p {
+    /* fz1.8r+mt.8r */
+    font-size: 1.8rem;
+    margin-top: 0.8rem;
+}
+
+.request-wrap {
+    /* w48.8r+h5.4r+bd */
+    width: 48.8rem;
+    height: 5.4rem;
+    border: 1px solid var(--dark-40);
+    margin: 5.2rem auto 0;
+    border-radius: 5rem;
+    overflow: hidden;
+    display: flex;
+    background: var(--white-100);
+}
+
+.request-wrap input {
+    /* fx1-1-a+p0-2.4r */
+    flex: 1 1 auto;
+    padding: 0 2.4rem;
+    outline: none; /* 보더 밖의 아웃라인 없애기 */
+}
+
+.btn-request {
+    /* w21.4r+bg+c#fff+fw700 */
+    width: 21.4rem;
+    background: var(--dark-100);
+    color: var(--white-100);
+    font-weight: 700;
+    border-radius: 5rem;
+}
+
+.map {
+    padding: 0 !important;
+    height: 68rem;
+}
+
+.map-wrap {
+    /* w100p+h100p */
+    width: 100%;
+    height: 100%;
+}
+
+.map-wrap iframe {
+    /* w100p+h100p */
+    width: 100%;
+    height: 100%;
+}
+
+#footer {
+    background: var(--dark-color);
+    color: var(--sub-color);
+    padding: 5.6rem 0;
+}
+
+.foot-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.sns-list {
+    display: flex;
+    gap: 2.4rem;
+}
+.sns-list li a {
+    /* db+w4.8r+h4.8r+bd+bdrs50p */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    aspect-ratio: 1/1;
+    border: 1px solid #000;
+    border-radius: 50%;
+    font-size: 2.2rem; /* 폰트 사이즈로 크기를 조정함 */
 }

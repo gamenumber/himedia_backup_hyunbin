@@ -226,7 +226,7 @@
     /* background: #5f5; */
     display: grid; /* dg -> 약간 표 그리듯이 그리고 합친다고 생각하면 쉬움~! 
     메인축 교차축 다 되는데 이건 여기저기 붙이는 레이아웃을 그나마 할 수 있음!*/
-    grid-template-columns: 40.678% 27.9661rem 27.9661rem; /* gtc */
+    grid-template-columns: 40.678% 27.9661% 27.9661%; /* gtc */ /* -> 여기서 크기를 정해줘서 aspect-ratio를 쓸 수 있음 */
     grid-template-rows: repeat(
         2,
         1fr /* 프렉션 : 분수단위(그리드에서) -> 같은비율로 2개를 만들겠다. */

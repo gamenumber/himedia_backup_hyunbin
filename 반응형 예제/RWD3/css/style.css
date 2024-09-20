@@ -52,10 +52,12 @@
     padding: 1rem 3rem;
 }
 
-/* .util-menu {
-} */
+.util-menu {
+    display: flex;
+    gap: 1.2rem;
+}
 
-.util-menu .btn-login {
+.util-menu button {
     /* w4r+h4r+bd+bdrs50p */
     width: 4rem;
     height: 4rem;
@@ -116,8 +118,9 @@
     font-weight: 700;
     font-size: 7.6rem;
     font-size: clamp(
-        3.2rem,
-        3.9583vw,
+        3.2rem /* 최소크기 */,
+        3.9583vw
+            /* 중간크기 (뷰포트 크기 1920을 기준으로하면 76 나누기 1920 곱하기 100)*/,
         7.6rem /* 7.6rem의 vw를 잡아서 의도를 살림 -> 중간값 */
     );
 }
@@ -141,7 +144,7 @@
     /* mt4.3r+w88r+m0-a */
     margin-top: 4.3rem;
     /* width: 88rem; */
-    width: 74.5763%;
+    width: 74.5763%; /* 880 나누기 .inner의 크기(1180) 곱하기 100 */
     margin: 0 auto;
     /* background: #5f5; */
 }
@@ -233,7 +236,7 @@
 }
 
 .work-list li:nth-child(1) figure {
-    aspect-ratio: 1/0.0667;
+    aspect-ratio: 1/0.4771784232365145;
 }
 
 .work-info {
@@ -344,15 +347,18 @@
 /* tablet pc */
 @media screen and (max-width: 1024px) {
     .inner {
-        width: 96.4rem;
+        /* width: 96.4rem; */
+        width: 94.1406%;
     }
 
     .visual-title {
-        width: 71.4rem;
+        /* width: 71.4rem; */
+        width: 69.7266vw;
     }
 
     .visual-title p {
-        padding: 0 5.7rem;
+        /* p0-7.983193277310924p */
+        padding: 0 7.9832%;
     }
 
     .visual {
@@ -382,6 +388,84 @@
     }
 
     .map {
-        height: 84.6rem;
+        /* height: 84.6rem; */
+        height: auto;
+        aspect-ratio: 1/0.826171875;
+    }
+}
+
+/* 모바일 */
+@media screen and (max-width: 390px) {
+    :root {
+        font-size: 58%;
+    }
+    .inner {
+        /* width: 35rem; */
+        width: 89.7436%;
+    }
+
+    #header nav {
+        height: 6.8rem;
+    }
+
+    .gnb {
+        display: none;
+    }
+
+    .visual {
+        /* height: 100vh; */
+        height: 54rem;
+    }
+
+    .visual-title {
+        width: 89.7436%;
+    }
+
+    .visual-title p {
+        padding: 0;
+        font-size: 1.8rem;
+    }
+
+    .about-con figure {
+        aspect-ratio: 1/0.9143;
+    }
+
+    .about-con p {
+        /* p0+fz1.6r */
+        padding: 0;
+        /* font-size: 1.6rem; */
+    }
+
+    .work-list {
+        display: flex;
+        flex-direction: column; /* fxdc */
+    }
+
+    .work-list li:nth-child(1) figure {
+        aspect-ratio: 1/1;
+    }
+
+    .request-wrap {
+        width: 100%;
+    }
+
+    .btn-request {
+        width: 8rem;
+        flex-shrink: 0;
+    }
+
+    .btn-request b {
+        display: none;
+    }
+
+    .btn-request::before {
+        content: "\F0D8";
+        font-family: "remixicon" !important;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .map {
+        aspect-ratio: 1/1.3538;
     }
 }

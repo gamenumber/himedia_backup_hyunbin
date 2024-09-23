@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>1. 변수와 상수</title>
+    </head>
+    <body>
+        <script>
+            // 한 줄 주석 : Ctrl+/
+            /* 여러 줄 주석 : Alt + Shift + A */
+
+            // 1. 변수(variable) : 값을 저장할 수 있다. -> 값이 변할 수 있다.
+            // 변수의 선언
+            let box;
+
+            // 변수에 값(데이터)을 저장
+            box = "상자";
+
+            console.log(box);
+
+            // 변수에 값을 재 할당
+            box = "진짜 상자";
+            console.log(box);
+
+            // 재 선언은 불가능
+            // 선언과 동시에 값을 할당하는 것도 가능
+            let box2 = "상자라니까";
+
+            // 2. 상수(constant) : 값이 변할 수 없다.
+            // 선언만 할 수 없다. 선언과 동시에 값을 할당
+            const name = "문미르";
+
+            // 3. 변수와 상수를 만들 때 주의점
+            /*
+                - 숫자로 시작하면 안 됨, 중간이나 마지막은 가능
+                - 공백(스테이스바)을 넣으면 안 됨 : 카멜케이스로 작성
+                - 소문자로 시작
+                - 특수문자 중에서 $, _(언더스코어) 사용 가능
+                - 영문, 한글, 유니코드 사용 가능
+                - 자바스크립트의 예약어는 사용할 수 없다.
+            */
+
+            // const 10num = 10; -> X
+            // const num10 = 10; -> O
+            // const nu10m = 10; -> O
+
+            const num10 = 10;
+            const characterName = "유즈하 리코";
+            const _characterName = "유즈하 리코";
+
+            let 오케이 = "OK";
+
+            const document = "내 문서";
+            console.log(document);
+        </script>
+    </body>
+</html>

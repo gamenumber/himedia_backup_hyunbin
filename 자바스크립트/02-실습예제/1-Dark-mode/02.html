@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>checkbox로 다크 모드를 구현하자</title>
+        <style>
+            body {
+                background: #fff;
+            }
+
+            body.dark {
+                background: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="checkbox" id="dark" />
+        <label for="dark">다크모드</label>
+        <script>
+            // 1. 대상을 변수에 저장
+            const $body = document.body;
+            const chkBox = document.getElementById("dark");
+
+            console.log($body, chkBox);
+
+            // input:checkbox가 체크되면 정보가 갱신된다.
+            // 함수가 이벤트핸들러로 호출될 때
+            // 첫번째 매개변수 자리를 통해 이벤트 정보를 객체로 받을 수 있다.
+            chkBox.addEventListener("click", function (event) {
+                // console.log(event)
+                console.log(event.target.checked);
+
+                // if (조건) {} else {}
+                if (event.target.checked) {
+                    // 조건이 참이면 실행
+                    $body.classList.add("dark");
+                } else {
+                    // 조건이 거짓이면 실행
+                    $body.classList.remove("dark");
+                }
+            });
+        </script>
+    </body>
+</html>

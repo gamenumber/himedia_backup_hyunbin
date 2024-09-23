@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>버튼으로 다크 모드를 구현하자</title>
+        <style>
+            body {
+                background: #fff;
+            }
+
+            body.dark {
+                background: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- button:button -->
+        <button type="button" id="addDark">다크모드 구현</button>
+        <button type="button" id="removeDark">다크모드 해제</button>
+
+        <script>
+            // 1. 대상을 변수에 저장
+            const btnAddDark = document.getElementById("addDark");
+            const btnRemoveDark = document.getElementById("removeDark");
+            const $body = document.body;
+
+            console.log(btnAddDark, btnRemoveDark, $body);
+
+            // 2. btnAddDark를 클릭했을 때
+            btnAddDark.addEventListener("click", function () {
+                // $body에 dark 클래스 부여
+                $body.classList.add("dark");
+            });
+
+            // 3. btnRemoveDark를 클릭했을 때
+            btnRemoveDark.addEventListener("click", function () {
+                // $body에 dark 클래스 삭제
+                $body.classList.remove("dark");
+            });
+        </script>
+    </body>
+</html>

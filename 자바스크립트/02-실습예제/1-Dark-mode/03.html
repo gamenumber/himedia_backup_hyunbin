@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>체크박스 디자인 커스텀</title>
+
+        <style>
+            * {
+                /* m0+p0+bxbb */
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background: #fff;
+                transition: 0.4s;
+            }
+
+            body.dark {
+                background: #333;
+                color: #fff;
+            }
+
+            .wrap {
+                /* w80p+m0-a+p3vw+lh1.6 */
+                width: 80%;
+                margin: 0 auto;
+                padding: 3vw;
+                line-height: 1.6;
+            }
+
+            .f-row {
+                /* bg#ff5+mla+w70 */
+                /* background: #ff5; */
+                margin-left: auto;
+                width: 70px;
+                height: 30px;
+            }
+
+            .f-row input[type="checkbox"] {
+                display: none;
+            }
+            .f-row input[type="checkbox"] + label {
+                display: block;
+                border: 1px solid #000;
+                background: #fff;
+                border-radius: 50px;
+
+                /* ti-999+oh */
+                text-indent: -999px;
+                overflow: hidden;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .f-row input[type="checkbox"] + label::after {
+                content: "";
+                width: 26px;
+                height: 26px;
+                border: 1px solid #000;
+                border-radius: 50%;
+                background: #fff;
+
+                position: absolute;
+                top: 0;
+                left: 1px;
+            }
+
+            .f-row input[type="checkbox"]:checked + label::after {
+                left: 39px;
+            }
+
+            .f-row input[type="checkbox"]:checked + label {
+                background: #b114a4;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- .wrap>.f-row>input:checkbox+label -->
+        <div class="wrap">
+            <div class="f-row">
+                <input type="checkbox" id="selectMode" /><label for="selectMode"
+                    >Dark Mode</label
+                >
+            </div>
+        </div>
+
+        <!-- .contents>h1+h2+p -->
+        <div class="contents">
+            <h1>누가 감히 자바스크립트를 이해하려고 하나?</h1>
+            <h2>그냥 받아들이는 거시지</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                placeat ipsam expedita magnam incidunt repellendus. Quasi earum,
+                doloribus dolorem quia incidunt commodi architecto sint
+                blanditiis molestiae adipisci, nesciunt dolores dolor?
+            </p>
+        </div>
+
+        <script>
+            // 1. 대상을 변수에 저장
+            const $body = document.body;
+            // const chkBox = document.getElementById("selectMode");
+            const chkBox = document.querySelector("#selectMode");
+
+            console.log($body, chkBox);
+
+            // input:checkbox가 체크되면 정보가 갱신된다.
+            // 함수가 이벤트핸들러로 호출될 때
+            // 첫번째 매개변수 자리를 통해 이벤트 정보를 객체로 받을 수 있다.
+            chkBox.addEventListener("click", function (event) {
+                // console.log(event)
+                console.log(event.target.checked);
+
+                // if (조건) {} else {}
+                if (event.target.checked) {
+                    // 조건이 참이면 실행
+                    $body.classList.add("dark");
+                } else {
+                    // 조건이 거짓이면 실행
+                    $body.classList.remove("dark");
+                }
+            });
+        </script>
+    </body>
+</html>

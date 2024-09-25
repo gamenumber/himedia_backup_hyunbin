@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>3. 연산자</title>
+    </head>
+    <body>
+        <script>
+            // 1. 산술연산자 : 사칙연산
+            const num1 = 15;
+            const num2 = 2;
+            let result;
+
+            // result = num1 + num2; -> 더하기
+            // result = num1 - num2; -> 빼기
+            // result = num1 * num2; -> 곱하기
+            // result = num1 / num2; -> 나누기 난 몫
+            // result = num1 % num2; -> 나누고 난 나머지 (홀/짝 구별방법)
+
+            console.log(result);
+
+            // "=" -> 대입연산자 (오른쪽값이 왼쪽값으로 들어감)
+            // "==" -> 등호연산자 (프로그래밍에서 실제로 같다는 의미)
+
+            // if () {} else {}
+            if (num1 % num2 == 0) {
+                console.log("짝수!");
+            } else {
+                console.log("홀수!");
+            }
+
+            // + 연산자의 특이한 점 : 숫자끼리는 더한다.
+            // 1. 문자 + 문자 --> 결합
+            const str1 = "강철";
+            const str2 = "부대";
+            const strResult = str1 + str2;
+            console.log(strResult);
+
+            // 2. 문자 + 숫자 --> 문자가 하나라도 끼게 되면, 문자로 변환해 버림
+        </script>
+    </body>
+</html>

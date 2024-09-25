@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=`, initial-scale=1.0" />
+        <title>사용자에게 헥스코드 값을 입력 받아서 적용</title>
+        <style>
+            body {
+                height: 100vh; /* h100vh 세로의 영역을 전체 다 써라 */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: skyblue;
+            }
+
+            .wrap {
+                display: flex;
+                gap: 10px;
+            }
+
+            #colorBox {
+                /* w500+h70+bd+p+bg+fz1.5r */
+                width: 500px;
+                height: 70px;
+                border: 4px solid #000;
+                padding: 10px;
+                background: #fff;
+                font-size: 1.3rem;
+                box-sizing: border-box;
+            }
+
+            .btnChange {
+                /* w100+h70+bg+c#fff+bdn */
+                width: 100px;
+                height: 70px;
+                background: #000;
+                color: #fff;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- .wrap>input+button:button.btnChange{변경} -->
+        <div class="wrap">
+            <input
+                type="text"
+                id="colorBox"
+                placeholder="원하는 컬러값을 HEX코드로 입력하세요. 예 : #ff3399"
+            />
+            <button type="button" class="btnChange">변경</button>
+        </div>
+
+        <script>
+            // 대상을 변수에 저장
+            const $body = document.body;
+            const colorBox = document.querySelector("#colorBox");
+            const btnChange = document.querySelector(".btnChange");
+
+            // $body.style.backgroundColor = "tomato";
+
+            // 버튼을 클릭했을 때
+            btnChange.addEventListener("click", function () {
+                // 기본적인 조작
+                // $body.style.backroundColor = "#f39";
+                // 1. 사용자가 입력한 값을 받아온다.
+                const color = colorBox.value;
+                console.log(color);
+
+                // 막아야 하는 상황
+                // 1. 입력값이 없는 상황
+                // 2. 실제 #코드가 들어가 있지않는 상황
+                // if () {} else {}
+                if (colorBox.value === "" || color.chatAt(0) !== "#") {
+                    window.alert("첫 판부터 장난질이냐?");
+                    colorBox.value = "";
+                    colorBox.focus();
+                } else {
+                    $body.style.backgroundColor = color;
+                }
+            });
+        </script>
+    </body>
+</html>

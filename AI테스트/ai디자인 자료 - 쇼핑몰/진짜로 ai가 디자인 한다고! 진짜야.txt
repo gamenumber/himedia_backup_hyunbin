@@ -1,0 +1,93 @@
+실제로 프로젝트 진행합니다.
+
+** 사용된 프롬프트 
+Create a website design for the main page of the COVERNAT site.
+## Main ##
+Kinetic typography 
+Stylish and colorful feel 
+main
+hero section
+	video background
+	main message
+New product section
+	grid layout
+	User reviews and ratings
+Category Highlights
+	Filtering Options
+	Highlight representative products
+Lookbook Gallery
+	slideshow
+	Add detailed description
+brand story
+	storytelling
+	Founder Interview
+-footer
+
+
+** 사용된 색 
+
+-- 메인 컬러 -- 
+
+--main-color
+Metallic Gray (#CACACA): 
+미래지향적이고 세련된 느낌을 주며, 
+다른 색상과 조화롭게 어울립니다.
+
+
+-- 서브 컬러 --
+
+--sub-color-1
+Electric Blue (#4681f4): 신뢰감과 안정감을 주며,
+회색과 잘 어울립니다.
+
+--sub-color-2
+Bright Orange (#FFA500): 활기차고 에너제틱한 
+느낌을 주며, 사용자의 주목을 끌기에 좋습니다.
+
+--sub-color-3
+Lime Green (#32CD32): 자연스럽고 신선한 느낌을 주며, 
+클릭을 유도하는 데 효과적입니다.
+
+
+-- 텍스트 컬러 --
+
+
+--taxt-color
+Charcoal Black (#333333): 고급스럽고 세련된 느낌을 
+주며, 텍스트를 명확하게 읽을 수 있게 합니다.
+
+
+--taxt-dark-color
+Onyx (#353839) : 고급스럽고 세련된 느낌을 유지하면서도 
+텍스트를 더욱 명확하게 읽을 수 있게 합니다.
+
+
+이외의 컬러 : 미리 잡아둔 
+
+--white-100: rgba(255, 255, 255, 1);
+--white-90: rgba(255, 255, 255, 0.9);
+--white-80: rgba(255, 255, 255, 0.8);
+--white-70: rgba(255, 255, 255, 0.7);
+--white-60: rgba(255, 255, 255, 0.6);
+--white-50: rgba(255, 255, 255, 0.5);
+--white-40: rgba(255, 255, 255, 0.4);
+--white-30: rgba(255, 255, 255, 0.3);
+--white-20: rgba(255, 255, 255, 0.2);
+--white-10: rgba(255, 255, 255, 0.1);
+--dark-100: rgba(0, 0, 0, 1);
+--dark-90: rgba(0, 0, 0, 0.9);
+--dark-80: rgba(0, 0, 0, 0.8);
+--dark-70: rgba(0, 0, 0, 0.7);
+--dark-60: rgba(0, 0, 0, 0.6);
+--dark-50: rgba(0, 0, 0, 0.5);
+--dark-40: rgba(0, 0, 0, 0.4);
+--dark-30: rgba(0, 0, 0, 0.3);
+--dark-20: rgba(0, 0, 0, 0.2);
+--dark-10: rgba(0, 0, 0, 0.1);
+--dark-0: rgba(0, 0, 0, 0);
+
+--gray-color: #dfdfdf;
+
+
+** 결과 -> 폴더 내부의 .fig파일을 확인해 주세요 
+

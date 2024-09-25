@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>7. 논리연산자</title>
+    </head>
+    <body>
+        <script>
+            let a = 10;
+            let b = 20;
+            let c = 30;
+            let d = 40;
+            let result;
+
+            // && : and연산자 --> A && B (A, B 두 조건 모두 true여야 결과값이 true)
+            result = a > b && b >= c;
+
+            // || : or연산자 --> A || B (A, B 두 조건 하나라도 true여야 결과값이 true)
+            result = a === c || c <= d;
+
+            // console.log(result);
+            console.log(!result); /* 무조건 결과값의 논리 반대값 */
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>6. 비교연산자</title>
+    </head>
+    <body>
+        <script>
+            // 비교한 값이 true / false로 변환됩니다
+            let a = 10;
+            let b = 20; /* 숫자형 */
+            let c = 10;
+            let d = "20"; /* 문자형 */
+            let result;
+
+            result = a <= b;
+            result = a == c;
+            result =
+                b ==
+                d; /* 데이터의 타입까지 비교하지는 않음 (생긴 모양만 판단) */
+
+            result = b === d; /* 데이터 타입까지 비교 */
+            // result = a > b;
+            result = !(a > b);
+
+            console.log(result);
+        </script>
+    </body>
+</html>

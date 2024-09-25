@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>3. 연산자</title>
+        <title>3. 산술연산자</title>
     </head>
     <body>
         <script>
             // 1. 산술연산자 : 사칙연산
-            const num1 = 15;
+            const num1 = 18;
             const num2 = 2;
             let result;
 
@@ -38,6 +38,11 @@
             console.log(strResult + "로 입대한 진뽕이");
 
             // 2. 문자 + 숫자 --> 문자가 하나라도 끼게 되면, 문자로 변환해 버림
+            // const result2 = 100 + num1; /* 118 */
+            const result2 = "100" + num1; /* 118? X -> 10018 */
+            console.log(
+                typeof result2
+            ); /* 어떤 타입인지 알아내는 키워드 -> typeof */
         </script>
     </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>4. 대입연산자</title>
+    </head>
+    <body>
+        <script>
+            // A += B --> A = A + B
+            // A와 B를 더한 후에 그 값을 A에 대입(할당)
+            // const num1 = 10; X
+            let num1 = 10; /* O */
+            const num2 = 3;
+            console.log((num1 += num2));
+
+            // 문자를 결합하는 용도
+            let txt = "김현빈";
+            txt += " 장하다! 오늘 지각!!";
+            txt += " 멋지다!!";
+
+            console.log(txt);
+            // document.write(txt);
+
+            let str = '<table border="1">';
+            str += "<tr>";
+            str += "<td>1</td> <td>2</td> <td>3</td>";
+            str += "</tr>";
+            str += "</table>";
+
+            document.write(str); /* 웹 문서에 뿌려지게함 해당 테그가 */
+        </script>
+    </body>
+</html>

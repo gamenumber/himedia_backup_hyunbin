@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>토글 형식의 조작 - flag🏴‍☠️</title>
+        <style>
+            body {
+                background: #fff;
+            }
+
+            body.dark {
+                background: #333;
+            }
+
+            .wrap > a {
+                background: #000;
+                padding: 10px 30px;
+                color: #fff;
+                font-size: 2rem;
+            }
+
+            .dark .wrap > a {
+                background: tomato;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- .wrap>a+p -->
+        <div class="wrap">
+            <a href="#">다크모드</a>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                nemo aut modi delectus, ipsa pariatur facilis eius veritatis.
+                Asperiores nam consectetur a ut numquam earum dolor veritatis,
+                ratione itaque reiciendis.
+            </p>
+        </div>
+
+        <script>
+            // 대상을 변수에 저장
+            const $body = document.body;
+            const btnChange = document.querySelector(".wrap > a");
+
+            let flag = true;
+
+            if (flag) {
+                $body.classList.add("dark");
+                flag = false;
+            } else {
+                $body.classList.remove("dark");
+                flag = true;
+            }
+
+            btnChange.addEventListener("click", function () {
+                $body.classList.add("dark");
+            });
+        </script>
+    </body>
+</html>

@@ -1,13 +1,16 @@
 실제로 프로젝트 진행합니다.
 
 ** 사용된 프롬프트 
-Create a website design for the main page of the COVERNAT site.
+Create a website design for the main page of the COVERNAT 
+clothes site.
 ## Main ##
 Kinetic typography 
 Stylish and colorful feel 
-main
+Separate each section by title and put it all together
+-header 
+- main
 hero section
-	video background
+	main image background
 	main message
 New product section
 	grid layout
@@ -20,7 +23,6 @@ Lookbook Gallery
 	Add detailed description
 brand story
 	storytelling
-	Founder Interview
 -footer
 
 

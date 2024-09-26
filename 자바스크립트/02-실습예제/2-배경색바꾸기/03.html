@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>사용자의 선택에 따라 배경색 바꾸기</title>
+        <style>
+            ul,
+            ol,
+            li {
+                list-style: none;
+            }
+
+            .wrap {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .wrap ul {
+                /* df+jcc+g20 */
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .wrap ul li {
+                width: 200px;
+                height: 200px;
+                border: 1px solid #000;
+                border-radius: 50%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .wrap ul li:nth-child(1) {
+                background: #000000;
+            }
+
+            .wrap ul li:nth-child(2) {
+                background: #ff0202;
+            }
+
+            .wrap ul li:nth-child(3) {
+                background: #ff2232;
+            }
+
+            .wrap ul li:nth-child(4) {
+                background: #ff2232;
+            }
+
+            .wrap ul li:nth-child(5) {
+                background: #ff1124;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- li:data-color -->
+        <div class="wrap">
+            <ul>
+                <li data-color="#000000">#000000</li>
+                <li data-color="#ff0202">#ff0202</li>
+                <li data-color="#ff9012">#ff9012</li>
+                <li data-color="#ff2232">#ff2232</li>
+                <li data-color="#ff1124">#ff1124</li>
+            </ul>
+        </div>
+
+        <script>
+            // 대상을 변수에 저장
+            const $body = document.body;
+            const colorItem =
+                document.querySelectorAll(".wrap ul li"); /* 유사배열 */
+            console.log(colorItem[1]);
+
+            for (let i = 0; i < colorItem.length; i++) {
+                colorItem[i].addEventListener("click", function () {
+                    // 선택한 요소의 data-color 값을 가져와서 colorCode에 담기
+                    const colorCode = colorItem[i].getAttribute("data-color");
+                    // body의 배경색을 colorCode 값으로 설정
+                    $body.style.backgroundColor = colorCode;
+                });
+            }
+
+            // colorItem[1].addEventListener('click', function () {
+            //     // 선택한 요소의 data-color값을 가져와서 colorCode에 담자
+            //     // body의 배경색으로 colorCode값을 적용
+            //     colorItem[0].addEventListener('click', function() {
+            //         const colorCode = colorItem[0].getAttribute("data-color")
+            //         $body.style.backgroundColor = colorCode;
+            //     })
+            // }
+        </script>
+    </body>
+</html>

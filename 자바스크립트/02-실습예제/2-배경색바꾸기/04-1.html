@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>배경색 바꾸기 - 헥스코드를 랜덤하게</title>
+        <style>
+            body {
+                /* h100vh+df+jcc+aic */
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .wrap {
+                border: 10px solid #000;
+                padding: 3vw;
+                background: #fff;
+                text-align: center;
+            }
+
+            .wrap h1 {
+                font-size: 3rem;
+            }
+
+            .changeBg {
+                /* fz2r+p10-20 */
+                font-size: 2rem;
+                padding: 10px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <h1>#ffffff</h1>
+            <button class="changeBg" type="button">변경</button>
+        </div>
+    </body>
+    <script>
+        const $body = document.body;
+        const colorCode = document.querySelector(".wrap > h1");
+        const btnChange = document.querySelector(".changeBg");
+        const hexDigits = [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+        ];
+
+        btnChange.addEventListener("click", changeBg);
+
+        // 1초에 한 번씩 실행
+        // setInterval(동작, 시간)
+        setInterval(changeBg, 1000);
+
+        // 반복되는 동작을 함수로 정의
+        function changeBg() {
+            let hexColor = "#";
+
+            for (let i = 0; i < 6; i++) {
+                let randomIdx = Math.floor(Math.random() * hexDigits.length);
+                hexColor += hexDigits[randomIdx];
+            }
+
+            $body.style.backgroundColor = hexColor;
+            colorCode.textContent = hexColor;
+        }
+    </script>
+</html>

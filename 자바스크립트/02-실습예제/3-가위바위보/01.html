@@ -8,6 +8,28 @@
     <body>
         <script>
             const options = ["가위", "바위", "보"];
+
+            playGame("바위");
+
+            function playGame(userChoice) {
+                // const comChoice = options[0];
+                const comChoice = options[Math.floowr(Math.random() * 3)];
+                console.log(userChoice, comChoice);
+            }
+
+            // if () {} else if() {} else {}
+            // 비긴 경우
+            if (userChoice === comChoice) {
+                console.log("비겼다. --;;");
+            } else if (
+                (userChoice === "바위" && comChoice === "가위") ||
+                (userChoice === "가위" && comChoice === "보") ||
+                (userChoice === "보" && comChoice == "바위")
+            ) {
+                console.log("이겼다!! ^^");
+            } else {
+                console.log("졌다. ㅠㅠ");
+            }
         </script>
     </body>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>배경색 바꾸기 - 헥스코드를 랜덤하게</title>
+        <style>
+            body {
+                /* h100vh+df+jcc+aic */
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .wrap {
+                border: 10px solid #000;
+                padding: 3vw;
+                background: #fff;
+                text-align: center;
+            }
+
+            .wrap h1 {
+                font-size: 3rem;
+            }
+
+            .changeBg {
+                /* fz2r+p10-20 */
+                font-size: 2rem;
+                padding: 10px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <h1>#ffffff</h1>
+            <button class="changeBg" type="button">변경</button>
+        </div>
+    </body>
+    <script>
+        // 대상을 변수에 저장
+        const $body = document.body;
+        const colorCode = document.querySelector(".wrap > h1");
+        const btnChange = document.querySelector(".changeBg");
+        const hexDigits = [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+        ];
+
+        // 버튼을 클릭했을 때
+        btnChange.addEventListener("click", function () {
+            let hexColor = "#";
+
+            // 랜덤하게 선택되는 동작이 6번 반복
+            for (let i = 0; i < 6; i++) {
+                let randomIdx = Math.floor(Math.random() * hexDigits.length); // 정수로 변환
+                hexColor += hexDigits[randomIdx];
+            }
+
+            // 배경색과 텍스트 업데이트
+            $body.style.backgroundColor = hexColor;
+            colorCode.textContent = hexColor;
+        });
+
+        // // 기본 아이디어
+        // // 1. 배열에 적용할 인덱스를 랜덤하게 생성
+        // // 2. 헥스코드의 자리수는 6자리까지만 생성(for문)
+        // let hexColor = "#";
+        // hexColor += hexDigits[10]; // hexColor = hexColor = hexDigits[10]
+        // console.log(hexColor);
+
+        const test = Math.random();
+        console.log(test);
+        // 랜덤한 수를 생성 : Math.random()
+        // const test = Math.floor(Math.random() * 10);
+        // console.log(tesxt)
+
+        // console.log(Math.ceil(3.5)); /* 무조건 올림 */
+        // console.log(Math.floor(3.5)); /* 무조건 내림 */
+        // console.log(Math.round(3.5)); /* 반올림 */
+
+        // textContent : DOM 트리의 특정 노드에 포함된 텍스트 컨텐츠를 나타내는 속성
+        console.log(colorCode, colorCode.textContent);
+    </script>
+</html>

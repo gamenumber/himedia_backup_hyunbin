@@ -18,13 +18,19 @@
                 });
 
                 // 2. 전체 통틀어 첫번째 li만 배경색을 #ff0 칠하기
-                $(".wrap li").first().css("background", "ff0");
+                $(".wrap li").first().css("background", "#ff0");
 
                 // 3. 각 명언리스트 중 짝수번째 li에 1픽셀, 빨간색 라인 테두리 주기
                 $(".wrap li:even").css("border", "1px solid red");
+
                 // 4. 전체 리스트의 4번째 인덱스에 해당하는 요소에 배경색을 #0f0 칠하기
+                $(".wrap li").eq(4).css("background", "#0f0");
+
                 // 5. ol리스트의 li 중 5번째 인덱스에 해당하는 요소에 배경색을 #f39 칠하기
+                $(".wrap ol li").eq(5).css("background", "#f39");
+
                 // 6. 제일 마지막에 나온 h2에 2픽셀 파란색 테두리 칠하기 단, .wrap부터 선택을 시작할 것
+                $(".wrap").find("h2:last").css("border", "2px solid blue");
             });
         </script>
     </head>

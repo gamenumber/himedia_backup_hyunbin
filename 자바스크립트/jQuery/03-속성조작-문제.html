@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>속성조작</title>
+	<style>
+		.default{width:100px;height:100px;background:red;}
+		.click-box{background:blue;}
+		.swap{width:200px;height:100px;border:1px solid #000;}
+		.on{border:5px solid #f39;}
+	</style>
+	<script>
+			
+    // 1. .get-html의 하위요소를 가져와 txt 변수에 담아서 alert으로 띄우기
+    
+    
+    
+    
+    // 2. .put-html의 하위요소로 <p>됐거든</p> 넣기
+    
+    
+    
+    
+    // 3. 변신 버튼을 클릭하면 .movie 안의 이미지를 new.jpg로 변경하기
+    
+    
+    
+    
+    // 4. .default를 클릭하면 .click-box 이름 부여
+    
+    
+    
+    
+    // 5. .swap 을 클릭했을 때 .on이 있으면 삭제하고 없으면 부여
+    
+    
+    
+    
+    // 6. .swap 을 클릭했을 때 .swap 요소에 .on이 있으면 body의 배경색을 노란색으로, 없으면 하얀색으로
+			
+			
+			
+			
+			
+	</script>
+</head>
+<body>	
+	<div class="get-html">
+		<p>애들이 좀 뛰어 놀 수도 있지. 왜 우리 아이 기를 죽이고 그래요!</p>
+	</div>
+	
+	<div class="put-html">
+		<p>그래. 애는 그럴 수 있어. 근데 '니가' 그러면 안 되지.</p>
+	</div>
+	
+	<div class="movie">
+		<img src="img/old.jpg" alt="돼지">
+		<button class="change">변신</button>
+	</div>
+	
+	<div class="default">기본 사각형</div>
+	
+	<div class="swap">toggleClass</div>
+</body>
+</html>

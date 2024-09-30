@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>사용자의 선택에 따라 배경색 바꾸기</title>
+        <style>
+            ul,
+            ol,
+            li {
+                list-style: none;
+            }
+
+            .wrap {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .wrap ul {
+                /* df+jcc+g20 */
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .wrap ul li {
+                width: 200px;
+                height: 200px;
+                border: 1px solid #000;
+                border-radius: 50%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .wrap ul li:nth-child(1) {
+                background: #000000;
+            }
+
+            .wrap ul li:nth-child(2) {
+                background: #ff0202;
+            }
+
+            .wrap ul li:nth-child(3) {
+                background: #ff2232;
+            }
+
+            .wrap ul li:nth-child(4) {
+                background: #ff2232;
+            }
+
+            .wrap ul li:nth-child(5) {
+                background: #ff1124;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="./js/script.js"></script>
+    </head>
+    <body>
+        <!-- li:data-color -->
+        <div class="wrap">
+            <ul>
+                <li data-color="#000000">#000000</li>
+                <li data-color="#ff0202">#ff0202</li>
+                <li data-color="#ff9012">#ff9012</li>
+                <li data-color="#ff2232">#ff2232</li>
+                <li data-color="#ff1124">#ff1124</li>
+            </ul>
+        </div>
+    </body>
+</html>

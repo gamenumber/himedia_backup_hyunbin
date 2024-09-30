@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>JQuery 선택자</title>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            // 1. .grand-parents의 배경색을 #ff0으로 칠하기
+            $(".grand-parents").css("background", "#ff0");
+            /*
+    2. .grand-parents의 자식인 div에게 
+    - 보더를 2픽셀 파란색 라인으로 칠하기
+    - border-radius: 10px 적용
+    */
+
+            /*
+    3. h1의 
+    - 글씨 크기를 20px
+    - 글씨 색상을 파란색으로
+    */
+
+            // 4. .wise-saying에게 배경색 #0f5 칠하기 단, h1을 기준으로 선택할 것
+
+            // 5. .my-best의 형들을 모두 선택하여 빨간색 1픽셀 땡땡이 테두리 만들기
+
+            // 6. .my-best의 동생들을 모두 선택하여 파란색 1픽셀 대쉬 테두리 만들기
+
+            // 7. .my-best를 찾아 배경색을 pink로 칠하기. 단, .parents로 선택 시작, 자식선택자(>) 사용 금지
+        </script>
+    </head>
+    <body>
+        <div class="grand-parents">
+            <div class="parents">
+                <h1>인생에 필요한 주옥같은 조언</h1>
+
+                <div class="wise-saying">
+                    <p>길을 아는 것과 그 길을 걷는 것은 분명히 다르다.</p>
+                    <strong>모피어스, 영화 매트릭스</strong>
+                </div>
+
+                <div class="wise-saying">
+                    <p>
+                        처음에는 우리가 습관을 만들지만 그 다음에는 습관이
+                        우리를 만든다.
+                    </p>
+                    <strong>존 드라이든</strong>
+                </div>
+                <div class="wise-saying">
+                    <p>말을 많이 한다는 것과 잘한다는 것은 별개이다.</p>
+                    <strong>소포클레스</strong>
+                </div>
+                <div class="wise-saying my-best">
+                    <p>
+                        재능이 부족하다고 걱정하지 마라. 인생에서는 진로가
+                        재능보다 중요하다.
+                    </p>
+                    <strong>양광모, 비상</strong>
+                </div>
+                <div class="wise-saying">
+                    <p>
+                        모든 사람은 천재다. 하지만 물고기들을 나무타기 실력으로
+                        평가한다면 물고기는 평생 자신이 형편없다고 믿으며 살아갈
+                        것이다.
+                    </p>
+                    <strong>알버트 아인슈타인</strong>
+                </div>
+                <div class="wise-saying">
+                    <p>
+                        하고 싶은 일을 하기 위해 해야 하는 일을 하지 않으면
+                        안된다.
+                    </p>
+                    <strong>도슨트, 윤운중</strong>
+                </div>
+                <div class="wise-saying">
+                    <p>
+                        꽃을 보고 좋아하면 꽃이 기분 좋습니까? 내가 기분이
+                        좋습니까? 상대를 좋아하면 내가 좋습니다. 행복도 내가
+                        만들고 불행도 내가 만드는 것입니다.
+                    </p>
+                    <strong>법륜스님</strong>
+                </div>
+                <div class="wise-saying">
+                    <p>
+                        내게 오는 사람들을 진정으로 대하라. 돈은 덤으로 온다.
+                        내게 온 사람을 통해 돈을 벌려하면 인연도 끊어지고 돈도
+                        떠난다.
+                    </p>
+                    <strong>작자미상</strong>
+                </div>
+                <div class="wise-saying">
+                    <p>
+                        중요한 승부에서 패하고도 마음이 아무렇지 않다면 그것은
+                        이미 프로가 아니다. 그것은 인품과 무관하며 승부사에게
+                        패배의 아픔은 항상 생생한 날것이어야 한다.
+                    </p>
+                    <strong>이창호 9단</strong>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

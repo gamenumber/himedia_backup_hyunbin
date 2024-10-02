@@ -1,0 +1,91 @@
+@charset 'utf-8';
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+header {
+  background: #000;
+  color: #fff;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.logo {
+  z-index: 10;
+  background: #f00;
+  width: 90px;
+  height: 90px;
+}
+
+.gnb {
+  display: flex;
+  z-index: 10;
+}
+
+.gnb > li > a {
+  border: 1px solid #fff;
+  display: block;
+  padding: 10px 40px;
+}
+
+.gnb > li {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 43px;
+  left: 0;
+  width: 100%;
+
+  /* jQuery로 동작을 만들기 위한 준비 */
+  display: none;
+  padding-top: 30px;
+}
+.submenu li a {
+  display: block;
+  border: 1px solid #ff0;
+  padding: 10px;
+  text-align: center;
+  background: #333;
+  color: #fff;
+}
+
+/* 활성화된 메뉴 디자인 */
+.gnb > li.on {
+  background: skyblue;
+}
+
+.inner {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  background: rgba(255, 255, 0, 0.15);
+}
+
+main {
+  padding: 100px 0;
+}
+
+footer {
+  padding: 50px 0;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}

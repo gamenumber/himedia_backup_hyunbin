@@ -1,84 +1,113 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<title>속성조작</title>
-	<style>
-		.box-wrap>div{padding:10px;border:5px solid #000;}
-	</style>
-	<script>
-			
-    // 1-1. 숨겨라 버튼을 클릭하면 .show-box를 안보이게
-    
-    
-    
-    // 1-2. 보여라 버튼을 클릭하면 .show-box를 보이게
-    
-    
-    
-    // 1-3. toggle 효과 구현
-    
-    
-    
-    
-    // 2-1. 숨겨라 버튼을 클릭하면 .show-box를 fadeOut			
-    
-    
-    // 2-2. 보여라 버튼을 클릭하면 .show-box를 보이게
-    
-    
-    // 2-3. toggle 효과 구현
-    
-    
-    
-    
-    // 3-1. 숨겨라 버튼을 클릭하면 .show-box를 fadeOut
-    
-    
-    // 3-2. 보여라 버튼을 클릭하면 .show-box를 보이게
-    
-    
-    // 3-3. toggle 효과 구현
-			
-			
-	</script>
-</head>
-<body>	
-	<h1>Jquery Effect</h1>
-	
-	<hr>	
-	<div class="box-wrap">
-		<h2>show / hide</h2>
-		<button class="btn-hide">숨겨라</button>
-		<button class="btn-show">보여라</button>
-		<button class="btn-sh-toggle">SHOW/HIDE</button>
-		<div class="show-box">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde earum, commodi, tempora vitae dignissimos quaerat quis ad, ratione perspiciatis quidem cupiditate reiciendis adipisci nostrum quod totam impedit voluptates dolores voluptas.
-		</div>
-	</div>
-	
-	
-	<hr>	
-	<div class="box-wrap">
-		<h2>fadeIn / fadeOut</h2>
-		<button class="btn-fout">숨겨라</button>
-		<button class="btn-fin">보여라</button>
-		<button class="btn-fade-toggle">fadeIn/fadeOut</button>
-		<div class="fade-box">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde earum, commodi, tempora vitae dignissimos quaerat quis ad, ratione perspiciatis quidem cupiditate reiciendis adipisci nostrum quod totam impedit voluptates dolores voluptas.
-		</div>
-	</div>
-	
-	
-	<hr>	
-	<div class="box-wrap">
-		<h2>slideUp / slideDown</h2>
-		<button class="btn-sup">숨겨라</button>
-		<button class="btn-sdown">보여라</button>
-		<button class="btn-slide-toggle">fadeIn/fadeOut</button>
-		<div class="slide-box">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde earum, commodi, tempora vitae dignissimos quaerat quis ad, ratione perspiciatis quidem cupiditate reiciendis adipisci nostrum quod totam impedit voluptates dolores voluptas.
-		</div>
-	</div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>속성조작</title>
+        <style>
+            .box-wrap > div {
+                padding: 10px;
+                border: 5px solid #000;
+            }
+        </style>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            // 효과 -> 숨김 / 보임 / 토글(보이거나 숨기거나) -> 대표적인 3가지
+            // $(document).ready(function () {});
+            $(function () {
+                const $showBox = $(".show-box");
+                const $fadeBox = $(".fade-box");
+                const $slideBox = $(".slide-box");
+
+                // 1-1. 숨겨라 버튼을 클릭하면 .show-box를 안보이게
+                $(".btn-hide").on("click", () => {
+                    $showBox.hide();
+                });
+
+                // 1-2. 보여라 버튼을 클릭하면 .show-box를 보이게
+                $(".btn-show").on("click", () => {
+                    $showBox.show();
+                });
+
+                // 1-3. toggle 효과 구현
+                $(".btn-sh-toggle").on("click", () => {
+                    $showBox.toggle();
+                });
+
+                // 2-1. 숨겨라 버튼을 클릭하면 .fade-box를 fadeOut
+                $(".btn-fout").on("click", () => {
+                    $fadeBox.fadeOut();
+                });
+
+                // 2-2. 보여라 버튼을 클릭하면 .fade-box를 보이게
+                $(".btn-fin").on("click", () => {
+                    $fadeBox.fadeIn();
+                });
+
+                // 2-3. toggle 효과 구현
+                $(".btn-fade-toggle").on("click", () => {
+                    $fadeBox.fadeToggle();
+                });
+
+                // 3-1. 숨겨라 버튼을 클릭하면 .slide-box를 slideup
+                $(".btn-sup").on("click", () => {
+                    $slideBox.slideUp();
+                });
+
+                // 3-2. 보여라 버튼을 클릭하면 .slide-box를 보이게
+                $(".btn-sdown").on("click", () => {
+                    $slideBox.slideDown();
+                });
+
+                // 3-3. toggle 효과 구현
+                $(".btn-slide-toggle").on("click", () => {
+                    $slideBox.slideToggle();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Jquery Effect</h1>
+
+        <hr />
+        <div class="box-wrap">
+            <h2>show / hide</h2>
+            <button class="btn-hide">숨겨라</button>
+            <button class="btn-show">보여라</button>
+            <button class="btn-sh-toggle">SHOW/HIDE</button>
+            <div class="show-box">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
+                earum, commodi, tempora vitae dignissimos quaerat quis ad,
+                ratione perspiciatis quidem cupiditate reiciendis adipisci
+                nostrum quod totam impedit voluptates dolores voluptas.
+            </div>
+        </div>
+
+        <hr />
+        <div class="box-wrap">
+            <h2>fadeIn / fadeOut</h2>
+            <button class="btn-fout">숨겨라</button>
+            <button class="btn-fin">보여라</button>
+            <button class="btn-fade-toggle">fadeIn/fadeOut</button>
+            <div class="fade-box">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
+                earum, commodi, tempora vitae dignissimos quaerat quis ad,
+                ratione perspiciatis quidem cupiditate reiciendis adipisci
+                nostrum quod totam impedit voluptates dolores voluptas.
+            </div>
+        </div>
+
+        <hr />
+        <div class="box-wrap">
+            <h2>slideUp / slideDown</h2>
+            <button class="btn-sup">숨겨라</button>
+            <button class="btn-sdown">보여라</button>
+            <button class="btn-slide-toggle">slideUp/slideDown</button>
+            <div class="slide-box">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
+                earum, commodi, tempora vitae dignissimos quaerat quis ad,
+                ratione perspiciatis quidem cupiditate reiciendis adipisci
+                nostrum quod totam impedit voluptates dolores voluptas.
+            </div>
+        </div>
+    </body>
 </html>

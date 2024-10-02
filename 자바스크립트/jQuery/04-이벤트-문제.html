@@ -1,51 +1,72 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<title>이벤트</title>
-	<style>
-		div{width:400px;height:200px;}
-		.mouse-enter{background:#ff0;}		
-		.mouse-enter2{background:#0f0;}
-		.hover{border:1px solid #000;}
-	</style>
-	<script>
-			
-    // 1. .mouse-enter 에 마우스가 들어오면 배경색을 빨간색으로
-    
-    
-    
-    
-    // 2. .mouse-enter 에 마우스가 나가면 배경색을 노란색으로
-    
-    
-    
-    
-    // on메서드 사용
-    
-    
-    
-    
-    
-    // 3. .hover에 마우스가 롤오버하면 배경색을 purple로, 아니면 white로
-			
-			
-			
-	</script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>이벤트</title>
+        <style>
+            div {
+                width: 400px;
+                height: 200px;
+            }
+            .mouse-enter {
+                background: #ff0;
+            }
+            .mouse-enter2 {
+                background: #0f0;
+            }
+            .hover {
+                border: 1px solid #000;
+            }
+        </style>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                // 1. .mouse-enter 에 마우스가 들어오면 배경색을 빨간색으로
+                $(".mouse-enter").on("mouseenter", function () {
+                    $(".mouse-enter").css("background", "#f00");
+                });
 
-<div class="mouse-enter">
-	<strong>mouseenter</strong>
-</div>
+                // 2. .mouse-enter 에 마우스가 나가면 배경색을 노란색으로
+                $(".mouse-enter").on("mouseleave", function () {
+                    $("mouse-enter").css("background", "yellow");
+                });
 
-<div class="mouse-enter2">
-	<strong>mouseenter2</strong>
-</div>
+                // on메서드 사용
+                const $mouseEnter2 = $(".mouse-enter2");
 
-<div class="hover">
-	<strong>hover</strong>
-</div>
+                $mouseEnter2.on("mouseenter", function () {
+                    $mouseEnter2.css("background", "skyblue");
+                });
 
-</body>
+                $mouseEnter2.on("mouseleave", function () {
+                    $mouseEnter2.css("background", "#0f0");
+                });
+
+                // 3. .hover에 마우스가 롤오버하면 배경색을 purple로, 아니면 white로
+                const $hover = $(".hover");
+
+                $hover.hover(
+                    function () {
+                        $hover.css("background", "purple");
+                    },
+                    function () {
+                        $hover.css("background", "white");
+                    }
+                );
+            });
+        </script>
+    </head>
+    <body>
+        <div class="mouse-enter">
+            <strong>mouseenter</strong>
+        </div>
+
+        <div class="mouse-enter2">
+            <strong>mouseenter2</strong>
+        </div>
+
+        <div class="hover">
+            <strong>hover</strong>
+        </div>
+    </body>
 </html>

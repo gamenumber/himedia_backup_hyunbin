@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<title>이벤트</title>
-	<style>
-		body{width:5000px;height:10000px;background:url(http://cfile27.uf.tistory.com/original/255A654F57FAB95704F749) 0 0 no-repeat;}
-		.info{
-			position:fixed;
-			top:50px;
-			right:50px;
-			padding:10px;
-			border:5px solid #000;
-			background:#fff;
-		}
-	</style>
-	<script>
-			
-    // 윈도우에 스크롤 이벤트가 발생하면 실행
-    
-        
-        // 현재 윈도우의 상단 스크롤 위치를 scTop변수에 담고
-        
-        
-        // 현재 윈도우의 왼쪽 스크롤 위치를 scLeft변수에 담아
-        
-        
-        // 각각 .info 창에 해당하는 strong 요소에 뿌려라.
-				
-			
-			
-	</script>
-</head>
-<body>
-<div class="info">
-	<p>위에서부터 <strong class="sc-top">0</strong>px 스크롤</p>
-	<p>왼쪽에서부터 <strong class="sc-left">0</strong>px 스크롤</p>
-</div>
+    <head>
+        <meta charset="UTF-8" />
+        <title>이벤트</title>
+        <style>
+            body {
+                width: 5000px;
+                height: 10000px;
+                background: url(http://cfile27.uf.tistory.com/original/255A654F57FAB95704F749)
+                    0 0 no-repeat;
+            }
+            .info {
+                position: fixed;
+                top: 50px;
+                right: 50px;
+                padding: 10px;
+                border: 5px solid #000;
+                background: #fff;
+            }
+        </style>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                // 윈도우에 스크롤 이벤트가 발생하면 실행
+                $(window).on("scroll", function () {
+                    // 현재 윈도우의 상단 스크롤 위치를 scTop변수에 담고
+                    const scTop = $(this).scrollTop();
 
-</body>
+                    // 현재 윈도우의 왼쪽 스크롤 위치를 scLeft변수에 담아
+                    const scLeft = $(this).scrollLeft();
+
+                    console.log(scTop, scLeft);
+                    // 각각 .info 창에 해당하는 strong 요소에 뿌려라.
+                    const $info = $(".info");
+
+                    $info.find(".sc-top").text(scTop);
+                    $info.find(".sc-left").text(scLeft);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="info">
+            <p>위에서부터 <strong class="sc-top">0</strong>px 스크롤</p>
+            <p>왼쪽에서부터 <strong class="sc-left">0</strong>px 스크롤</p>
+        </div>
+    </body>
 </html>

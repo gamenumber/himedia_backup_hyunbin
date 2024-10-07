@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+.faq-wrap {
+    /* w80p+m50-a */
+    width: 80%;
+    margin: 50px auto;
+}
+
+.faq-wrap > ul > li {
+    /* bd+p30+m10-0 */
+    border: 1px solid #000;
+    padding: 30px;
+    margin: 10px 0;
+}
+
+.faq-wrap > ul > li > strong {
+    background-color: #5f5;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.faq-wrap > ul > li > strong::before {
+    /* ct+db+w30+h30+bg */
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #000;
+}
+
+.faq-wrap > ul > li > strong::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-width: 2px 2px 0 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+    right: 0;
+    transition: 0.3s;
+}
+
+.answer-wrap {
+    /* bg#f5f5f5+p30+mt20 */
+    background: #f5f5f5;
+    padding: 30px;
+    margin-top: 20px;
+
+    /* jQuery의 효과 메서드(slideDown)를 위한 준비 */
+    display: none;
+}
+
+.faq-wrap > ul > li.on > strong {
+    color: #f00;
+}
+
+.faq-wrap > ul > li.on > strong::before {
+    background: #f00;
+}
+
+/* 활성화 표시 */
+.faq-wrap > ul > li.on > strong::after {
+    border-color: #f00; /* bdc */
+    transform: translateY(-50%) rotate(315deg);
+}

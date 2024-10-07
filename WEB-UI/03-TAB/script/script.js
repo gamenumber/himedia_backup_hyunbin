@@ -6,10 +6,7 @@ $(function () {
     // console.log($tabMenu, $tabCon);
 
     // 처음 세팅
-    $tabMenu.removeClass("on");
-    $tabMenu.eq(0).addClass("on");
-    $tabCon.hide();
-    $tabCon.eq(0).show();
+    tabAction(0);
 
     // 탭메뉴를 클릭했을 때
     $tabMenu.on("click", function (e) {
@@ -20,12 +17,16 @@ $(function () {
         const tabIdx = $(this).index();
         console.log(tabIdx);
 
-        // 탭메뉴 활성화
-        $tabMenu.removeClass("on");
-        $tabMenu.eq(tabIdx).addClass("on");
-
-        // 인덱스에 해당하는 $tabCon 보이기
-        $tabCon.hide();
-        $tabCon.eq(tabIdx).show();
+        tabAction(tabIdx);
     });
+
+    // 공통의 동작을 함수로 정의 (여기저기에서 쓰기 위해서 이벤트 바깥에)
+    function tabAction(index) {
+        // // 탭메뉴 활성화
+        $tabMenu.removeClass("on");
+        $tabMenu.eq(index).addClass("on");
+        // // 인덱스에 해당하는 $tabCon 보이기
+        $tabCon.hide();
+        $tabCon.eq(index).show();
+    }
 });

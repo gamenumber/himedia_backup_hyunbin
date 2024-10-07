@@ -2,6 +2,7 @@ $(function () {
     // 대상을 변수에 저장
     const $tabMenu = $(".tab-menu > li");
     const $tabCon = $(".tab-con-item");
+    const bgcolor = ["red", "green", "blue"];
 
     // console.log($tabMenu, $tabCon);
 
@@ -28,5 +29,9 @@ $(function () {
         // // 인덱스에 해당하는 $tabCon 보이기
         $tabCon.hide();
         $tabCon.eq(index).show();
+
+        $("body").css({
+            backgroundColor: bgcolor[index],
+        });
     }
 });

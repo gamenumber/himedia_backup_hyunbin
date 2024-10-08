@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>팝업창 띄우기</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .wrap {
+                width: 60%;
+                margin: 0 auto;
+                background: #ff5;
+                font-size: 2rem;
+            }
+
+            .popup {
+                position: fixed;
+                top: -40%; /* 화면에서 나가게끔 */
+                left: 50%;
+                width: 600px;
+                height: 400px;
+                border: 10px solid #000;
+                background: #fff;
+                transform: translate(-50%, -50%);
+                padding: 60px;
+                transition: 1s;
+            }
+
+            .popup.active {
+                top: 50%;
+                transition: 0.2 cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+
+            .dim {
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.7);
+                display: none;
+            }
+        </style>
+
+        <script src="script/jquery-3.7.1.min.js"></script>
+        <script>
+            $(function () {
+                // 대상을 변수에 저장
+                const $dim = $(".dim");
+                const $popup = $(".popup");
+                const $btnClose = $(".btn-close");
+
+                $(".wrap a").on("click", function (e) {
+                    e.preventDefault();
+
+                    $dim.fadeIn();
+                    $popup.addClass("active");
+                });
+
+                $btnClose.on("click", function () {
+                    $dim.fadeOut();
+                    $popup.removeClass("active");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="dim"></div>
+        <div class="popup">
+            <p>팝업내용</p>
+            <button class="btn-close" type="button">닫기</button>
+        </div>
+
+        <div class="wrap">
+            <p>
+                <a href="#">Lorem ipsum dolor</a> sit amet consectetur
+                adipisicing elit. Possimus nihil voluptas fugiat, rerum
+                voluptatum tenetur fugit sequi corporis laborum voluptates. Ex
+                alias, quod itaque tenetur quis maxime eius, saepe rem doloribus
+                neque quidem pariatur incidunt libero molestiae repellendus
+                facilis, voluptate odio consequatur. Molestiae quo dolores,
+                natus amet quisquam ullam assumenda corporis ratione nisi
+                blanditiis similique? Accusantium soluta totam cupiditate,
+                debitis architecto voluptatem eveniet ipsa aspernatur animi
+                inventore amet sequi numquam voluptate asperiores? Odit alias ea
+                non fugiat, qui, provident placeat pariatur deleniti saepe,
+                inventore quo iusto et rem quos in harum. Error commodi
+                laudantium optio itaque rem inventore odit dolorum incidunt
+                magni quaerat. Itaque dolores voluptas, praesentium dolorem
+                voluptatibus recusandae incidunt tempora vero reprehenderit
+                provident ratione ullam quidem distinctio fuga labore
+                consequatur earum sed deleniti possimus asperiores. Iste, autem
+                laborum, tenetur ut hic dolore aliquid ab accusamus iusto
+                voluptatibus eius velit rem possimus, in recusandae! Recusandae
+                rem voluptates saepe aperiam unde sit at quos expedita, cumque
+                est ducimus praesentium id sapiente sequi quis? Nisi sunt culpa
+                modi illum distinctio aliquid autem provident mollitia corporis!
+                Voluptatibus tempora consequatur assumenda obcaecati similique
+                deleniti eius ullam ad aut, sit labore at vitae. Quo iure
+                voluptas repellat, aliquid, explicabo exercitationem mollitia
+                maiores vero dolorum voluptatem commodi. Odit id, quibusdam,
+                alias sed tempora maxime, hic quidem culpa blanditiis obcaecati
+                a nesciunt deleniti atque accusantium quasi. Illum atque, quasi
+                voluptates quo deserunt officiis quisquam iusto quia. Et impedit
+                in veritatis at, eaque natus, ipsa suscipit tempore maiores
+                doloribus quidem sit ducimus veniam vel ipsam dolorum, ratione
+                totam quas rem assumenda sint corporis porro libero eius.
+                Repellat pariatur quibusdam et, blanditiis soluta tenetur? Quos
+                cupiditate ratione dolores mollitia incidunt inventore aliquid
+                sint neque ipsum aspernatur natus alias asperiores officia et ab
+                dicta quas sed nam, nesciunt eum repellat omnis quod veniam.
+                Voluptates similique necessitatibus molestiae ducimus, hic quod
+                aspernatur quos corporis aut aliquid tempora enim veniam maxime
+                repellendus voluptatum dignissimos sint aliquam praesentium
+                blanditiis repellat, illo non cum eos? Commodi nihil voluptatem
+                tempore at! Culpa dolor laborum nostrum reiciendis, id optio
+                pariatur aperiam autem odio corporis explicabo ducimus ut error
+                doloremque. Ut explicabo cumque impedit libero eos iusto
+                laboriosam in? Quisquam ad consequuntur modi tempore cupiditate.
+                Amet accusantium dolor commodi reprehenderit temporibus ad
+                nostrum perferendis quaerat, molestias sed. Quos placeat totam
+                earum illum veritatis a harum deleniti suscipit, consequuntur
+                officiis reiciendis, ratione perferendis excepturi autem impedit
+                dolore ipsam? Amet distinctio voluptates, necessitatibus sequi
+                omnis autem laudantium mollitia odit expedita eius dolores, quas
+                ipsa, quaerat soluta iste. Temporibus, aliquam. Deleniti
+                aspernatur cum, voluptatem veritatis deserunt vitae, qui quidem
+                accusantium earum nulla excepturi at quos laudantium quibusdam
+                blanditiis debitis. Sed esse laudantium illo minima! Id ratione
+                magni adipisci porro, assumenda illo sed, laboriosam
+                exercitationem ullam doloribus veniam quibusdam sunt! Repellat
+                aliquam a quibusdam deserunt deleniti est eos? Blanditiis,
+                voluptatum facere quibusdam vitae id ipsa! Aliquid, doloribus
+                expedita inventore quos blanditiis illo, rerum soluta facere
+                repellat excepturi odio voluptates corrupti veritatis explicabo
+                recusandae consequuntur? Architecto id consequuntur incidunt
+                accusantium et ut ea repellat hic earum placeat, at odio
+                perferendis enim deleniti, aliquid recusandae veniam doloribus
+                corrupti fugiat? Ratione, eius recusandae quasi blanditiis
+                nesciunt, cum quod et dicta provident dolor nemo minima corporis
+                sit tempore! Doloremque ab asperiores nostrum nihil esse tempora
+                illo facilis voluptate aperiam repellendus, porro consectetur
+                nisi aspernatur ullam, quos id et sapiente distinctio ratione?
+                Itaque ad eveniet eos culpa molestias incidunt libero delectus
+                quae illum autem nulla obcaecati, ab sed, corrupti est! Nesciunt
+                maiores quibusdam corrupti facere aut, labore tempore unde in
+                praesentium vitae animi magni pariatur facilis perspiciatis
+                debitis soluta architecto dicta qui natus adipisci possimus sint
+                eum molestiae nulla. Corporis inventore voluptas fugit error.
+                Optio, hic error at fuga velit asperiores accusantium maiores
+                nesciunt adipisci esse, culpa in, nulla assumenda ullam ex!
+                Asperiores, doloribus velit dolor nihil tempora quod suscipit.
+                Nam inventore natus repellat voluptas iste consequuntur tempore
+                saepe expedita hic at rerum cupiditate aliquid unde porro minima
+                soluta, ipsum sed explicabo ab! Debitis, ullam. Fuga cumque
+                molestiae reiciendis expedita optio, sunt ea eveniet minima
+                dignissimos a accusamus eligendi possimus voluptatibus. Sunt
+                optio dolores doloremque magnam modi voluptatem. Nisi aspernatur
+                ad est excepturi corrupti ratione laboriosam, soluta
+                perspiciatis sunt? Recusandae eius saepe aspernatur voluptatibus
+                explicabo. Impedit aliquam aspernatur, laudantium est explicabo
+                sapiente magnam accusamus similique quaerat sint numquam
+                molestiae ducimus, dolorem voluptas totam nobis iusto
+                perferendis alias, cumque saepe dolores laborum pariatur labore
+                ea! A unde ipsum quisquam eum consequuntur quaerat totam eaque?
+                Eum, quaerat. Nulla dolores placeat voluptatem nemo natus
+                voluptatibus, quam quisquam, minus, eligendi architecto quia
+                quae numquam! Fugiat quia molestiae magnam nam illo quos
+                possimus eius illum hic, amet alias saepe consectetur aperiam
+                rem aliquid aliquam ratione quasi quisquam atque non obcaecati
+                excepturi, reiciendis natus ipsam. Exercitationem quos labore,
+                debitis sunt quo asperiores dolorum, enim explicabo dolor maxime
+                delectus neque obcaecati quae perferendis adipisci itaque! Totam
+                officia dolorum a nihil, doloremque debitis, laborum maiores
+                excepturi id quis natus iusto reprehenderit nostrum, adipisci
+                iste aut. Iusto dicta sed ea hic minus quaerat corrupti harum
+                exercitationem in quod, est, eos id officiis modi earum
+                obcaecati quae quos, sequi maxime voluptatem consequuntur
+                delectus recusandae esse. Voluptates voluptas quibusdam deserunt
+                accusamus in, est sapiente. Adipisci quisquam architecto fugit
+                aperiam inventore consequuntur nulla ad ducimus harum natus
+                velit sit voluptates, repellat reiciendis hic, maxime alias
+                magni eligendi necessitatibus deleniti iste dolorum aut. Quas
+                esse illo totam dolore, explicabo illum doloribus accusantium
+                nisi velit, ea exercitationem. Doloribus nobis laboriosam nemo
+                sequi cum. Perferendis facere quae harum dolorem dolore totam,
+                molestiae nihil aperiam sequi incidunt ducimus deserunt minima
+                non delectus corporis? Molestias, obcaecati. Reprehenderit
+                voluptatum delectus aperiam laudantium nam vitae, corporis quo
+                at, voluptatem, voluptate tempore nesciunt aliquam? Ullam, magni
+                tempora? Nostrum quidem voluptates voluptatem dicta minus
+                voluptas repellat amet praesentium quas ea itaque ad accusamus
+                omnis sunt recusandae, cupiditate vero. Labore, et! Sed
+                accusamus eveniet aut molestias, consequuntur cum quae
+                asperiores, consequatur laudantium fugiat natus rem nisi sint?
+                Pariatur, non earum! Minus voluptate doloremque odit omnis
+                beatae quisquam atque nostrum vero impedit corrupti voluptas,
+                neque rem ipsam deserunt, officiis facere illo exercitationem?
+                In qui beatae ea officia rem.
+            </p>
+        </div>
+    </body>
+</html>

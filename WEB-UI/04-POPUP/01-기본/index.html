@@ -29,12 +29,19 @@
                 background: #fff;
                 transform: translate(-50%, -50%);
                 padding: 60px;
+                opacity: 0;
                 transition: 1s;
+
+                pointer-events: none;
+                user-select: none;
             }
 
             .popup.active {
                 top: 50%;
+                opacity: 1;
                 transition: 0.2 cubic-bezier(0.075, 0.82, 0.165, 1);
+                pointer-events: initial;
+                user-select: initial;
             }
 
             .dim {

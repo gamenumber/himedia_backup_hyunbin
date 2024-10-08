@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+* {
+    /* m0+p0+bxbb */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    /* lisn */
+    list-style: none;
+}
+
+img {
+    /* vat */
+    vertical-align: top;
+}
+
+.dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.video-wrap {
+    /* pof+t50p+l50p+trft */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1024px;
+    aspect-ratio: 16/9;
+    border: 10px solid #000;
+}

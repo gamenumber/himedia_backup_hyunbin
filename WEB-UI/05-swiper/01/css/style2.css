@@ -63,3 +63,34 @@ img {
     cursor: pointer;
     border: none;
 }
+
+.top-slider-wrap .pagination {
+    /* poa+b-50+r0+bg#ff5 */
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background: #ff5; */
+    display: flex;
+    justify-content: center;
+}
+
+.top-slider-wrap .swiper-pagination-bullet {
+    /* w100+h5+bdrs0 */
+    width: 70px;
+    height: 10px !important;
+    border-radius: 0;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+.top-slider-wrap .swiper-pagination-bullet-active {
+    background: #000;
+}
+
+.top-slider-wrap .swiper-slide {
+    filter: grayscale(1);
+}
+.top-slider-wrap .swiper-slide-active {
+    filter: grayscale(0);
+}

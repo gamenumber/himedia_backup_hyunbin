@@ -1,7 +1,5 @@
-@charset "utf-8";
-
+@charset 'utf-8';
 * {
-    /* m0+p0+bxbb */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,19 +8,15 @@
 ul,
 ol,
 li {
-    /* lisn */
     list-style: none;
 }
 
 img {
-    /* vat+w100p+h100p+obf */
     vertical-align: top;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
-/* 디자인 시작 */
 
 .top-slider-wrap {
     width: 80%;
@@ -37,7 +31,6 @@ img {
 }
 
 .top-slider-wrap .btn-prev {
-    /* poa+t50p+trfxy+l-70+w50+h50+bg+c#fff+cup+bdn */
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -47,38 +40,35 @@ img {
     background: #000;
     color: #fff;
     cursor: pointer;
-    border: none;
+    /* display: none; */
 }
-
 .top-slider-wrap .btn-next {
-    /* poa+t50p+trfxy+l-70+w50+h50+bg+c#fff+cup+bdn */
     position: absolute;
     bottom: -70px;
     transform: translateY(-50%);
-    left: -70px;
+    left: 0;
     width: 50px;
     height: 50px;
     background: #000;
     color: #fff;
     cursor: pointer;
-    border: none;
+    /* display: none; */
 }
 
 .top-slider-wrap .pagination {
-    /* poa+b-50+r0+bg#ff5 */
     position: absolute;
     bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
-    /* background: #ff5; */
+    background: #ff5;
+
     display: flex;
     justify-content: center;
 }
 
 .top-slider-wrap .swiper-pagination-bullet {
-    /* w100+h5+bdrs0 */
     width: 70px;
-    height: 10px !important;
+    height: 10px;
     border-radius: 0;
     border: 1px solid #000;
     background: #fff;

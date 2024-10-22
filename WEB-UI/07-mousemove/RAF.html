@@ -68,17 +68,32 @@
             console.log(winWidth);
 
             let position = 0;
+            let raf; // 전역변수
+            let isRunning = false;
 
             function running() {
                 info.textContent = position;
                 cat.style.transform = `translateX(${position}px)`;
                 position += 3;
 
-                requestAnimationFrame(running);
+                raf = requestAnimationFrame(running);
                 if (position >= winWidth - 250) position = 0;
             }
 
             running();
+
+            // 화면을 클릭하면 고양이가 멈춘다 / 달린다
+            window.addEventListener("click", () => {
+                if (!isRunning) {
+                    cancelAnimationFrame(raf);
+                    isRunning = true;
+                    cat.style.animationPlayState = "paused";
+                } else {
+                    raf = requestAnimationFrame(running);
+                    isRunning = false;
+                    cat.style.animationPlayState = "running";
+                }
+            });
         </script>
     </body>
 </html>

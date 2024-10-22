@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>부드럽게</title>
+    <style>
+      body {
+        background: #000;
+        cursor: none;
+        height: 100vh;
+      }
+
+      h1 {
+        color: #fff;
+      }
+
+      .cursor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(255, 0, 0, 0.7);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 좌표값을 뿌릴 공간 -->
+    <h1 class="info">test</h1>
+
+    <!-- 가짜 커서 -->
+    <div class="cursor"></div>
+  </body>
+</html>

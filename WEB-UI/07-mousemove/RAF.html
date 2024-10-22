@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Request Animation Frame</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            img {
+                vertical-align: top;
+            }
+
+            body {
+                background: skyblue;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .wrap {
+                width: 100%;
+                border: 1px solid #fff;
+            }
+
+            .cat {
+                width: 245px;
+                height: 184px;
+                background: url(img/cat.png) no-repeat 0 0;
+                animation: catRunning 0.4s infinite steps(6);
+            }
+
+            .info {
+                position: absolute;
+                left: 50%;
+                bottom: 50px;
+                transform: translateX(-50%);
+                font-size: 5vw;
+                color: #fff;
+            }
+
+            /* 고양이가 달린다 */
+            @keyframes catRunning {
+                100% {
+                    background-position: -1470px 0;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- .wrap>.cat+.info -->
+        <div class="wrap">
+            <div class="cat"></div>
+            <div class="info">0</div>
+        </div>
+
+        <script>
+            const cat = document.querySelector(".cat");
+            const info = document.querySelector(".info");
+            const winWidth = window.innerWidth;
+            console.log(winWidth);
+
+            let position = 0;
+
+            function running() {
+                info.textContent = position;
+                cat.style.transform = `translateX(${position}px)`;
+                position += 3;
+
+                requestAnimationFrame(running);
+                if (position >= winWidth - 250) position = 0;
+            }
+
+            running();
+        </script>
+    </body>
+</html>

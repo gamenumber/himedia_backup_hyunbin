@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마우스 움직임에 따라 오브젝트 움직이기</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .obj-wrap {
+        width: 100%;
+        height: 100%;
+        background: rgb(255, 255, 213);
+
+        /* 3차원 효과를 위한 세팅 */
+      }
+
+      .obj1 {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 200px;
+        height: 300px;
+        background: red;
+      }
+
+      .obj2 {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        width: 300px;
+        height: 400px;
+        background: orange;
+      }
+
+      .obj3 {
+        position: absolute;
+        top: 30%;
+        right: 30%;
+        width: 300px;
+        height: 300px;
+        background: yellow;
+      }
+
+      .obj4 {
+        position: absolute;
+        top: 30%;
+        right: 5%;
+        width: 300px;
+        height: 400px;
+        background: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="obj-wrap">
+      <div class="obj1"></div>
+      <div class="obj2"></div>
+      <div class="obj3"></div>
+      <div class="obj4"></div>
+    </div>
+  </body>
+</html>

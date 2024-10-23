@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>부드럽게</title>
-    <style>
-      body {
-        background: #000;
-        cursor: none;
-        height: 100vh;
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>부드럽게</title>
+        <style>
+            body {
+                background: #000;
+                /* cursor: none; */
+                height: 100vh;
+            }
 
-      h1 {
-        color: #fff;
-      }
+            h1 {
+                color: #fff;
+            }
 
-      .cursor {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background: rgba(255, 0, 0, 0.7);
-      }
-    </style>
-  </head>
+            .cursor {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background: rgba(255, 0, 0, 0.7);
+            }
+        </style>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            $(function () {
+                // 대상을 변수에 저장
+                const $window = $(window);
+                const $info = $(".info");
+                const $cursor = $(".cursor");
 
-  <body>
-    <!-- 좌표값을 뿌릴 공간 -->
-    <h1 class="info">test</h1>
+                // 마우스 좌표값을 저장할 번수
+                let x = 0;
+                let y = 0;
 
-    <!-- 가짜 커서 -->
-    <div class="cursor"></div>
-  </body>
+                // 수정되는 좌표값을 저장할 변수
+                let mx = 0;
+                let my = 0;
+
+                // 기본 속도
+                let speed = 0.08;
+            });
+        </script>
+    </head>
+
+    <body>
+        <!-- 좌표값을 뿌릴 공간 -->
+        <h1 class="info">test</h1>
+
+        <!-- 가짜 커서 -->
+        <div class="cursor"></div>
+    </body>
 </html>

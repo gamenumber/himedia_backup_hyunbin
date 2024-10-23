@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>부드럽게</title>
-    <style>
-      body {
-        background: #000;
-        /* cursor: none; */
-        height: 100vh;
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>부드럽게</title>
+        <style>
+            body {
+                background: #000;
+                /* cursor: none; */
+                height: 100vh;
+            }
 
-      body::before,
-      body::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: #fff;
-      }
+            body::before,
+            body::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #fff;
+            }
 
-      body::before {
-        width: 1px;
-        height: 100%;
-      }
+            body::before {
+                width: 1px;
+                height: 100%;
+            }
 
-      body::after {
-        width: 100%;
-        height: 1px;
-      }
+            body::after {
+                width: 100%;
+                height: 1px;
+            }
 
-      h1 {
-        color: #fff;
-      }
+            h1 {
+                color: #fff;
+            }
 
-      .cursor {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background: rgba(255, 0, 0, 0.7);
-      }
-    </style>
-  </head>
+            .cursor {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background: rgba(255, 0, 0, 0.7);
+            }
+        </style>
+    </head>
 
-  <body>
-    <!-- 좌표값을 뿌릴 공간 -->
-    <h1 class="info">test</h1>
+    <body>
+        <!-- 좌표값을 뿌릴 공간 -->
+        <h1 class="info">test</h1>
 
-    <!-- 가짜 커서 -->
-    <div class="cursor"></div>
-  </body>
+        <!-- 가짜 커서 -->
+        <div class="cursor"></div>
+    </body>
 </html>

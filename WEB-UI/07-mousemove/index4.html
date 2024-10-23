@@ -1,94 +1,99 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>마우스 움직임에 따라 오브젝트 움직이기</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>마우스 움직임에 따라 오브젝트 움직이기</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-      body {
-        width: 100%;
-        height: 100vh;
-      }
+            body {
+                width: 100%;
+                height: 100vh;
+            }
 
-      .obj-wrap {
-        overflow: hidden;
-        width: 100%;
-        height: 100vh;
-        background: rgb(255, 255, 213);
+            .obj-wrap {
+                overflow: hidden;
+                width: 100%;
+                height: 100vh;
+                background: rgb(255, 255, 213);
 
-        /* 3차원 효과를 위한 세팅 */
-      }
+                /* 3차원 효과를 위한 세팅 */
+            }
 
-      .obj1 {
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        width: 200px;
-        height: 300px;
-        background: red;
-      }
+            .obj1 {
+                position: absolute;
+                top: 10%;
+                left: 10%;
+                width: 200px;
+                height: 300px;
+                background: red;
+            }
 
-      .obj2 {
-        position: absolute;
-        top: 20%;
-        left: 20%;
-        width: 300px;
-        height: 400px;
-        background: orange;
-      }
+            .obj2 {
+                position: absolute;
+                top: 20%;
+                left: 20%;
+                width: 300px;
+                height: 400px;
+                background: orange;
+            }
 
-      .obj3 {
-        position: absolute;
-        top: 30%;
-        right: 30%;
-        width: 300px;
-        height: 300px;
-        background: yellow;
-      }
+            .obj3 {
+                position: absolute;
+                top: 30%;
+                right: 30%;
+                width: 300px;
+                height: 300px;
+                background: yellow;
+            }
 
-      .obj4 {
-        position: absolute;
-        top: 30%;
-        right: 5%;
-        width: 300px;
-        height: 400px;
-        background: green;
-      }
+            .obj4 {
+                position: absolute;
+                top: 30%;
+                right: 5%;
+                width: 300px;
+                height: 400px;
+                background: green;
+            }
 
-      .scroll-area {
-        border: 10px solid #eee;
-        padding: 5vw;
-        min-height: 200vh;
-      }
-    </style>
-  </head>
+            .scroll-area {
+                border: 10px solid #eee;
+                padding: 5vw;
+                min-height: 200vh;
+            }
+        </style>
+    </head>
 
-  <body>
-    <div class="obj-wrap">
-      <div class="obj1"></div>
-      <div class="obj2"></div>
-      <div class="obj3"></div>
-      <div class="obj4"></div>
-    </div>
+    <body>
+        <div class="obj-wrap">
+            <div class="obj1"></div>
+            <div class="obj2"></div>
+            <div class="obj3"></div>
+            <div class="obj4"></div>
+        </div>
 
-    <div class="scroll-area">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, hic officia? Quae perspiciatis sint, voluptatibus
-        eveniet exercitationem necessitatibus aliquam soluta quo vel minima odio sapiente, eos suscipit illo magni
-        temporibus a repellat dolorum nam dolore quas delectus eligendi ratione impedit? Iusto, doloribus aspernatur
-        fuga temporibus illo cupiditate numquam quod. Impedit, cupiditate temporibus quaerat perspiciatis, repellendus
-        nihil exercitationem in excepturi atque ratione a fugiat asperiores nulla repudiandae doloribus alias quod
-        similique! Suscipit dignissimos consectetur, quae rerum, deserunt adipisci dolorum esse similique recusandae
-        culpa quos cupiditate placeat at quod sit illo saepe eveniet aut fuga tenetur! Consequuntur porro quas facilis
-        dolores aperiam.
-      </p>
-    </div>
-  </body>
+        <div class="scroll-area">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
+                hic officia? Quae perspiciatis sint, voluptatibus eveniet
+                exercitationem necessitatibus aliquam soluta quo vel minima odio
+                sapiente, eos suscipit illo magni temporibus a repellat dolorum
+                nam dolore quas delectus eligendi ratione impedit? Iusto,
+                doloribus aspernatur fuga temporibus illo cupiditate numquam
+                quod. Impedit, cupiditate temporibus quaerat perspiciatis,
+                repellendus nihil exercitationem in excepturi atque ratione a
+                fugiat asperiores nulla repudiandae doloribus alias quod
+                similique! Suscipit dignissimos consectetur, quae rerum,
+                deserunt adipisci dolorum esse similique recusandae culpa quos
+                cupiditate placeat at quod sit illo saepe eveniet aut fuga
+                tenetur! Consequuntur porro quas facilis dolores aperiam.
+            </p>
+        </div>
+    </body>
 </html>

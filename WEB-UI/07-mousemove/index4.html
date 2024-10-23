@@ -24,6 +24,7 @@
                 background: rgb(255, 255, 213);
 
                 /* 3차원 효과를 위한 세팅 */
+                perspective: 600px;
             }
 
             .obj1 {
@@ -68,6 +69,91 @@
                 min-height: 200vh;
             }
         </style>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            $(function () {
+                // 대상을 변수에 저장
+                const $window = $(window);
+                const $objwrap = $(".obj-wrap");
+                const $obj1 = $objwrap.find(".obj1");
+                const $obj2 = $objwrap.find(".obj2");
+                const $obj3 = $objwrap.find(".obj3");
+                const $obj4 = $objwrap.find(".obj4");
+
+                // 마우스 좌표값
+                let x = 0;
+                let y = 0;
+
+                // 보정된 값
+                let mx = 0;
+                let my = 0;
+
+                // 기본 속도
+                const speed = 0.009;
+
+                // 애니메이션 정의
+                let raf;
+
+                // 마우스가 움직이면 좌표를 구하고 시작점을 화면의 정중앙으로 세팅
+                // 함수로 정의
+                function getOffset() {
+                    $window.on("mousemove", (e) => {
+                        x = e.pageX - $window.outerWidth() / 2;
+                        y = e.pageY - $window.outerHeight() / 2;
+                    });
+                }
+
+                // 움직임 구현
+                function moving() {
+                    // 좌표값 보정
+                    mx += (x - mx) * speed;
+                    my += (y - my) * speed;
+
+                    // 대상에 적용
+                    $obj1.css({
+                        transform: `translate3d(${mx}px, ${my}px), ${my}px)`,
+                    });
+                    $obj2.css({
+                        transform: `translate(${-mx}px, ${-my}px) rotate(${mx}deg)`,
+                    });
+                    $obj3.css({
+                        transform: `translate(${-mx * 0.5}px, ${-my * 0.5}px)`,
+                        filter: `blur(${mx * 0.5}px)`,
+                    });
+                    $obj4.css({
+                        transform: `translate(${mx * 0.5}px, ${
+                            -my * 0.5
+                        }px) rotateY(${mx}deg)`,
+                    });
+
+                    // 부드럽게 반복
+                    raf = requestAnimationFrame(moving);
+                }
+
+                // 애니메이션을 실행하는 함수
+                function initAnimation() {
+                    getOffset();
+                    moving();
+                }
+
+                initAnimation();
+
+                const targetPos = $(".scroll-area").offset().top;
+                console.log(targetPos);
+
+                // 스크롤이 발생하면
+                $window.on("scrool", function () {
+                    const scroolTop = $(this).scrollTop();
+                    console.log(targetPos, scroolTop);
+
+                    // 스크롤 값이 scrool-area의 위치값보다 커지면 애니메이션 중지
+                    if (scroolTop >= targetPos) cancelAnimationFrame(raf);
+
+                    // 상단으로 이동하면 애니메이션 실행
+                    if (scroolTop == 0) initAnimation();
+                });
+            });
+        </script>
     </head>
 
     <body>

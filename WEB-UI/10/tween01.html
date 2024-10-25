@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>tween - 기본</title>
+        <style>
+            .wrap {
+                /* w70p+m50-a+bd */
+                width: 70%;
+                margin: 50px auto;
+                border: 1px solid #000;
+            }
+
+            .box {
+                width: 100px;
+                height: 100px;
+                margin-top: 30px;
+            }
+
+            .red {
+                background: red;
+            }
+
+            .yellow {
+                background: yellow;
+            }
+
+            .blue {
+                background: blue;
+            }
+        </style>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    </head>
+
+    <body>
+        <!-- .wrap>.box*3 -->
+        <div class="wrap">
+            <div class="box red"></div>
+            <div class="box yellow"></div>
+            <div class="box blue"></div>
+        </div>
+    </body>
+
+    <script>
+        console.log(gsap);
+
+        // gsap.to(대상, {옵션})
+        gsap.to(".red", { x: 100, duration: 2, rotation: 360, delay: 1 });
+        gsap.from(".yellow", {
+            xPercent: -200,
+            duration: 3,
+            width: 300,
+            repeat: -1,
+            yoyo: true,
+        });
+        gsap.fromTo(
+            ".blue",
+            { x: -200, scale: 1.5 },
+            { x: 100, rotation: 360, scale: 1, duration: 2 }
+        );
+    </script>
+</html>

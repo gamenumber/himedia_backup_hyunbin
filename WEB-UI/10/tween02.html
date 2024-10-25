@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>tween - 버튼으로 제어</title>
+        <style>
+            .wrap {
+                /* w70p+m50-a+bd */
+                width: 70%;
+                margin: 50px auto;
+                border: 1px solid #000;
+            }
+
+            .box {
+                width: 100px;
+                height: 100px;
+                margin-top: 30px;
+            }
+
+            .red {
+                background: red;
+                /* vh */
+                visibility: hidden;
+            }
+
+            .yellow {
+                background: yellow;
+            }
+
+            .blue {
+                background: blue;
+                visibility: hidden;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    </head>
+
+    <body>
+        <!-- .wrap>.box*3 -->
+        <div class="wrap">
+            <div class="box red"></div>
+            <div class="box yellow"></div>
+            <div class="box blue"></div>
+
+            <button id="btnGo">Go!</button>
+        </div>
+
+        <script>
+            // 대상을 변수에 저장
+            const redBox = document.querySelector(".red");
+            const yellowBox = document.querySelector(".yellow");
+            const blueBox = document.querySelector(".blue");
+            const btnGo = document.querySelector("#btnGo");
+
+            gsap.from(redBox, {
+                y: -100,
+                rotation: 90,
+                duration: 2,
+                autoAlpha: 0,
+                delay: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: "bounce.out",
+            });
+
+            gsap.to(yellowBox, { rotation: 360, repeat: -1, ease: "none" });
+
+            // 클릭으로 제어
+            btnGo.addEventListener("click", () => {
+                // 파란색 박스를 2초동안 x축으로 400픽셀 이동, 페이드 인 효과 구현, 이징효과 추가
+                gsap.from(blueBox, {
+                    duration: 2,
+                    x: 400,
+                    autoAlpha: 1,
+                    ease: "elastic.out(1,0.3)",
+                });
+            });
+        </script>
+    </body>
+</html>

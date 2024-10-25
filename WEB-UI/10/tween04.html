@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>tween - stagger</title>
+        <style>
+            .wrap {
+                width: 50%;
+                margin: 0 auto;
+                border: 1px solid #000;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .box {
+                width: 100px;
+                height: 100px;
+            }
+
+            .red {
+                background: red;
+            }
+
+            .yellow {
+                background: yellow;
+            }
+
+            .blue {
+                background: blue;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="box red"></div>
+            <div class="box yellow"></div>
+            <div class="box blue"></div>
+        </div>
+        <script>
+            const box = document.querySelectorAll(".box");
+            console.log(box);
+
+            gsap.from(box, {
+                autoAlpha: 0,
+                y: -50,
+                rotation: 20,
+                duration: 1,
+
+                // stagger
+                stagger: {
+                    each: 0.5,
+                    from: "random",
+                },
+            });
+        </script>
+    </body>
+</html>

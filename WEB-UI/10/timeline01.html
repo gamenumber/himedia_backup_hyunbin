@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>timeline 기본</title>
+        <style>
+            .wrap {
+                /* w70p+m50-a+bd */
+                width: 70%;
+                margin: 50px auto;
+                border: 1px solid #000;
+            }
+
+            .box {
+                width: 100px;
+                height: 100px;
+                margin-top: 30px;
+            }
+
+            .red {
+                background: red;
+            }
+
+            .yellow {
+                background: yellow;
+            }
+
+            .blue {
+                background: blue;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    </head>
+
+    <body>
+        <!-- .wrap>.box*3 -->
+        <div class="wrap">
+            <div class="box red"></div>
+            <div class="box yellow"></div>
+            <div class="box blue"></div>
+        </div>
+
+        <script>
+            // gsap.to(".red", { x: 800, duration: 2 });
+            // gsap.to(".yellow", { x: 800, duration: 3, delay: 2 });
+            // gsap.to(".blue", { x: 800, duration: 1, delay: 5 });
+
+            // timeline: 여러 요소의 순차적인 애니메이션 제작을 위해
+            const tl = gsap.timeline();
+
+            tl.to(".red", { x: 800, duration: 2 });
+            tl.to(".yellow", { x: 800, duration: 3 }, "-=1");
+            tl.to(".blue", { x: 800, duration: 1 }, "<");
+        </script>
+    </body>
+</html>

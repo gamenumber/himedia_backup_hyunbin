@@ -15,4 +15,5 @@ window.addEventListener("load", () => {
     tl.to(middleLine, { duration: 0.5, height: 200 });
     tl.from(grape, { autoAlpha: 0, y: -50, duration: 0.8, ease: "bounce.out" });
     tl.from(btnDiscover, { autoAlpha: 0, y: -50, duration: 0.5 }, "+=1");
+    tl.to(grape, { duration: 1, rotation: 360, repeat: -1, repeatDelay: 2 });
 });

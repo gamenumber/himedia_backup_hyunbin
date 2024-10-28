@@ -11,4 +11,8 @@ window.addEventListener("load", () => {
 
     tl.from(navLinks, { autoAlpha: 0, y: -50, duration: 1, stagger: 0.3 });
     tl.from(imgsNav, { autoAlpha: 0, y: -50, duration: 1, stagger: 0.3 });
+    tl.from(title, { autoAlpha: 0, y: -50, duration: 0.5 });
+    tl.to(middleLine, { duration: 0.5, height: 200 });
+    tl.from(grape, { autoAlpha: 0, y: -50, duration: 0.8, ease: "bounce.out" });
+    tl.from(btnDiscover, { autoAlpha: 0, y: -50, duration: 0.5 }, "+=1");
 });

@@ -69,8 +69,10 @@ $(function () {
 
     // 마우스가 움직이면 좌표값을 구한다.
     $window.on("mousemove", (e) => {
-        x = e.pageX - $window.innerWidth() / 2;
-        y = e.pageY - $window.innerHeight() / 2;
+        // x = e.pageX - $window.innerWidth() / 2;
+        // y = e.pageY - $window.innerHeight() / 2;
+        x = Math.max(-100, e.pageX - $window.innerWidth() / 2);
+        y = Math.max(-10, e.pageY - $window.innerHeight() / 2);
     });
 
     function moving() {
@@ -79,6 +81,10 @@ $(function () {
 
         $(".bruce-lee").css({
             transform: `translateX(${mx}px)`,
+        });
+
+        $(".bruce-lee-bg").css({
+            transform: `translate(${mx}px, ${my}px)`,
         });
 
         requestAnimationFrame(moving);

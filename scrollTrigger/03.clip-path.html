@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clip-path</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      img {
+        vertical-align: top;
+        width: 100%;
+      }
+
+      .wrap {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .wrap figure {
+        height: 50vh;
+      }
+
+      .wrap figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 10%;
+      }
+
+      /* 1. css animation */
+      .wrap1 figure {
+        clip-path: circle(0% at 50% 50%);
+        animation: circleAni 1s 1s both;
+      }
+
+      @keyframes circleAni {
+        to {
+          clip-path: circle(100% at 50% 50%);
+        }
+      }
+
+      /* 2. gsap */
+      .wrap2 figure {
+        clip-path: inset(0 50%);
+        /* clip-path: inset(0 0 0 0); */
+      }
+
+      .spacer {
+        height: 100vh;
+        background: #f5f5f5;
+      }
+
+      .wrap3 {
+        height: 100vh;
+        background: yellowgreen;
+      }
+
+      .wrap3 figure {
+        clip-path: inset(0 0 0 0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap wrap1">
+      <figure>
+        <img src="https://kpopanswers.com/wp-content/uploads/2023/04/how-old-are-the-blackpink-members.jpg" alt="" />
+      </figure>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="wrap wrap2">
+      <figure><img src="https://www.nme.com/wp-content/uploads/2023/07/newjeans-get-up-review.jpg" alt="" /></figure>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="wrap wrap3">
+      <figure>
+        <img
+          src="https://media.cnn.com/api/v1/images/stellar/prod/231206101132-k-pop-band-blackpink-uk-file.jpg?c=original"
+          alt=""
+        />
+      </figure>
+    </div>
+
+    <div class="spacer"></div>
+  </body>
+</html>

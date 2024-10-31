@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>an interior design company</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <a href="#container" class="skip hidden">본문 바로가기</a>
+    <hr />
+
+    <header id="header">
+      <!-- .inner>nav>h1.logo+ul.gnb+.util -->
+      <div class="inner">
+        <nav>
+          <h1 class="logo">
+            <a href="#"><i class="hidden">Agency</i></a>
+          </h1>
+          <ul class="gnb">
+            <li><a href="#">about</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">work</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+          <div class="util">
+            <a href="#" class="btn-menu"><i class="hidden">menu</i></a>
+            <a href="#" class="btn-login"><i class="hidden">login</i></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <hr />
+    <main id="container">
+      <section class="visual">
+        <div class="video-wrap">
+          <video src="./video/drone.mp4" autoplay muted loop></video>
+        </div>
+        <div class="visual-title">
+          <h2><strong>an interior design company</strong></h2>
+          <p>
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+            velit mollit. Exercitation veniam consequat sunt nostrud amet.
+          </p>
+          <a href="#" class="btn-cta">request work</a>
+        </div>
+      </section>
+      <!-- // visual -->
+
+      <section class="about">
+        <div class="inner">
+          <h3 class="sec-title">about us</h3>
+          <figure><img src="./img/about-pic01.jpg" alt="#" /></figure>
+          <p>
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+            velit mollit. Exercitation veniam consequat sunt nostrud amet.
+          </p>
+        </div>
+      </section>
+      <!-- // about -->
+
+      <section class="team">
+        <div class="inner">
+          <h3 class="sec-title">team</h3>
+          <ul class="team-list">
+            <li>
+              <figure>
+                <img
+                  src="https://thumb.mt.co.kr/06/2022/05/2022052710190512913_1.jpg/dims/optimize/"
+                  alt="Courtney Henry"
+                />
+              </figure>
+              <dl>
+                <dt>Courtney Henry</dt>
+                <dd>Founder & CEO</dd>
+              </dl>
+            </li>
+            <li>
+              <figure>
+                <img
+                  src="https://i.namu.wiki/i/14c9xyqnXEZuSGkIiUvq68co3E9TpRu0kP1xuc3Y3xGCkAmmQ_QCwQP_7wUvb1Jr-7pOOymD2nqCpogr0dPOWQ.webp"
+                  alt="Devon Lane"
+                />
+              </figure>
+              <dl>
+                <dt>Devon Lane</dt>
+                <dd>President of Sales</dd>
+              </dl>
+            </li>
+            <li>
+              <figure>
+                <img src="https://m.segye.com/content/image/2021/03/08/20210308504672.jpg" alt="Wade Warren" />
+              </figure>
+              <dl>
+                <dt>Wade Warren</dt>
+                <dd>Web Designer</dd>
+              </dl>
+            </li>
+            <li>
+              <figure>
+                <img
+                  src="https://i.namu.wiki/i/0BSOSbY93dN4TVaJpKDPomjdh2fVu5NwCzQ2gvgl5doAS9oCDmvx3z3sGqf_vFO8iyE8kM9Ou4-HLxcISoT-QA.webp"
+                  alt="Arlene McCoy"
+                />
+              </figure>
+              <dl>
+                <dt>Arlene McCoy</dt>
+                <dd>Marketing Coordinator</dd>
+              </dl>
+            </li>
+          </ul>
+
+          <a href="#" class="btn-with">work with us</a>
+        </div>
+      </section>
+      <!-- // team -->
+
+      <section class="work">
+        <div class="inner">
+          <h3 class="sec-title">work</h3>
+
+          <div class="work-con">
+            <article class="work-best">
+              <figure><img src="./img/work-pic01.jpg" alt="" /></figure>
+              <h4>Amet minim mollit non deserunt</h4>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
+                enim velit mollit. Exercitation veniam...
+              </p>
+            </article>
+
+            <ul class="work-list">
+              <li>
+                <a href="#">
+                  <figure><img src="./img/work-pic02.jpg" alt="" /></figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure><img src="./img/work-pic03.jpg" alt="" /></figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure><img src="./img/work-pic04.jpg" alt="" /></figure>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <figure><img src="./img/work-pic05.jpg" alt="" /></figure>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="form-wrap">
+            <form action="#">
+              <div class="form-inner">
+                <!-- input+button[type="submit"] -->
+                <input type="text" placeholder="enter your e-mail" />
+                <button type="submit"><i>request work</i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- // work -->
+
+      <section class="map">
+        <h3 class="hidden">map</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.3891027928694!2d127.02410297643408!3d37.498740028011696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1599df402fd%3A0x61e47b25489c1d06!2z7ZWY7J2066-465SU7Ja07JWE7Lm0642w66-4IOqwleuCqOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1698198913233!5m2!1sko!2skr"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+      <!-- // map -->
+    </main>
+    <hr />
+    <footer id="footer">
+      <!-- .inner>.foot-con>strong.copy+ul.sns-list>li*3>a>i.hidden -->
+      <div class="inner">
+        <div class="foot-con">
+          <strong class="copy">© Company.LLC 2022</strong>
+          <ul class="sns-list">
+            <li>
+              <a href="#"><i class="hidden">facebook</i></a>
+            </li>
+            <li>
+              <a href="#"><i class="hidden">instagram</i></a>
+            </li>
+            <li>
+              <a href="#"><i class="hidden">youtube</i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

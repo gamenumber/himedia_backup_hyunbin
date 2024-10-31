@@ -1,0 +1,202 @@
+@charset 'utf-8';
+
+/* 웹폰트 정의 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --main-color: #504b4b;
+  --main-color-dark: #3d3636;
+  --point-color: #e9e2d4;
+  --title-color: #000;
+  --text-color: #555;
+  --line-color-w: rgba(255, 255, 255, 0.5);
+  --line-color-b: rgba(0, 0, 0, 0.5);
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font: 2rem/1.5 "Montserrat", sans-serif;
+  color: var(--text-color);
+  word-break: keep-all; /* wbka */
+  text-transform: capitalize; /* ttc */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+hr,
+.hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+::selection {
+  background: var(--main-color);
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+label {
+  cursor: pointer; /* cup */
+}
+
+.inner {
+  width: 118rem;
+  margin: 0 auto;
+  /* background: rgba(255, 255, 0, 0.15); */
+  position: relative;
+  height: 100%;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9rem;
+}
+
+.logo a {
+  display: block;
+  width: 4rem;
+  height: 4.8rem;
+  background: url(../img/logo.svg) no-repeat 0 0 / cover;
+}
+
+.btn-menu {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid var(--line-color-w);
+  background: url(../img/ico-menu.svg) no-repeat 50%;
+  display: none;
+}
+
+.btn-login {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid var(--line-color-w);
+  background: url(../img/ico-login.svg) no-repeat 50%;
+}
+
+.gnb {
+  display: flex;
+  margin-left: auto;
+  margin-right: 4rem;
+}
+.gnb li a {
+  display: block;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+#footer {
+  background: #2c2c2c;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 5.6rem 0;
+}
+
+.foot-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foot-con .copy {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.foot-con .sns-list {
+  display: flex;
+  gap: 2.4rem;
+}
+.foot-con .sns-list li a {
+  display: block;
+  width: 4.8rem;
+  height: 4.8rem;
+  border: 1px solid var(--line-color-w);
+  border-radius: 50%;
+  background: no-repeat 50%;
+}
+.foot-con .sns-list li:nth-child(1) a {
+  background-image: url(../img/ico-facebook.svg);
+}
+.foot-con .sns-list li:nth-child(2) a {
+  background-image: url(../img/ico-insta.svg);
+}
+.foot-con .sns-list li:nth-child(3) a {
+  background-image: url(../img/ico-youtube.svg);
+}
+
+/* 반응형 분기점 */
+@media (max-width: 1180px) {
+  .inner {
+    width: 94.1406%;
+  }
+}
+
+/* 태블릿 디자인 */
+@media (max-width: 1024px) {
+}
+
+/* 추가 분기점 생성 */
+@media (max-width: 800px) {
+  .gnb {
+    display: none;
+  }
+  .util {
+    display: flex;
+    gap: 1.2rem;
+  }
+  .btn-menu {
+    display: block;
+  }
+}
+
+/* 모바일 디자인 */
+@media (max-width: 500px) {
+  .inner {
+    width: 89.7436%; /* 350/390 */
+  }
+  nav {
+    height: 6.8rem;
+  }
+  .logo a {
+    width: 3rem;
+    height: 3.6rem;
+  }
+
+  .foot-con {
+    flex-direction: column;
+    gap: 2.8rem;
+  }
+}

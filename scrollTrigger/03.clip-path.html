@@ -1,95 +1,166 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>clip-path</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>clip-path</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-      img {
-        vertical-align: top;
-        width: 100%;
-      }
+            img {
+                vertical-align: top;
+                width: 100%;
+            }
 
-      .wrap {
-        width: 100%;
-        margin: 0 auto;
-      }
+            .wrap {
+                width: 100%;
+                margin: 0 auto;
+            }
 
-      .wrap figure {
-        height: 50vh;
-      }
+            .wrap figure {
+                height: 50vh;
+            }
 
-      .wrap figure img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 10%;
-      }
+            .wrap figure img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50% 10%;
+            }
 
-      /* 1. css animation */
-      .wrap1 figure {
-        clip-path: circle(0% at 50% 50%);
-        animation: circleAni 1s 1s both;
-      }
+            /* 1. css animation */
+            .wrap1 figure {
+                clip-path: circle(0% at 50% 50%);
+                /* animation: circleAni 1s 1s both; */
+            }
 
-      @keyframes circleAni {
-        to {
-          clip-path: circle(100% at 50% 50%);
-        }
-      }
+            @keyframes circleAni {
+                to {
+                    clip-path: circle(100% at 50% 50%);
+                }
+            }
 
-      /* 2. gsap */
-      .wrap2 figure {
-        clip-path: inset(0 50%);
-        /* clip-path: inset(0 0 0 0); */
-      }
+            /* 2. gsap */
+            .wrap2 figure {
+                clip-path: inset(0 50%);
+                /* clip-path: inset(0 0 0 0); */
+            }
 
-      .spacer {
-        height: 100vh;
-        background: #f5f5f5;
-      }
+            .spacer {
+                height: 100vh;
+                background: #f5f5f5;
+            }
 
-      .wrap3 {
-        height: 100vh;
-        background: yellowgreen;
-      }
+            .wrap3 {
+                height: 100vh;
+                background: yellowgreen;
+            }
 
-      .wrap3 figure {
-        clip-path: inset(0 0 0 0);
-      }
-    </style>
-  </head>
+            .wrap3 figure {
+                clip-path: inset(0 0 0 0);
+            }
+        </style>
 
-  <body>
-    <div class="wrap wrap1">
-      <figure>
-        <img src="https://kpopanswers.com/wp-content/uploads/2023/04/how-old-are-the-blackpink-members.jpg" alt="" />
-      </figure>
-    </div>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
-    <div class="spacer"></div>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-    <div class="wrap wrap2">
-      <figure><img src="https://www.nme.com/wp-content/uploads/2023/07/newjeans-get-up-review.jpg" alt="" /></figure>
-    </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", (event) => {
+                gsap.registerPlugin(scroolTrigger);
 
-    <div class="spacer"></div>
+                const imgs = gsap.utils.toArray(".wrap figure");
+                console.log(imgs);
 
-    <div class="wrap wrap3">
-      <figure>
-        <img
-          src="https://media.cnn.com/api/v1/images/stellar/prod/231206101132-k-pop-band-blackpink-uk-file.jpg?c=original"
-          alt=""
-        />
-      </figure>
-    </div>
+                // jQuery: .each((index, item)=> {})
+                imgs.forEach((item, index) => {
+                    console.log(item, index);
 
-    <div class="spacer"></div>
-  </body>
+                    gsap.from(item, {
+                        clipPath: "inset(0 50%)",
+
+                        scrollTrigger: {
+                            trigger: item,
+                            markers: true,
+                            start: "top 50%",
+                        },
+                    });
+                });
+                //     gsap.to(".wrap1 figure", {
+                //         clipPath: "circle(0% at 50% 50%)",
+                //         duration: 3,
+                //         ease: "bounce.out",
+                //         scrollTrigger: {
+                //             trigger: ".wrap1 figure",
+                //             start: "top 60%", // trigger, scroller(viewport)
+                //             end: "bottom top",
+                //         },
+                //     });
+                //     gsap.to(".wrap2 figure", {
+                //         clipPath: "inset(0)",
+                //         duration: 3,
+                //         ease: "bounce.out",
+                //         scrollTrigger: {
+                //             trigger: ".wrap1 figure",
+                //             // markers: "true",
+                //             start: "top 60%", // trigger, scroller(viewport)
+                //             end: "bottom top",
+                //             toggleActions: "play onoe reverse none",
+                //         },
+                //     });
+                //     gsap.from(".wrap2 figure", {
+                //         clipPath: "inset(0 50%)",
+                //         duration: 3,
+                //         ease: "bounce.out",
+                //         scrollTrigger: {
+                //             trigger: ".wrap3 figure",
+                //             // markers: "true",
+                //             start: "top 60%", // trigger, scroller(viewport)
+                //             end: "bottom top",
+                //         },
+                //     });
+                // });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="spacer"></div>
+        <div class="wrap wrap1">
+            <figure>
+                <img
+                    src="https://kpopanswers.com/wp-content/uploads/2023/04/how-old-are-the-blackpink-members.jpg"
+                    alt=""
+                />
+            </figure>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="wrap wrap2">
+            <figure>
+                <img
+                    src="https://www.nme.com/wp-content/uploads/2023/07/newjeans-get-up-review.jpg"
+                    alt=""
+                />
+            </figure>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="wrap wrap3">
+            <figure>
+                <img
+                    src="https://media.cnn.com/api/v1/images/stellar/prod/231206101132-k-pop-band-blackpink-uk-file.jpg?c=original"
+                    alt=""
+                />
+            </figure>
+        </div>
+
+        <div class="spacer"></div>
+    </body>
 </html>
